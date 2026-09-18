@@ -18,6 +18,7 @@ import java.awt.BorderLayout;
 /*      */ import java.io.InputStream;
 /*      */ import java.io.InputStreamReader;
 /*      */ import java.io.OutputStream;
+import java.nio.charset.StandardCharsets;
 /*      */ import java.text.SimpleDateFormat;
 /*      */ import java.time.LocalDate;
 /*      */ import java.util.ArrayList;
@@ -79,7 +80,9 @@ public class HomeMainGui {
 		/*   99 */     return databaseStatus;
 	/*      */   }
 	/*      */   private MySQLConnect mySQLDatabase; 
-	/*      */   private static final String inputFile = "cost.csv"; public static final int ROWS = 6;
+	/*      */   private static final String inputFile = "cost.csv"; 
+                private final String filename = "mysqlsignonstuff.txt";
+                public static final int ROWS = 6;
 	/*      */   public static final int COLS = 12;
 	/*      */   private static boolean maxLimitFlag = false;
 	/*      */   private static Boolean databaseStatus;
@@ -712,15 +715,11 @@ public class HomeMainGui {
    private void isSQLSignonCredentCorrect() {
 		/*  864 */    
 
+        boolean isFound; 
+        final String DELIMITER= "%";
+		String myDatastuff[] = getCredentialsFromFile().split(DELIMITER);
 
-
-
-         String credentials = getCredentialsFromFile("/resources/mysqlsignonstuff.txt");
-
-		/*  865 */     String DELIMITER = "%";
-		/*  866 */    //String[] myDatastuff = getCredentialsFromFile(credentialsFilename).split(DELIMITER);
-
-		String[] myDatastuff = credentials.split(DELIMITER);
+        
 		
 		/*  869 */     this.mySQLDatabase = new MySQLConnect(myDatastuff[0], myDatastuff[1], myDatastuff[2]);
 		/*  870 */     if (this.mySQLDatabase.isConnected()) {
@@ -732,14 +731,23 @@ public class HomeMainGui {
 		/*      */     } 
 	/*      */   }
 
-	/*      */   private String getCredentialsFromFile(String inputFile) {
+	/*      */   private String getCredentialsFromFile() {
+
+        InputStream inputStream = Login_Sys.class.getClassLoader().getResourceAsStream(filename);
 		/*  892 */     final int myMagicNumber = 36;
 		/*  893 */     String allData = null;
 		/*  894 */     int count = 1;
 		/*  895 */     BufferedReader bufferedReader = null;
-		/*      */     
+		/*      */if (inputStream == null) {
+                    JOptionPane.showMessageDialog(null, "Can not find credential file ");
+                        //System.err.println("Configuration file config.txt not found in resources!");
+                        return null;
+        }
+        
+
+     
 		/*      */     try {
-			/*  898 */       bufferedReader = new BufferedReader(new FileReader(inputFile));
+			/*  898 */       bufferedReader = new BufferedReader(new InputStreamReader(inputStream, StandardCharsets.UTF_8));
 			/*      */       try {
 				/*      */         String data;
 				/*  901 */         while ((data = bufferedReader.readLine()) != null) {
@@ -749,17 +757,15 @@ public class HomeMainGui {
 					/*      */           }
 					/*  905 */           count++;
 				/*      */         } 
-			
+                                    if(count < myMagicNumber) { //file does not contain sign-on credential info
+                                            JOptionPane.showMessageDialog(null, "Credentials can not be found."); 
+                                        }
 			/*  910 */       } catch (IOException e) {
 				/*      */         
 				/*  912 */         e.printStackTrace();
 				/*  913 */         JOptionPane.showMessageDialog(null, "HomeMainGui: HomeMainGUI: Can not read  from file ");
 			/*      */       } 
-		/*  915 */     } catch (FileNotFoundException e) {
-			/*      */       String data;
-			/*  917 */       JOptionPane.showMessageDialog(null, "HomeMainGui : Can not find MYSQL database \ncredential file. Program terminated ");
-			/*  918 */       e.printStackTrace();
-		/*      */     } finally {
+		/*  915 */     }  finally {
 			/*      */       try {
 				/*  921 */         bufferedReader.close();
 			/*      */       }

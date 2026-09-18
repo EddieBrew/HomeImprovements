@@ -147,7 +147,7 @@ private JFrame frame;
 				if(isSignonCredentCorrect(username, password)) {
 					frame.setVisible(false); //you can't see me!
 					frame.dispose(); //Destroy the JFrame object
-					//new HomeMainGui(username, password);    
+					new HomeMainGui(username, password);    
 				} else {
 					// TODO Auto-generated catch block
 					//JOptionPane.showMessageDialog(null, "Invalid Username and/or Password ","Login Error", JOptionPane.ERROR_MESSAGE);
