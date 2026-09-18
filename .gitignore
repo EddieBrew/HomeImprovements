@@ -1,0 +1,14 @@
+# Ignore compiled Java binary files
+*.class
+
+# Ignore Java build tool directories (if you use Maven or Gradle later)
+target/
+build/
+.gradle/
+
+# Ignore local VS Code configuration files
+.vscode/
+
+# Ignore system-specific junk files
+.DS_Store
+Thumbs.db
