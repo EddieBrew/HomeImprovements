@@ -13,6 +13,7 @@ package com.homeimprovement;
 /*     */ import java.awt.image.BufferedImage;
 /*     */ import java.io.File;
 /*     */ import java.io.IOException;
+import java.io.InputStream;
 /*     */ import java.text.DateFormat;
 /*     */ import java.text.SimpleDateFormat;
 /*     */ import java.util.Date;
@@ -32,7 +33,6 @@ package com.homeimprovement;
 /*     */ import javax.swing.JTextField;
 /*     */ import javax.swing.border.Border;
 
-/*     */ 
 /*     */ import com.toedter.calendar.JDateChooser;
 
 
@@ -50,7 +50,7 @@ private static final long serialVersionUID = -4647310868286988256L;
 /*     */   private BufferedImage img;
 /*     */   private BufferedImage scaled;
 /*     */   MySQLConnect myDatabase;
-/*  63 */   private final String BACKGROUND_PIC = "house2024.gif";
+/*  63 */   private final String BACKGROUND_PIC = "resources/images/house2024.gif";
 /*  64 */   private final String HOMEIMPROVEMENT_DATABASE = "houseexpenses";
 /*     */   
 /*     */   public MyBackgroundPanel(MySQLConnect mySQLDatabase) {
@@ -76,12 +76,22 @@ private static final long serialVersionUID = -4647310868286988256L;
 /*     */   private void setupPanel() {
 /*  87 */     setLayout((LayoutManager)null);
 /*     */     
-/*     */     try {
-/*  90 */       setBackground(ImageIO.read(new File("house2024.gif")));
-/*  91 */     } catch (IOException e1) {
-/*     */       
-/*  93 */       JOptionPane.showMessageDialog(null, "Page Load Fault: Can not find background image");
-/*     */     } 
+
+	// 2. From an InputStream (e.g., resources inside a JAR)
+// Load background image using classloader from classpath
+    try (InputStream is = MyBackgroundPanel.class.getResourceAsStream("/resources/house2024.gif")) {
+        if (is != null) {
+            BufferedImage imageFromStream = ImageIO.read(is);
+            setBackground(imageFromStream);
+        } else {
+            System.err.println("Could not find background image on classpath: /resources/house2024.gif");
+            JOptionPane.showMessageDialog(this, "Page Load Fault: Can not find background image", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    } catch (IOException e) {
+        //e.printStackTrace();
+        JOptionPane.showMessageDialog(this, "Page Load Fault: Error reading background image", "Error", JOptionPane.ERROR_MESSAGE);
+    }
+	
 /*     */     
 /*  96 */     JLabel lblHomeImprovementRecords = new JLabel("Home Improvement Records");
 /*  97 */     lblHomeImprovementRecords.setHorizontalAlignment(0);
