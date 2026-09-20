@@ -67,6 +67,25 @@ public class MyBackgroundPanel extends JPanel {
  /*     */
  /*     */
  /*     */ public static void main(String[] args) {
+
+    // TODO Auto-generated method stub
+		 String jdbcUrl = "jdbc:mysql://127.0.0.1:3306/home_improvement";
+		  String userid = "rbrewer"; 
+		  String password = "Great2BeAliveN2022#"; 
+		// final String DATABASE_NAME = "home_improvement";
+
+         
+        MySQLConnect myDatabase = new MySQLConnect(jdbcUrl, userid, password);
+        MyBackgroundPanel backgroundPanel = new MyBackgroundPanel(myDatabase);
+        JFrame frame = new JFrame("BackGroundPanel Example");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(400, 300);
+        frame.add(backgroundPanel);
+        frame.setVisible(true);
+
+
+
+
     }
 
     /*     */
@@ -82,12 +101,12 @@ public class MyBackgroundPanel extends JPanel {
 
         // 2. From an InputStream (e.g., resources inside a JAR)
 // Load background image using classloader from classpath
-        try (InputStream is = MyBackgroundPanel.class.getResourceAsStream("/resources/house2024.gif")) {
+        try (InputStream is = MyBackgroundPanel.class.getResourceAsStream("/images/house2024.gif")) {
             if (is != null) {
                 BufferedImage imageFromStream = ImageIO.read(is);
                 setBackground(imageFromStream);
             } else {
-                System.err.println("Could not find background image on classpath: /resources/house2024.gif");
+                System.err.println("Could not find background image on classpath: house2024.gif");
                 JOptionPane.showMessageDialog(this, "Page Load Fault: Can not find background image", "Error", JOptionPane.ERROR_MESSAGE);
             }
         } catch (IOException e) {
