@@ -30,7 +30,7 @@ public class HomeData implements Comparable<HomeData> {
 /*     */   
 /*     */   private void parseIntoVariable(String input) {
 /*  40 */     String COMMA_DELIMITER = ",";
-/*  41 */     String[] databaseInput = input.split(",");
+/*  41 */     String[] databaseInput = input.split(COMMA_DELIMITER);
 /*     */     
 /*  43 */     for (int i = 0; i < databaseInput.length; i++) {
 /*     */       
@@ -77,7 +77,8 @@ public class HomeData implements Comparable<HomeData> {
 /*     */ 
 /*     */ 
 /*     */   
-/*     */   public String toString() {
+/*     */@Override
+   public String toString() {
 /*  89 */     return "HomeData [date=" + this.date + " \n area=" + this.area + " \n item=" + this.item + " \n cost=" + this.cost + "\n receiptFilename=" + 
 /*  90 */       this.receiptFilename + "\n info=" + this.info + "\n isValue=" + this.isValue + "]";
 /*     */   }
@@ -136,12 +137,14 @@ public class HomeData implements Comparable<HomeData> {
 /*     */   }
 /*     */ 
 /*     */   
-/*     */   public int hashCode() {
+/*     */@Override
+   public int hashCode() {
 /* 148 */     return Objects.hash(new Object[] { this.area, this.cost, this.date, this.info, this.isValue, this.item, this.receiptFilename });
 /*     */   }
 /*     */ 
 /*     */   
-/*     */   public boolean equals(Object obj) {
+/*     */@Override
+   public boolean equals(Object obj) {
 /* 153 */     if (this == obj)
 /* 154 */       return true; 
 /* 155 */     if (obj == null)
@@ -158,7 +161,8 @@ public class HomeData implements Comparable<HomeData> {
 /*     */ 
 /*     */ 
 /*     */   
-/*     */   public int compareTo(HomeData obj) {
+/*     */@Override
+   public int compareTo(HomeData obj) {
 /* 170 */     return convertDateStringToInt(this.date) - convertDateStringToInt(obj.date);
 /*     */   }
 /*     */ }
