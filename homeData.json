@@ -1,0 +1,591 @@
+{ 
+ "homeData" :[ 
+{"date":"2026-05-20","area":"BACKYARD","item":"MISC","cost":29.02,"receiptFilename":"filename","info":"houseplants","isValue":false}
+{"date":"2026-05-15","area":"FRONTYARD","item":"SEWAGE LINE","cost":15.85,"receiptFilename":"filename","info":"sewage line treatment","isValue":false}
+{"date":"2026-05-13","area":"BACKYARD","item":"LIGHTS","cost":21.52,"receiptFilename":"filename","info":"Two sets of floodlights for backyard motion sensor floodlights","isValue":false}
+{"date":"2026-04-20","area":"FRONTYARD","item":"MISC","cost":10.47,"receiptFilename":"filename","info":"wood and mount for sign","isValue":false}
+{"date":"2026-04-12","area":"LIVING ROOM","item":"PLANTS","cost":34.19,"receiptFilename":"filename","info":"pot trays","isValue":false}
+{"date":"2026-04-07","area":"BACKYARD","item":"PLANTS","cost":38.52,"receiptFilename":"filename","info":"tomatoes","isValue":false}
+{"date":"2026-04-07","area":"BACKYARD","item":"MISC","cost":4.27,"receiptFilename":"filename","info":"drip water stake","isValue":false}
+{"date":"2026-04-04","area":"GARAGE","item":"MISC","cost":15.94,"receiptFilename":"filename","info":"3d printer hardware","isValue":false}
+{"date":"2026-04-04","area":"FRONTYARD","item":"MISC","cost":2.78,"receiptFilename":"filename","info":"drip mister","isValue":false}
+{"date":"2026-03-28","area":"FRONTYARD","item":"MISC","cost":15.07,"receiptFilename":"filename","info":"garden soil","isValue":false}
+{"date":"2026-03-26","area":"FRONTYARD","item":"MISC","cost":22.6,"receiptFilename":"filename","info":"Hedgers for Front/Back Yards","isValue":false}
+{"date":"2026-03-09","area":"FRONTYARD","item":"PLANTS","cost":22.63,"receiptFilename":"filename","info":"6 pack pergonias","isValue":false}
+{"date":"2026-03-09","area":"FRONTYARD","item":"MISC","cost":7.94,"receiptFilename":"filename","info":"garden soil","isValue":false}
+{"date":"2026-02-28","area":"FRONTYARD","item":"MISC","cost":26.9,"receiptFilename":"filename","info":"drip access.","isValue":false}
+{"date":"2026-02-14","area":"FRONTYARD","item":"PLANTS","cost":43.1,"receiptFilename":"filename","info":"camellia","isValue":false}
+{"date":"2026-02-12","area":"BACKYARD","item":"MISC","cost":38.7,"receiptFilename":"filename","info":"odor eliminator","isValue":false}
+{"date":"2026-02-01","area":"FRONTYARD","item":"PLANTS","cost":15.0,"receiptFilename":"filename","info":"Primroses","isValue":false}
+{"date":"2026-02-01","area":"FRONTYARD","item":"PLANTS","cost":10.74,"receiptFilename":"filename","info":"two bags of soil","isValue":false}
+{"date":"2026-01-02","area":"LIVING ROOM","item":"MISC","cost":28.5,"receiptFilename":"filename","info":"swifter mop","isValue":false}
+{"date":"2025-12-29","area":"GARAGE","item":"MISC","cost":9.46,"receiptFilename":"filename","info":"concrete cement patch","isValue":false}
+{"date":"2025-12-16","area":"LIVING ROOM","item":"MISC","cost":9.99,"receiptFilename":"filename","info":"battery","isValue":false}
+{"date":"2025-11-18","area":"LIVING ROOM","item":"MISC","cost":20.33,"receiptFilename":"filename","info":"battery","isValue":false}
+{"date":"2025-10-18","area":"BACKYARD","item":"MISC","cost":12.78,"receiptFilename":"filename","info":"bark","isValue":false}
+{"date":"2025-10-12","area":"BACKYARD","item":"PLANTS","cost":11.9,"receiptFilename":"filename","info":"vegetables","isValue":false}
+{"date":"2025-10-11","area":"BACKYARD","item":"PLANTS","cost":10.74,"receiptFilename":"filename","info":"soil","isValue":false}
+{"date":"2025-10-11","area":"BACKYARD","item":"PLANTS","cost":4.83,"receiptFilename":"filename","info":"raindrip parts","isValue":false}
+{"date":"2025-10-06","area":"BACKYARD","item":"PLANTS","cost":12.83,"receiptFilename":"filename","info":"soil","isValue":false}
+{"date":"2025-10-06","area":"BACKYARD","item":"PLANTS","cost":4.97,"receiptFilename":"C:\\Receipts","info":"4.97","isValue":false}
+{"date":"2025-10-06","area":"BACKYARD","item":"MISC","cost":79.79,"receiptFilename":"filename","info":"auger rental","isValue":false}
+{"date":"2025-10-02","area":"LIVING ROOM","item":"MISC","cost":30.2,"receiptFilename":"filename","info":"floor cleaner","isValue":false}
+{"date":"2025-09-27","area":"GARAGE","item":"LIGHTS","cost":9.03,"receiptFilename":"filename","info":"house number sign","isValue":false}
+{"date":"2025-09-25","area":"FRONTYARD","item":"LIGHTS","cost":13.95,"receiptFilename":"filename","info":"xmas light. mosquito coil","isValue":false}
+{"date":"2025-09-12","area":"FRONTYARD","item":"PLANTS","cost":17.18,"receiptFilename":"filename","info":"soil","isValue":false}
+{"date":"2025-09-12","area":"FRONTYARD","item":"PLANTS","cost":20.48,"receiptFilename":"filename","info":"aster","isValue":false}
+{"date":"2025-08-18","area":"FRONTYARD","item":"PLANTS","cost":33.89,"receiptFilename":"filename","info":"daisy","isValue":false}
+{"date":"2025-08-17","area":"LIVING ROOM","item":"MISC","cost":179.0,"receiptFilename":"C:\\Receipts\\ClarkNRush081424_YearlyMaintenance.pdf","info":"Annual HVAC Maintenace","isValue":false}
+{"date":"2025-08-17","area":"LIVING ROOM","item":"OUTLETS","cost":25.99,"receiptFilename":"C:\\Receipts\\Kasa_Smart_Plug_08172025.pdf","info":"4 pack smart plugs","isValue":false}
+{"date":"2025-08-14","area":"LIVING ROOM","item":"MISC","cost":13.79,"receiptFilename":"C:\\Receipts\\Display Base_08142025.pdf","info":"Rotating Display Base for picture cube","isValue":false}
+{"date":"2025-08-13","area":"BATH2","item":"MISC","cost":4.23,"receiptFilename":"filename","info":"velcro tape","isValue":false}
+{"date":"2025-08-12","area":"FRONTYARD","item":"MISC","cost":22.4,"receiptFilename":"filename","info":"raindrip pvc","isValue":false}
+{"date":"2025-08-05","area":"GARAGE","item":"MISC","cost":11.68,"receiptFilename":"filename","info":"storage box","isValue":false}
+{"date":"2025-07-28","area":"BACKYARD","item":"ANTENNA","cost":1.0,"receiptFilename":"filename","info":"play","isValue":false}
+{"date":"2025-07-19","area":"KITCHEN","item":"LIGHTS","cost":4.83,"receiptFilename":"filename","info":"hood light","isValue":false}
+{"date":"2025-07-17","area":"BATH1","item":"TOILET","cost":18.99,"receiptFilename":"C:\\Receipts\\Toilet Paper Stand - Black _07142025.pdf","info":"Black toilet paper stand","isValue":false}
+{"date":"2025-07-16","area":"BACKYARD","item":"MISC","cost":21.01,"receiptFilename":"filename","info":"trellis","isValue":false}
+{"date":"2025-07-02","area":"GARAGE","item":"LIGHTS","cost":1.75,"receiptFilename":"filename","info":"wall plate","isValue":false}
+{"date":"2025-06-30","area":"FRONTYARD","item":"MISC","cost":14.85,"receiptFilename":"filename","info":"flag bracket","isValue":false}
+{"date":"2025-06-30","area":"BACKYARD","item":"MISC","cost":34.17,"receiptFilename":"filename","info":"house corner repair","isValue":false}
+{"date":"2025-06-24","area":"KITCHEN","item":"FLOOR","cost":33.09,"receiptFilename":"filename","info":"floor trim","isValue":false}
+{"date":"2025-06-23","area":"FRONTYARD","item":"MISC","cost":11.79,"receiptFilename":"filename","info":"wasp trap","isValue":false}
+{"date":"2025-06-13","area":"FRONTYARD","item":"PLANTS","cost":9.0,"receiptFilename":"filename","info":"lantana","isValue":false}
+{"date":"2025-06-02","area":"FRONTYARD","item":"PLANTS","cost":14.0,"receiptFilename":"filename","info":"soil","isValue":false}
+{"date":"2025-05-24","area":"HALLWAY","item":"DOOR","cost":10.72,"receiptFilename":"filename","info":"front door repair","isValue":false}
+{"date":"2025-05-16","area":"BACKYARD","item":"GUTTERS","cost":31.56,"receiptFilename":"filename","info":"gutter down spout repair","isValue":false}
+{"date":"2025-05-08","area":"BACKYARD","item":"PLANTS","cost":37.75,"receiptFilename":"filename","info":"veggies","isValue":false}
+{"date":"2025-05-02","area":"FRONTYARD","item":"PLANTS","cost":45.69,"receiptFilename":"filename","info":"shut off valve","isValue":false}
+{"date":"2025-04-27","area":"LIVING ROOM","item":"FAN","cost":96.94,"receiptFilename":"C:\\Receipts\\2025_04_05&08&16&27_misc.jpg","info":"New ceil fan/light for living room","isValue":false}
+{"date":"2025-04-16","area":"BACKYARD","item":"MISC","cost":27.98,"receiptFilename":"C:\\Receipts\\2025_04_05&08&16&27_misc.jpg","info":"mulch for garden","isValue":false}
+{"date":"2025-04-08","area":"BATH1","item":"SHOWER/TUB","cost":6.98,"receiptFilename":"C:\\Receipts\\2025_04_05&08&16&27_misc.jpg","info":"solutions to fix tub drain","isValue":false}
+{"date":"2025-04-05","area":"BATH2","item":"SHOWER/TUB","cost":14.71,"receiptFilename":"C:\\Receipts\\2025_04_05&08&16&27_misc.jpg","info":"bonding solution for shower drain","isValue":false}
+{"date":"2025-03-25","area":"BACKYARD","item":"MISC","cost":2.89,"receiptFilename":"filename","info":"parts for sprinkler line","isValue":false}
+{"date":"2025-03-25","area":"FRONTYARD","item":"PLANTS","cost":17.14,"receiptFilename":"filename","info":"two african dasies","isValue":false}
+{"date":"2025-03-25","area":"FRONTYARD","item":"MISC","cost":8.88,"receiptFilename":"C:\\Receipts\\2025_03_23&25_garden.jpg","info":"irrigation pvc","isValue":false}
+{"date":"2025-03-22","area":"FRONTYARD","item":"MISC","cost":6.18,"receiptFilename":"C:\\Receipts\\2025_03_22&24_garden.jpg","info":"irrigaton/sprinkler parts","isValue":false}
+{"date":"2025-03-22","area":"ATTIC","item":"MISC","cost":37.12,"receiptFilename":"C:\\Receipts\\2025_03_22&24_garden.jpg","info":"wood to fix attic and ant traps","isValue":false}
+{"date":"2025-03-22","area":"ATTIC","item":"MISC","cost":21.57,"receiptFilename":"filename","info":"anchors for attic entry","isValue":false}
+{"date":"2025-03-15","area":"BATH2","item":"MISC","cost":7.83,"receiptFilename":"C:\\Receipts\\2025_03_15 shower_drain.jpg","info":"shower drain","isValue":false}
+{"date":"2025-03-08","area":"FRONTYARD","item":"PLANTS","cost":10.5,"receiptFilename":"C:\\Receipts\\2025_02_09.jpg","info":"Parts to replace sprinkler valve","isValue":false}
+{"date":"2025-03-07","area":"FRONTYARD","item":"PLANTS","cost":5.89,"receiptFilename":"C:\\Receipts\\2025_02_09.jpg","info":"Parts for sprinkler valve replacement","isValue":false}
+{"date":"2025-03-06","area":"FRONTYARD","item":"PLANTS","cost":30.55,"receiptFilename":"C:\\Receipts\\2025_03_06_sprinklerValve.pdf","info":"Sprinker valve","isValue":false}
+{"date":"2025-02-24","area":"BACKYARD","item":"FENCE","cost":7.52,"receiptFilename":"C:\\Receipts\\2025_02_09.jpg","info":"Trellis for Carolina Jasmine","isValue":false}
+{"date":"2025-02-09","area":"BACKYARD","item":"FENCE","cost":20.43,"receiptFilename":"C:\\Receipts\\2025_02_09.jpg","info":"Trellis for Lilac","isValue":false}
+{"date":"2025-01-05","area":"KITCHEN","item":"MISC","cost":18.31,"receiptFilename":"C:\\Receipts\\2025_01_05 fryer_Pan.jpg","info":"fryer pan","isValue":false}
+{"date":"2024-11-24","area":"BACKYARD","item":"GUTTERS","cost":7.31,"receiptFilename":"C:\\Receipts\\2024_11_17 downspout.jpg","info":"caulking material for backyard downspout","isValue":false}
+{"date":"2024-11-17","area":"BACKYARD","item":"GUTTERS","cost":10.49,"receiptFilename":"C:\\Receipts\\2024_11_17 downspout.jpg","info":"inal downspout for backyard gutter","isValue":false}
+{"date":"2024-10-16","area":"LIVING ROOM","item":"MISC","cost":44.27,"receiptFilename":"C:\\Receipts\\2024_10_08_filters.pdf","info":"16X25X2 filters ( 4-pack) for HVAC sysytem","isValue":false}
+{"date":"2024-10-03","area":"BACKYARD","item":"MISC","cost":16.98,"receiptFilename":"filename","info":"","isValue":false}
+{"date":"2024-10-03","area":"LIVING ROOM","item":"FLOOR","cost":12.97,"receiptFilename":"filename","info":"tile cleaner","isValue":false}
+{"date":"2024-09-22","area":"KITCHEN","item":"MISC","cost":1283.72,"receiptFilename":"filename","info":"refrigerator","isValue":false}
+{"date":"2024-09-22","area":"FRONTYARD","item":"PLANTS","cost":30.09,"receiptFilename":"filename","info":"soil","isValue":false}
+{"date":"2024-09-22","area":"BACKYARD","item":"PLANTS","cost":11.9,"receiptFilename":"filename","info":"Vegetable 6-pack","isValue":false}
+{"date":"2024-09-22","area":"BACKYARD","item":"PLANTS","cost":23.64,"receiptFilename":"filename","info":"","isValue":false}
+{"date":"2024-09-20","area":"KITCHEN","item":"OUTLETS","cost":10.0,"receiptFilename":"filename","info":"kitchen outlet","isValue":false}
+{"date":"2024-09-18","area":"LIVING ROOM","item":"PLANTS","cost":22.28,"receiptFilename":"filename","info":"houseplant soil and fertilizer","isValue":false}
+{"date":"2024-09-10","area":"FRONTYARD","item":"PLANTS","cost":9.64,"receiptFilename":"filename","info":"lantana","isValue":false}
+{"date":"2024-09-02","area":"FRONTYARD","item":"MISC","cost":22.57,"receiptFilename":"filename","info":"wasp trap","isValue":false}
+{"date":"2024-08-11","area":"FRONTYARD","item":"MISC","cost":18.24,"receiptFilename":"C:\\Receipts\\2024_08_11 solenoid.jpg","info":"solenoid for siphon valve irrigation","isValue":false}
+{"date":"2024-08-11","area":"FRONTYARD","item":"MISC","cost":3.95,"receiptFilename":"filename","info":"bushing housing for solenoid and siphon valve","isValue":false}
+{"date":"2024-08-05","area":"FRONTYARD","item":"MISC","cost":5.74,"receiptFilename":"C:\\Receipts\\2024_0805_stakes.jpg","info":"Stakes for drip system","isValue":false}
+{"date":"2024-08-04","area":"FRONTYARD","item":"MISC","cost":6.92,"receiptFilename":"filename","info":"4 GPH drips","isValue":false}
+{"date":"2024-08-04","area":"FRONTYARD","item":"MISC","cost":14.87,"receiptFilename":"filename","info":"drippers","isValue":false}
+{"date":"2024-08-03","area":"FRONTYARD","item":"MISC","cost":24.36,"receiptFilename":"filename","info":"bark","isValue":false}
+{"date":"2024-07-31","area":"LIVING ROOM","item":"MISC","cost":179.0,"receiptFilename":"C:\\Receipts\\ClarkNRush073124.pdf","info":"Clark and Rush 2024 HVAC service","isValue":false}
+{"date":"2024-07-22","area":"KITCHEN","item":"FRIG","cost":370.68,"receiptFilename":"C:\\Receipts\\refrig_invoice1_10288.pdf","info":"Replaced fan in Kitchenaide refrigerator","isValue":false}
+{"date":"2024-06-27","area":"FRONTYARD","item":"MISC","cost":7.51,"receiptFilename":"filename","info":"wasp spray","isValue":false}
+{"date":"2024-06-24","area":"KITCHEN","item":"MISC","cost":13.96,"receiptFilename":"filename","info":"floor cleaner","isValue":false}
+{"date":"2024-06-24","area":"FRONTYARD","item":"MISC","cost":16.13,"receiptFilename":"filename","info":"wasp trap","isValue":false}
+{"date":"2024-06-05","area":"KITCHEN","item":"MISC","cost":15.06,"receiptFilename":"filename","info":"mop","isValue":false}
+{"date":"2024-06-02","area":"BATH1","item":"WINDOWS","cost":3.24,"receiptFilename":"filename","info":"window screen","isValue":false}
+{"date":"2024-05-31","area":"FRONTYARD","item":"MISC","cost":10.74,"receiptFilename":"filename","info":"weed killer","isValue":false}
+{"date":"2024-05-31","area":"BATH1","item":"WINDOWS","cost":19.13,"receiptFilename":"filename","info":"window screen","isValue":false}
+{"date":"2024-05-30","area":"FRONTYARD","item":"MISC","cost":22.9,"receiptFilename":"filename","info":"pest control","isValue":false}
+{"date":"2024-05-23","area":"LIVING ROOM","item":"PLANTS","cost":40.4,"receiptFilename":"filename","info":"houseplants","isValue":false}
+{"date":"2024-05-21","area":"FRONTYARD","item":"PLANTS","cost":48.49,"receiptFilename":"filename","info":"lavender","isValue":false}
+{"date":"2024-05-21","area":"BACKYARD","item":"PLANTS","cost":22.09,"receiptFilename":"filename","info":"fertilizer","isValue":false}
+{"date":"2024-05-20","area":"KITCHEN","item":"MISC","cost":30.98,"receiptFilename":"filename","info":"garbage bags","isValue":false}
+{"date":"2024-05-18","area":"BACKYARD","item":"MISC","cost":15.05,"receiptFilename":"filename","info":"pet odor eliminator","isValue":false}
+{"date":"2024-05-04","area":"LIVING ROOM","item":"MISC","cost":13.78,"receiptFilename":"filename","info":"HVAC filters","isValue":false}
+{"date":"2024-05-04","area":"LIVING ROOM","item":"MISC","cost":13.96,"receiptFilename":"filename","info":"ac filter","isValue":false}
+{"date":"2024-05-03","area":"FRONTYARD","item":"PLANTS","cost":11.32,"receiptFilename":"C:\\Receipts\\2024_04_20 gloves.jpg","info":"6 pack flowers","isValue":false}
+{"date":"2024-05-03","area":"KITCHEN","item":"FRIG","cost":38.78,"receiptFilename":"filename","info":"Water filters","isValue":false}
+{"date":"2024-05-01","area":"BACKYARD","item":"PLANTS","cost":9.34,"receiptFilename":"filename","info":"tomato plant","isValue":false}
+{"date":"2024-04-26","area":"BACKYARD","item":"PLANTS","cost":22.6,"receiptFilename":"C:\\Receipts\\2024_04_20 gloves.jpg","info":"soil","isValue":false}
+{"date":"2024-04-25","area":"BACKYARD","item":"MISC","cost":26.37,"receiptFilename":"filename","info":"weed killer","isValue":false}
+{"date":"2024-04-21","area":"FRONTYARD","item":"MISC","cost":16.9,"receiptFilename":"filename","info":"Flower pot for daisy","isValue":false}
+{"date":"2024-04-20","area":"GARAGE","item":"MISC","cost":39.19,"receiptFilename":"filename","info":"ant bait","isValue":false}
+{"date":"2024-04-14","area":"GARAGE","item":"LIGHTS","cost":29.08,"receiptFilename":"filename","info":"Etetale Solar Address Sign","isValue":false}
+{"date":"2024-04-11","area":"BACKYARD","item":"PLANTS","cost":29.95,"receiptFilename":"filename","info":"veggies","isValue":false}
+{"date":"2024-04-10","area":"FRONTYARD","item":"PLANTS","cost":13.47,"receiptFilename":"filename","info":"hydro","isValue":false}
+{"date":"2024-04-10","area":"FRONTYARD","item":"MISC","cost":4.27,"receiptFilename":"filename","info":"soil","isValue":false}
+{"date":"2024-04-09","area":"FRONTYARD","item":"MISC","cost":27.97,"receiptFilename":"filename","info":"black rock","isValue":false}
+{"date":"2024-03-21","area":"FRONTYARD","item":"MISC","cost":13.34,"receiptFilename":"filename","info":"black pavers","isValue":false}
+{"date":"2024-03-16","area":"FRONTYARD","item":"MISC","cost":110.98,"receiptFilename":"C:\\Receipts\\2024_03_16 rocks.jpg","info":"rocks","isValue":false}
+{"date":"2024-03-13","area":"FRONTYARD","item":"PLANTS","cost":10.76,"receiptFilename":"C:\\Receipts\\2024_03_13 lawn convert.jpg","info":"mulch black","isValue":false}
+{"date":"2024-03-12","area":"FRONTYARD","item":"MISC","cost":478.41,"receiptFilename":"C:\\Receipts\\2024_03_12 rocks.jpg","info":"rocks","isValue":false}
+{"date":"2024-03-11","area":"LIVING ROOM","item":"PLANTS","cost":9.63,"receiptFilename":"filename","info":"soil","isValue":false}
+{"date":"2024-03-09","area":"FRONTYARD","item":"MISC","cost":7.97,"receiptFilename":"C:\\Receipts\\2024_03_13 lawn convert.jpg","info":"drip system","isValue":false}
+{"date":"2024-03-08","area":"FRONTYARD","item":"MISC","cost":8.14,"receiptFilename":"C:\\Receipts\\2024_03_13 lawn convert.jpg","info":"drip system","isValue":false}
+{"date":"2024-03-07","area":"FRONTYARD","item":"PLANTS","cost":26.94,"receiptFilename":"C:\\Receipts\\2024_03_07 plants.jpg","info":"plants","isValue":false}
+{"date":"2024-03-07","area":"FRONTYARD","item":"MISC","cost":1.06,"receiptFilename":"C:\\Receipts\\2024_03_13 lawn convert.jpg","info":"drip system","isValue":false}
+{"date":"2024-03-07","area":"FRONTYARD","item":"MISC","cost":58.85,"receiptFilename":"C:\\Receipts\\2024_03_13 lawn convert.jpg","info":"drip system","isValue":false}
+{"date":"2024-03-06","area":"FRONTYARD","item":"MISC","cost":30.7,"receiptFilename":"C:\\Receipts\\2024_03_07 plants.jpg","info":"tarp","isValue":false}
+{"date":"2024-03-06","area":"FRONTYARD","item":"MISC","cost":44.09,"receiptFilename":"C:\\Receipts\\2024_03_07 plants.jpg","info":"pvc pipe","isValue":false}
+{"date":"2024-03-05","area":"FRONTYARD","item":"PLANTS","cost":17.13,"receiptFilename":"C:\\Receipts\\2024_03_07 plants.jpg","info":"","isValue":false}
+{"date":"2024-03-05","area":"FRONTYARD","item":"MISC","cost":17.22,"receiptFilename":"filename","info":"stapes","isValue":false}
+{"date":"2024-02-25","area":"FRONTYARD","item":"MISC","cost":126.58,"receiptFilename":"C:\\Receipts\\2024_02_25 sod cutter.jpg","info":"sod cutter rental","isValue":false}
+{"date":"2024-02-24","area":"BACKYARD","item":"PLANTS","cost":14.55,"receiptFilename":"C:\\Receipts\\2024_02_05 toilet rep.jpg","info":"jasmine","isValue":false}
+{"date":"2024-02-11","area":"BACKYARD","item":"MISC","cost":21.53,"receiptFilename":"filename","info":"","isValue":false}
+{"date":"2024-02-06","area":"BATH1","item":"TOILET","cost":4.48,"receiptFilename":"filename","info":"gasket","isValue":false}
+{"date":"2024-02-05","area":"BATH1","item":"TOILET","cost":104.04,"receiptFilename":"C:\\Receipts\\2024_02_05 toilet rep.jpg","info":"new toilet","isValue":false}
+{"date":"2024-01-28","area":"BACKYARD","item":"MISC","cost":10.74,"receiptFilename":"filename","info":"soil","isValue":false}
+{"date":"2023-12-27","area":"LIVING ROOM","item":"PLANTS","cost":7.51,"receiptFilename":"filename","info":"potting mix","isValue":false}
+{"date":"2023-12-24","area":"LIVING ROOM","item":"FLOOR","cost":7.51,"receiptFilename":"filename","info":"floor scrub","isValue":false}
+{"date":"2023-12-23","area":"LIVING ROOM","item":"PLANTS","cost":12.98,"receiptFilename":"C:\\Receipts\\2023_12_5 smoke.jpg","info":"house plant","isValue":false}
+{"date":"2023-12-05","area":"BDRM1","item":"MISC","cost":18.19,"receiptFilename":"C:\\Receipts\\2023_12_5 smoke.jpg","info":"smoke alarm","isValue":false}
+{"date":"2023-12-03","area":"GARAGE","item":"MISC","cost":1.49,"receiptFilename":"filename","info":"","isValue":false}
+{"date":"2023-11-28","area":"FRONTYARD","item":"OUTLETS","cost":4.28,"receiptFilename":"C:\\Receipts\\2023_11_05 ladder.jpg","info":"xmas extension","isValue":false}
+{"date":"2023-11-21","area":"FRONTYARD","item":"MISC","cost":32.78,"receiptFilename":"C:\\Receipts\\2023_11_05 ladder.jpg","info":"xmas decor","isValue":false}
+{"date":"2023-11-05","area":"FRONTYARD","item":"MISC","cost":75.3,"receiptFilename":"C:\\Receipts\\2023_11_05 ladder.jpg","info":"8 ft ladder","isValue":false}
+{"date":"2023-10-28","area":"GARAGE","item":"OUTLETS","cost":7.27,"receiptFilename":"C:\\Receipts\\2023_11_05 ladder.jpg","info":"","isValue":false}
+{"date":"2023-10-26","area":"BACKYARD","item":"PLANTS","cost":16.1,"receiptFilename":"C:\\Receipts\\2023_10_27 plants.jpg","info":"bulbs","isValue":false}
+{"date":"2023-10-24","area":"BACKYARD","item":"MISC","cost":49.45,"receiptFilename":"C:\\Receipts\\2023_10_27 plants.jpg","info":"dog spray soil","isValue":false}
+{"date":"2023-10-23","area":"BACKYARD","item":"PLANTS","cost":5.95,"receiptFilename":"C:\\Receipts\\2023_10_27 plants.jpg","info":"lantana","isValue":false}
+{"date":"2023-10-19","area":"LIVING ROOM","item":"PLANTS","cost":21.51,"receiptFilename":"filename","info":"indoor plants","isValue":false}
+{"date":"2023-09-24","area":"HALLWAY","item":"MISC","cost":8.49,"receiptFilename":"filename","info":"first aid kit","isValue":false}
+{"date":"2023-09-16","area":"FRONTYARD","item":"PLANTS","cost":17.85,"receiptFilename":"C:\\Receipts\\2023_10_27 plants.jpg","info":"","isValue":false}
+{"date":"2023-09-12","area":"LIVING ROOM","item":"PLANTS","cost":20.43,"receiptFilename":"C:\\Receipts\\2023_08_30 plants.jpg","info":"","isValue":false}
+{"date":"2023-09-12","area":"BDRM2","item":"MISC","cost":4.29,"receiptFilename":"C:\\Receipts\\2023_08_30 plants.jpg","info":"spray bottle","isValue":false}
+{"date":"2023-09-02","area":"BACKYARD","item":"MISC","cost":21.93,"receiptFilename":"C:\\Receipts\\2023_08_30 plants.jpg","info":"wood","isValue":false}
+{"date":"2023-08-30","area":"BATH2","item":"TOILET","cost":238.0,"receiptFilename":"filename","info":"bidet and ext cord from Amazon","isValue":false}
+{"date":"2023-08-30","area":"BDRM2","item":"MISC","cost":12.12,"receiptFilename":"C:\\Receipts\\2023_08_30 plants.jpg","info":"new hose for toilet","isValue":false}
+{"date":"2023-08-28","area":"BACKYARD","item":"PLANTS","cost":20.36,"receiptFilename":"C:\\Receipts\\2023_08+25 Toilet.jpg","info":"","isValue":false}
+{"date":"2023-08-28","area":"BACKYARD","item":"PLANTS","cost":15.03,"receiptFilename":"C:\\Receipts\\2023_08+25 Toilet.jpg","info":"","isValue":false}
+{"date":"2023-08-27","area":"FRONTYARD","item":"PLANTS","cost":3.18,"receiptFilename":"C:\\Receipts\\2023_08+25 Toilet.jpg","info":"","isValue":false}
+{"date":"2023-08-25","area":"BATH2","item":"MISC","cost":101.29,"receiptFilename":"C:\\Receipts\\2023_08+25 Toilet.jpg","info":"toilet","isValue":false}
+{"date":"2023-08-09","area":"LIVING ROOM","item":"MISC","cost":13.44,"receiptFilename":"filename","info":"sweeper","isValue":false}
+{"date":"2023-08-08","area":"FRONTYARD","item":"PLANTS","cost":20.31,"receiptFilename":"C:\\Receipts\\2023_08+25 Toilet.jpg","info":"","isValue":false}
+{"date":"2023-07-14","area":"BACKYARD","item":"MISC","cost":5.68,"receiptFilename":"C:\\Receipts\\2023_07_10 Canna.jpg","info":"","isValue":false}
+{"date":"2023-07-10","area":"BACKYARD","item":"PLANTS","cost":9.68,"receiptFilename":"C:\\Receipts\\2023_07_10 Canna.jpg","info":"","isValue":false}
+{"date":"2023-07-06","area":"BACKYARD","item":"PLANTS","cost":30.71,"receiptFilename":"filename","info":"canna lily","isValue":false}
+{"date":"2023-06-29","area":"BACKYARD","item":"MISC","cost":30.54,"receiptFilename":"C:\\Receipts\\2023_06_29 Pet Odor.jpg","info":"odor remover","isValue":false}
+{"date":"2023-06-28","area":"KITCHEN","item":"MISC","cost":30.31,"receiptFilename":"filename","info":"camera for Gigi","isValue":false}
+{"date":"2023-06-28","area":"KITCHEN","item":"MISC","cost":13.38,"receiptFilename":"filename","info":"2 64g card for Gigi camera","isValue":false}
+{"date":"2023-06-27","area":"BACKYARD","item":"MISC","cost":40.86,"receiptFilename":"C:\\Receipts\\2023_06_29 Pet Odor.jpg","info":"mulch and garden hose","isValue":false}
+{"date":"2023-06-26","area":"BACKYARD","item":"PLANTS","cost":18.0,"receiptFilename":"C:\\Receipts\\2023_06_29 Pet Odor.jpg","info":"cactus soil","isValue":false}
+{"date":"2023-06-25","area":"BDRM3","item":"WINDOWS","cost":96.94,"receiptFilename":"C:\\Receipts\\2023_06_29 Pet Odor.jpg","info":"window tinting 3","isValue":false}
+{"date":"2023-06-22","area":"FRONTYARD","item":"PLANTS","cost":10.24,"receiptFilename":"C:\\Receipts\\2023_06_29 Pet Odor.jpg","info":"plant","isValue":false}
+{"date":"2023-06-19","area":"BACKYARD","item":"MISC","cost":10.09,"receiptFilename":"filename","info":"bolt for fence gate","isValue":false}
+{"date":"2023-06-11","area":"BACKYARD","item":"MISC","cost":133.36,"receiptFilename":"C:\\Receipts\\2023_06_07 cord sleeve.jpg","info":"artificial grass for dog","isValue":false}
+{"date":"2023-06-11","area":"FRONTYARD","item":"MISC","cost":50.6,"receiptFilename":"filename","info":"smart sprinkler controller","isValue":false}
+{"date":"2023-06-08","area":"LIVING ROOM","item":"OUTLETS","cost":4.53,"receiptFilename":"C:\\Receipts\\2023_06_07 cord sleeve.jpg","info":"cord sleeve","isValue":false}
+{"date":"2023-06-08","area":"BACKYARD","item":"PLANTS","cost":20.45,"receiptFilename":"C:\\Receipts\\2023_06_07 cord sleeve.jpg","info":"","isValue":false}
+{"date":"2023-06-07","area":"LIVING ROOM","item":"OUTLETS","cost":13.57,"receiptFilename":"C:\\Receipts\\2023_06_07 cord sleeve.jpg","info":"cord sleeves","isValue":false}
+{"date":"2023-06-05","area":"BACKYARD","item":"MISC","cost":15.58,"receiptFilename":"C:\\Receipts\\2023_06_07 cord sleeve.jpg","info":"concrete patch for outer corner wall","isValue":false}
+{"date":"2023-06-05","area":"LIVING ROOM","item":"MISC","cost":12.22,"receiptFilename":"filename","info":"","isValue":false}
+{"date":"2023-06-04","area":"BDRM3","item":"MISC","cost":54.46,"receiptFilename":"C:\\Receipts\\2023_06_01 water wand.jpg","info":"repairs and paint for bedroom wall","isValue":false}
+{"date":"2023-06-03","area":"FRONTYARD","item":"PLANTS","cost":9.7,"receiptFilename":"C:\\Receipts\\2023_06_01 water wand.jpg","info":"","isValue":false}
+{"date":"2023-05-31","area":"BDRM3","item":"PLANTS","cost":19.39,"receiptFilename":"filename","info":"","isValue":false}
+{"date":"2023-05-31","area":"FRONTYARD","item":"MISC","cost":64.64,"receiptFilename":"filename","info":"solar camera","isValue":false}
+{"date":"2023-05-31","area":"FRONTYARD","item":"MISC","cost":12.92,"receiptFilename":"filename","info":"128G SD card for solar camera","isValue":false}
+{"date":"2023-05-29","area":"FRONTYARD","item":"PLANTS","cost":13.99,"receiptFilename":"C:\\Receipts\\2023_06_01 water wand.jpg","info":"water wand","isValue":false}
+{"date":"2023-05-28","area":"LIVING ROOM","item":"MISC","cost":46.03,"receiptFilename":"C:\\Receipts\\2023_05_28 Plants.jpg","info":"drain cleaner","isValue":false}
+{"date":"2023-05-27","area":"FRONTYARD","item":"PLANTS","cost":13.99,"receiptFilename":"C:\\Receipts\\2023_05_28 Plants.jpg","info":"plants for pots","isValue":false}
+{"date":"2023-05-27","area":"BACKYARD","item":"MISC","cost":64.64,"receiptFilename":"filename","info":"solar camera","isValue":false}
+{"date":"2023-05-27","area":"BACKYARD","item":"MISC","cost":12.92,"receiptFilename":"filename","info":"128g SD card for solar camera","isValue":false}
+{"date":"2023-05-26","area":"BACKYARD","item":"PLANTS","cost":15.8,"receiptFilename":"C:\\Receipts\\2023_05_28 Plants.jpg","info":"potted plants","isValue":false}
+{"date":"2023-05-25","area":"BACKYARD","item":"MISC","cost":36.49,"receiptFilename":"C:\\Receipts\\2023_05_28 Plants.jpg","info":"fence springs","isValue":false}
+{"date":"2023-05-23","area":"FRONTYARD","item":"MISC","cost":17.24,"receiptFilename":"C:\\Receipts\\2023_05_28 Plants.jpg","info":"mulch","isValue":false}
+{"date":"2023-05-20","area":"BATH1","item":"SINK","cost":33.22,"receiptFilename":"filename","info":"faucet","isValue":false}
+{"date":"2023-05-10","area":"BACKYARD","item":"PLANTS","cost":2.44,"receiptFilename":"C:\\Receipts\\2023_04_30 Tomato.jpg","info":"","isValue":false}
+{"date":"2023-05-10","area":"ROOF","item":"MISC","cost":32.28,"receiptFilename":"C:\\Receipts\\2023_05_10 AC & Dog Enc.jpg","info":"roof shingles and glue","isValue":false}
+{"date":"2023-05-10","area":"FRONTYARD","item":"PLANTS","cost":57.65,"receiptFilename":"C:\\Receipts\\2023_05_10 AC & Dog Enc.jpg","info":"soil","isValue":false}
+{"date":"2023-05-09","area":"BACKYARD","item":"MISC","cost":33.45,"receiptFilename":"C:\\Receipts\\2023_05_10 AC & Dog Enc.jpg","info":"gravel","isValue":false}
+{"date":"2023-05-07","area":"BATH1","item":"MISC","cost":15.99,"receiptFilename":"filename","info":"curtains","isValue":false}
+{"date":"2023-05-04","area":"BACKYARD","item":"MISC","cost":26.85,"receiptFilename":"C:\\Receipts\\2023_05_10 AC & Dog Enc.jpg","info":"screws and air cleaner","isValue":false}
+{"date":"2023-05-03","area":"BACKYARD","item":"MISC","cost":72.64,"receiptFilename":"C:\\Receipts\\2023_05_10 AC & Dog Enc.jpg","info":"wood structure for AC and dog","isValue":false}
+{"date":"2023-05-03","area":"FRONTYARD","item":"PLANTS","cost":10.2,"receiptFilename":"C:\\Receipts\\2023_05_10 AC & Dog Enc.jpg","info":"lawn grass seeds","isValue":false}
+{"date":"2023-05-03","area":"BATH1","item":"MISC","cost":15.99,"receiptFilename":"filename","info":"curtains","isValue":false}
+{"date":"2023-04-30","area":"FRONTYARD","item":"MISC","cost":28.47,"receiptFilename":"C:\\Receipts\\2023_04_30 Tomato.jpg","info":"black mulch","isValue":false}
+{"date":"2023-04-30","area":"BACKYARD","item":"MISC","cost":10.75,"receiptFilename":"filename","info":"weed digger tool","isValue":false}
+{"date":"2023-04-28","area":"BACKYARD","item":"PLANTS","cost":27.55,"receiptFilename":"C:\\Receipts\\2023_04_30 Tomato.jpg","info":"annual herb and vegies","isValue":false}
+{"date":"2023-04-06","area":"LIVING ROOM","item":"PLANTS","cost":18.26,"receiptFilename":"filename","info":"indoor plants","isValue":false}
+{"date":"2023-04-04","area":"GARAGE","item":"MISC","cost":60.62,"receiptFilename":"C:\\Receipts\\2023_03_19 Paint.jpg","info":"handtruck","isValue":false}
+{"date":"2023-03-29","area":"FRONTYARD","item":"PLANTS","cost":21.47,"receiptFilename":"C:\\Receipts\\2023_03_19 Paint.jpg","info":"flowers","isValue":false}
+{"date":"2023-03-19","area":"BACKYARD","item":"MISC","cost":41.51,"receiptFilename":"C:\\Receipts\\2023_03_19 Paint.jpg","info":"paint exterior","isValue":false}
+{"date":"2023-03-18","area":"BACKYARD","item":"FENCE","cost":114.05,"receiptFilename":"C:\\Receipts\\2023_03_18 lattice.jpg","info":"lattace","isValue":false}
+{"date":"2023-03-18","area":"BACKYARD","item":"FENCE","cost":18.17,"receiptFilename":"C:\\Receipts\\2023_03_18 lattice.jpg","info":"nails and seeds","isValue":false}
+{"date":"2023-03-18","area":"FRONTYARD","item":"PLANTS","cost":3.52,"receiptFilename":"C:\\Receipts\\2023_03_18 lattice.jpg","info":"top soil","isValue":false}
+{"date":"2023-03-17","area":"BACKYARD","item":"FENCE","cost":13.96,"receiptFilename":"C:\\Receipts\\2023_03_18 lattice.jpg","info":"13.96","isValue":false}
+{"date":"2023-03-13","area":"BACKYARD","item":"MISC","cost":15.39,"receiptFilename":"C:\\Receipts\\2023_03_13 const screws.jpg","info":"connector screww","isValue":false}
+{"date":"2023-03-11","area":"BACKYARD","item":"MISC","cost":23.6,"receiptFilename":"C:\\Receipts\\2023_03_13 const screws.jpg","info":"brackets for fence posts","isValue":false}
+{"date":"2023-03-08","area":"FRONTYARD","item":"PLANTS","cost":24.75,"receiptFilename":"C:\\Receipts\\2023_03_13 const screws.jpg","info":"lawn fertilizer","isValue":false}
+{"date":"2023-03-08","area":"BACKYARD","item":"MISC","cost":38.34,"receiptFilename":"C:\\Receipts\\2023_03_13 const screws.jpg","info":"outside wall paint","isValue":false}
+{"date":"2023-03-07","area":"FRONTYARD","item":"MISC","cost":5.37,"receiptFilename":"C:\\Receipts\\2023_03_13 const screws.jpg","info":"bucket for concrete","isValue":false}
+{"date":"2023-03-07","area":"FRONTYARD","item":"MISC","cost":18.26,"receiptFilename":"C:\\Receipts\\2023_03_13 const screws.jpg","info":"gloves","isValue":false}
+{"date":"2023-03-07","area":"LIVING ROOM","item":"MISC","cost":10486.0,"receiptFilename":"filename","info":"HVAC replacement by Clarke and Rush","isValue":false}
+{"date":"2023-03-06","area":"FRONTYARD","item":"MISC","cost":10.09,"receiptFilename":"C:\\Receipts\\2023_02_17 lumber.jpg","info":"cement","isValue":false}
+{"date":"2023-03-03","area":"BACKYARD","item":"MISC","cost":66.81,"receiptFilename":"filename","info":"auger rental","isValue":false}
+{"date":"2023-03-02","area":"BACKYARD","item":"PLANTS","cost":23.17,"receiptFilename":"C:\\Receipts\\2023_02_17 lumber.jpg","info":"Iris","isValue":false}
+{"date":"2023-03-01","area":"FRONTYARD","item":"MISC","cost":7.08,"receiptFilename":"C:\\Receipts\\2023_02_17 lumber.jpg","info":"drippers","isValue":false}
+{"date":"2023-02-17","area":"BACKYARD","item":"FENCE","cost":46.57,"receiptFilename":"C:\\Receipts\\2023_02_17 lumber.jpg","info":"lumber for dog fence","isValue":false}
+{"date":"2023-02-08","area":"KITCHEN","item":"OUTLETS","cost":1.81,"receiptFilename":"C:\\Receipts\\2023_01_25 DAP concrete.jpg","info":"kitchen wall plate","isValue":false}
+{"date":"2023-02-04","area":"BACKYARD","item":"MISC","cost":21.49,"receiptFilename":"C:\\Receipts\\2023_01_25 DAP concrete.jpg","info":"hardware for pergola","isValue":false}
+{"date":"2023-02-01","area":"KITCHEN","item":"OUTLETS","cost":28.53,"receiptFilename":"C:\\Receipts\\2023_01_25 DAP concrete.jpg","info":"replace kitchen outlet microwave","isValue":false}
+{"date":"2023-01-31","area":"FRONTYARD","item":"PLANTS","cost":4.92,"receiptFilename":"C:\\Receipts\\2023_01_25 DAP concrete.jpg","info":"soil for front yard","isValue":false}
+{"date":"2023-01-31","area":"BACKYARD","item":"MISC","cost":104.95,"receiptFilename":"C:\\Receipts\\2023_01_25 DAP concrete.jpg","info":"roof tops for pergola","isValue":false}
+{"date":"2023-01-26","area":"BACKYARD","item":"MISC","cost":16.12,"receiptFilename":"C:\\Receipts\\2023_01_25 DAP concrete.jpg","info":"concrete for outside walls","isValue":false}
+{"date":"2023-01-25","area":"BACKYARD","item":"MISC","cost":24.18,"receiptFilename":"C:\\Receipts\\2023_01_25 DAP concrete.jpg","info":"liquid cement for outside walls","isValue":false}
+{"date":"2023-01-21","area":"KITCHEN","item":"WALLS","cost":27.42,"receiptFilename":"C:\\Receipts\\2023_01_10 kitchen.jpg","info":"snip for tiles","isValue":false}
+{"date":"2023-01-20","area":"KITCHEN","item":"WALLS","cost":70.0,"receiptFilename":"filename","info":"Amazon backsplash tiles","isValue":false}
+{"date":"2023-01-17","area":"KITCHEN","item":"MISC","cost":71.01,"receiptFilename":"C:\\Receipts\\2023_01_10 kitchen.jpg","info":"kitchen cabinet","isValue":false}
+{"date":"2023-01-13","area":"KITCHEN","item":"MISC","cost":63.36,"receiptFilename":"C:\\Receipts\\2023_01_10 kitchen.jpg","info":"kitchen cabinets","isValue":false}
+{"date":"2023-01-12","area":"KITCHEN","item":"MISC","cost":79.53,"receiptFilename":"C:\\Receipts\\2023_01_10 kitchen.jpg","info":"kitchen cabinets","isValue":false}
+{"date":"2023-01-10","area":"KITCHEN","item":"MISC","cost":32.48,"receiptFilename":"C:\\Receipts\\2023_01_10 kitchen.jpg","info":"cabinet door handles","isValue":false}
+{"date":"2023-01-08","area":"KITCHEN","item":"MISC","cost":43.01,"receiptFilename":"C:\\Receipts\\2023_01_08 cabinets.jpg","info":"wood molding","isValue":false}
+{"date":"2023-01-08","area":"KITCHEN","item":"MISC","cost":43.56,"receiptFilename":"C:\\Receipts\\2023_01_08 cabinets.jpg","info":"paint","isValue":false}
+{"date":"2023-01-05","area":"KITCHEN","item":"MISC","cost":40.84,"receiptFilename":"C:\\Receipts\\2023_01_08 cabinets.jpg","info":"door knobs","isValue":false}
+{"date":"2023-01-05","area":"LIVING ROOM","item":"MISC","cost":56.74,"receiptFilename":"filename","info":"Air Filters for HVAC system","isValue":false}
+{"date":"2023-01-04","area":"BATH1","item":"DOOR","cost":72.03,"receiptFilename":"filename","info":"Black door knobs for right side of house","isValue":false}
+{"date":"2023-01-02","area":"KITCHEN","item":"MISC","cost":24.53,"receiptFilename":"C:\\Receipts\\2023_01_08 cabinets.jpg","info":"adhesive","isValue":false}
+{"date":"2022-12-31","area":"LIVING ROOM","item":"FLOOR","cost":17.72,"receiptFilename":"filename","info":"floor care","isValue":false}
+{"date":"2022-12-30","area":"KITCHEN","item":"CLOSET","cost":15.57,"receiptFilename":"filename","info":"longer bolts","isValue":false}
+{"date":"2022-12-29","area":"KITCHEN","item":"MISC","cost":46.27,"receiptFilename":"C:\\Receipts\\2022_11_23 xmas.jpg","info":"kitchen cabinet resurface","isValue":false}
+{"date":"2022-12-29","area":"BATH2","item":"TOILET","cost":15.07,"receiptFilename":"filename","info":"Blue cover for toilet tank","isValue":false}
+{"date":"2022-12-24","area":"LIVING ROOM","item":"MISC","cost":22.76,"receiptFilename":"filename","info":"Couch covers","isValue":false}
+{"date":"2022-12-20","area":"LIVING ROOM","item":"FLOOR","cost":140.0,"receiptFilename":"filename","info":"floor scrubber and scrub pads","isValue":false}
+{"date":"2022-12-20","area":"BDRM3","item":"MISC","cost":34.47,"receiptFilename":"filename","info":"3 pack light switch for Luis office","isValue":false}
+{"date":"2022-12-20","area":"LIVING ROOM","item":"OUTLETS","cost":10.7,"receiptFilename":"filename","info":"Light switech or recptable cover plate(black)","isValue":false}
+{"date":"2022-12-20","area":"LIVING ROOM","item":"LIGHTS","cost":10.99,"receiptFilename":"filename","info":"ENERLITES Toggle Light Switch Wall Plate","isValue":false}
+{"date":"2022-12-18","area":"KITCHEN","item":"MISC","cost":19.71,"receiptFilename":"C:\\Receipts\\2022_11_23 xmas.jpg","info":"kitchen cabinet resurface","isValue":false}
+{"date":"2022-12-17","area":"GARAGE","item":"MISC","cost":31.48,"receiptFilename":"C:\\Receipts\\2022_11_23 xmas.jpg","info":"pest control","isValue":false}
+{"date":"2022-12-15","area":"LIVING ROOM","item":"LIGHTS","cost":10.99,"receiptFilename":"filename","info":"ENERLITES Toggle Light Switch Wall Plate","isValue":false}
+{"date":"2022-12-12","area":"LIVING ROOM","item":"OUTLETS","cost":5.99,"receiptFilename":"filename","info":"ENERLITES Double Duplex Wall Plate","isValue":false}
+{"date":"2022-12-12","area":"LIVING ROOM","item":"OUTLETS","cost":5.99,"receiptFilename":"filename","info":"ENERLITES Double Duplex Wall Plate","isValue":false}
+{"date":"2022-12-12","area":"LIVING ROOM","item":"OUTLETS","cost":7.58,"receiptFilename":"filename","info":"ENERLITES Double Duplex Wall Plate","isValue":false}
+{"date":"2022-12-09","area":"BACKYARD","item":"MISC","cost":32.26,"receiptFilename":"C:\\Receipts\\2022_11_23 xmas.jpg","info":"staple gun","isValue":false}
+{"date":"2022-12-07","area":"BATH2","item":"OUTLETS","cost":14.99,"receiptFilename":"filename","info":"Blue Marble Light Switch Cover-Single","isValue":false}
+{"date":"2022-12-07","area":"BATH1","item":"OUTLETS","cost":13.99,"receiptFilename":"filename","info":"White Marble Light Switch Cover--Double","isValue":false}
+{"date":"2022-12-07","area":"BATH1","item":"OUTLETS","cost":13.99,"receiptFilename":"filename","info":"White Marble Light Switch Cover--Single","isValue":false}
+{"date":"2022-12-05","area":"BATH2","item":"OUTLETS","cost":16.99,"receiptFilename":"filename","info":"Blue Marble Light Switch Cover","isValue":false}
+{"date":"2022-12-05","area":"FRONTYARD","item":"PLANTS","cost":53.88,"receiptFilename":"C:\\Receipts\\2022_11_17 Sewer.jpg","info":"maple tree","isValue":false}
+{"date":"2022-12-04","area":"LIVING ROOM","item":"MISC","cost":16.11,"receiptFilename":"C:\\Receipts\\2022_11_17 Sewer.jpg","info":"indoor potting mix","isValue":false}
+{"date":"2022-11-29","area":"BATH1","item":"LGHTS","cost":22.77,"receiptFilename":"filename","info":"smart switches for both bathrooms","isValue":false}
+{"date":"2022-11-25","area":"FRONTYARD","item":"LIGHTS","cost":19.38,"receiptFilename":"filename","info":"extra battery for ring doorbell & camera","isValue":false}
+{"date":"2022-11-23","area":"FRONTYARD","item":"OUTLETS","cost":20.0,"receiptFilename":"C:\\Receipts\\2022_11_23 xmas.jpg","info":"outdoor extension","isValue":false}
+{"date":"2022-11-17","area":"BATH1","item":"SINK","cost":12.09,"receiptFilename":"filename","info":"black towel holder ring","isValue":false}
+{"date":"2022-11-12","area":"BATH1","item":"TOILET","cost":8.33,"receiptFilename":"filename","info":"toilet paper holder","isValue":false}
+{"date":"2022-11-03","area":"FRONTYARD","item":"MISC","cost":252.87,"receiptFilename":"filename","info":"Christmas tree outdoors","isValue":false}
+{"date":"2022-10-26","area":"FRONTYARD","item":"LIGHTS","cost":15.4,"receiptFilename":"filename","info":"lights for front door outside light","isValue":false}
+{"date":"2022-10-25","area":"LIVING ROOM","item":"MISC","cost":89.5,"receiptFilename":"filename","info":"yearly heater inspection","isValue":false}
+{"date":"2022-10-25","area":"BATH1","item":"LIGHTS","cost":23.36,"receiptFilename":"filename","info":"black vanity light fisture","isValue":false}
+{"date":"2022-10-23","area":"FRONTYARD","item":"MISC","cost":37.71,"receiptFilename":"C:\\Receipts\\2022_10_23 Spinners.jpg","info":"wind spinner","isValue":false}
+{"date":"2022-10-21","area":"BACKYARD","item":"MISC","cost":50.0,"receiptFilename":"filename","info":"patio pergola cover","isValue":false}
+{"date":"2022-10-20","area":"BATH2","item":"TOILET","cost":15.79,"receiptFilename":"C:\\Receipts\\2022_10_23 Spinners.jpg","info":"","isValue":false}
+{"date":"2022-10-20","area":"FRONTYARD","item":"GUTTERS","cost":25.0,"receiptFilename":"filename","info":"Rain chain for gutter from Amazon","isValue":false}
+{"date":"2022-10-17","area":"FRONTYARD","item":"LIGHTS","cost":18.0,"receiptFilename":"filename","info":"front garage","isValue":false}
+{"date":"2022-10-16","area":"BACKYARD","item":"MISC","cost":12.92,"receiptFilename":"C:\\Receipts\\2022_10_23 Spinners.jpg","info":"wood for grape trellis","isValue":false}
+{"date":"2022-10-14","area":"LIVING ROOM","item":"MISC","cost":16.27,"receiptFilename":"filename","info":"wifi extender","isValue":false}
+{"date":"2022-10-13","area":"GARAGE","item":"LIGHTS","cost":19.33,"receiptFilename":"filename","info":"smart bulb for garage outside garage lights","isValue":false}
+{"date":"2022-10-09","area":"BACKYARD","item":"PLANTS","cost":6.47,"receiptFilename":"C:\\Receipts\\2022_10_23 Spinners.jpg","info":"canna lily plant","isValue":false}
+{"date":"2022-10-08","area":"BACKYARD","item":"MISC","cost":74.49,"receiptFilename":"C:\\Receipts\\2022_10_08 ext cord.jpg","info":"grill cover","isValue":false}
+{"date":"2022-10-05","area":"ROOF","item":"GUTTERS","cost":39.5,"receiptFilename":"C:\\Receipts\\2022_10_08 ext cord.jpg","info":"","isValue":false}
+{"date":"2022-09-23","area":"GARAGE","item":"MISC","cost":27.87,"receiptFilename":"filename","info":"wrokbench light","isValue":false}
+{"date":"2022-09-11","area":"FRONTYARD","item":"PLANTS","cost":8.04,"receiptFilename":"C:\\Receipts\\2022_10_08 ext cord.jpg","info":"","isValue":false}
+{"date":"2022-09-11","area":"BACKYARD","item":"PLANTS","cost":20.38,"receiptFilename":"C:\\Receipts\\2022_10_08 ext cord.jpg","info":"","isValue":false}
+{"date":"2022-09-08","area":"BACKYARD","item":"MISC","cost":50.79,"receiptFilename":"filename","info":"cloth dry rack","isValue":false}
+{"date":"2022-09-04","area":"FRONTYARD","item":"MISC","cost":40.0,"receiptFilename":"filename","info":"rain barrel","isValue":false}
+{"date":"2022-08-28","area":"FRONTYARD","item":"MISC","cost":9.14,"receiptFilename":"C:\\Receipts\\2022-08_14 yard.jpg","info":"rain drip coupler","isValue":false}
+{"date":"2022-08-28","area":"FRONTYARD","item":"MISC","cost":2.74,"receiptFilename":"filename","info":"rain drip coupler","isValue":false}
+{"date":"2022-08-27","area":"FRONTYARD","item":"MISC","cost":53.28,"receiptFilename":"C:\\Receipts\\2022-08_14 yard.jpg","info":"tarp","isValue":false}
+{"date":"2022-08-27","area":"FRONTYARD","item":"MISC","cost":21.6,"receiptFilename":"filename","info":"mulch 6 bags","isValue":false}
+{"date":"2022-08-14","area":"FRONTYARD","item":"MISC","cost":24.17,"receiptFilename":"C:\\Receipts\\2022-08_14 yard.jpg","info":"pots","isValue":false}
+{"date":"2022-07-23","area":"BACKYARD","item":"MISC","cost":16.1,"receiptFilename":"C:\\Receipts\\2022_07_15 Hose.jpg","info":"buckets","isValue":false}
+{"date":"2022-07-19","area":"FRONTYARD","item":"MISC","cost":35.54,"receiptFilename":"C:\\Receipts\\2022_07_15 Hose.jpg","info":"garden hose","isValue":false}
+{"date":"2022-07-15","area":"FRONTYARD","item":"PLANTS","cost":23.72,"receiptFilename":"C:\\Receipts\\2022_07_15 Hose.jpg","info":"","isValue":false}
+{"date":"2022-07-07","area":"BACKYARD","item":"MISC","cost":6.93,"receiptFilename":"C:\\Receipts\\2022_07_04 raindrip.jpg","info":"","isValue":false}
+{"date":"2022-07-04","area":"BACKYARD","item":"MISC","cost":8.52,"receiptFilename":"C:\\Receipts\\2022_07_04 raindrip.jpg","info":"","isValue":false}
+{"date":"2022-06-30","area":"BACKYARD","item":"MISC","cost":12.62,"receiptFilename":"C:\\Receipts\\2022_07_04 raindrip.jpg","info":"","isValue":false}
+{"date":"2022-06-26","area":"BACKYARD","item":"MISC","cost":16.77,"receiptFilename":"C:\\Receipts\\2022_06_20 rain drip.jpg","info":"","isValue":false}
+{"date":"2022-06-25","area":"BACKYARD","item":"MISC","cost":61.39,"receiptFilename":"C:\\Receipts\\2022_06_20 rain drip.jpg","info":"rain drip system for backyard","isValue":false}
+{"date":"2022-06-21","area":"FRONTYARD","item":"MISC","cost":10.73,"receiptFilename":"C:\\Receipts\\2022_06_20 rain drip.jpg","info":"","isValue":false}
+{"date":"2022-06-20","area":"FRONTYARD","item":"MISC","cost":16.67,"receiptFilename":"C:\\Receipts\\2022_06_20 rain drip.jpg","info":"fertilizer","isValue":false}
+{"date":"2022-06-16","area":"BATH2","item":"SINK","cost":87.23,"receiptFilename":"C:\\Receipts\\2022_6_19 Bath fixture.jpg","info":"replacement sink vanity fixture","isValue":false}
+{"date":"2022-06-15","area":"BATH2","item":"MISC","cost":9.0,"receiptFilename":"C:\\Receipts\\2022_6_19 Bath fixture.jpg","info":"toilet sink valve","isValue":false}
+{"date":"2022-06-12","area":"BDRM3","item":"WALLS","cost":9.0,"receiptFilename":"C:\\Receipts\\2022_6_19 Bath fixture.jpg","info":"wall finishing nails","isValue":false}
+{"date":"2022-06-11","area":"BACKYARD","item":"MISC","cost":10.01,"receiptFilename":"C:\\Receipts\\2022_6_19 Bath fixture.jpg","info":"","isValue":false}
+{"date":"2022-06-05","area":"BACKYARD","item":"FENCE","cost":33.44,"receiptFilename":"C:\\Receipts\\2022_06_08 Fence gate hardware.jpg","info":"fence gate hardware","isValue":false}
+{"date":"2022-06-04","area":"BACKYARD","item":"FENCE","cost":54.05,"receiptFilename":"C:\\Receipts\\2022_06_04 Fenc Gate.jpg","info":"redwood panels for fence","isValue":false}
+{"date":"2022-06-04","area":"BACKYARD","item":"MISC","cost":27.44,"receiptFilename":"C:\\Receipts\\2022_06_08 Fence gate hardware.jpg","info":"Mulch","isValue":false}
+{"date":"2022-05-28","area":"BACKYARD","item":"PLANTS","cost":8.53,"receiptFilename":"C:\\Receipts\\2022_05_15 grass.jpg","info":"plant","isValue":false}
+{"date":"2022-05-28","area":"FRONTYARD","item":"MISC","cost":23.92,"receiptFilename":"C:\\Receipts\\2022_06_08 Fence gate hardware.jpg","info":"twin pack rotor with nozzle","isValue":false}
+{"date":"2022-05-26","area":"BACKYARD","item":"PLANTS","cost":16.23,"receiptFilename":"C:\\Receipts\\2022_05_15 grass.jpg","info":"indoor plant","isValue":false}
+{"date":"2022-05-24","area":"FRONTYARD","item":"PLANTS","cost":26.94,"receiptFilename":"C:\\Receipts\\2022_05_15 grass.jpg","info":"jasmine","isValue":false}
+{"date":"2022-05-22","area":"BACKYARD","item":"PLANTS","cost":14.98,"receiptFilename":"C:\\Receipts\\2022_05_15 grass.jpg","info":"daisy","isValue":false}
+{"date":"2022-05-20","area":"GARAGE","item":"DOOR","cost":5.14,"receiptFilename":"C:\\Receipts\\2022_05_15 grass.jpg","info":"push pin","isValue":false}
+{"date":"2022-05-15","area":"BACKYARD","item":"PLANTS","cost":23.66,"receiptFilename":"C:\\Receipts\\2022_05_15 new hose.jpg","info":"lantana","isValue":false}
+{"date":"2022-05-15","area":"FRONTYARD","item":"PLANTS","cost":19.36,"receiptFilename":"C:\\Receipts\\2022_05_15 grass.jpg","info":"turf builder","isValue":false}
+{"date":"2022-05-14","area":"BACKYARD","item":"MISC","cost":61.34,"receiptFilename":"C:\\Receipts\\2022_05_15 new hose.jpg","info":"new garden hose","isValue":false}
+{"date":"2022-05-11","area":"BACKYARD","item":"MISC","cost":19.3,"receiptFilename":"C:\\Receipts\\2022_05_15 new hose.jpg","info":"hooks","isValue":false}
+{"date":"2022-05-09","area":"FRONTYARD","item":"DOOR","cost":72.25,"receiptFilename":"C:\\Receipts\\2022_05_15 new hose.jpg","info":"Paint for front door","isValue":false}
+{"date":"2022-05-07","area":"BACKYARD","item":"MISC","cost":290.0,"receiptFilename":"filename","info":"garden tool shed","isValue":false}
+{"date":"2022-05-04","area":"BACKYARD","item":"MISC","cost":7.51,"receiptFilename":"filename","info":"mosquito repellant","isValue":false}
+{"date":"2022-05-03","area":"BACKYARD","item":"MISC","cost":23.82,"receiptFilename":"C:\\Receipts\\2022_05_01 Plants.jpg","info":"planter box","isValue":false}
+{"date":"2022-05-02","area":"BACKYARD","item":"OUTLETS","cost":10.0,"receiptFilename":"C:\\Receipts\\2022_05_01 Plants.jpg","info":"backyard outlet cover","isValue":false}
+{"date":"2022-05-02","area":"FRONTYARD","item":"PLANTS","cost":14.99,"receiptFilename":"C:\\Receipts\\2022_05_01 Plants.jpg","info":"grass seeds","isValue":false}
+{"date":"2022-05-01","area":"BACKYARD","item":"PLANTS","cost":12.68,"receiptFilename":"C:\\Receipts\\2022_05_01 Plants.jpg","info":"succulent","isValue":false}
+{"date":"2022-04-30","area":"FRONTYARD","item":"MISC","cost":77.57,"receiptFilename":"filename","info":"Lawn trimmer","isValue":false}
+{"date":"2022-04-30","area":"BACKYARD","item":"PLANTS","cost":8.53,"receiptFilename":"C:\\Receipts\\2022_05_01 Plants.jpg","info":"soil","isValue":false}
+{"date":"2022-04-30","area":"BACKYARD","item":"PLANTS","cost":26.67,"receiptFilename":"C:\\Receipts\\2022_05_01 Plants.jpg","info":"veggies","isValue":false}
+{"date":"2022-04-29","area":"BACKYARD","item":"MISC","cost":8.34,"receiptFilename":"C:\\Receipts\\2022_05_01 Plants.jpg","info":"solar shade","isValue":false}
+{"date":"2022-04-27","area":"FRONTYARD","item":"MISC","cost":99.98,"receiptFilename":"filename","info":"Lawn edger","isValue":false}
+{"date":"2022-04-27","area":"LIVING ROOM","item":"MISC","cost":56.0,"receiptFilename":"filename","info":"Air conditioner service","isValue":false}
+{"date":"2022-04-26","area":"BACKYARD","item":"MISC","cost":29.52,"receiptFilename":"C:\\Receipts\\2022_04_28 Planter boxes.jpg","info":"wood","isValue":false}
+{"date":"2022-04-24","area":"BACKYARD","item":"MISC","cost":29.86,"receiptFilename":"C:\\Receipts\\2022_04_28 Planter boxes.jpg","info":"planter box","isValue":false}
+{"date":"2022-04-23","area":"BACKYARD","item":"MISC","cost":21.52,"receiptFilename":"C:\\Receipts\\2022_04_28 Planter boxes.jpg","info":"fir for planter boxes","isValue":false}
+{"date":"2022-04-17","area":"BACKYARD","item":"MISC","cost":25.0,"receiptFilename":"C:\\Receipts\\2022_04_28 Planter boxes.jpg","info":"garden tool","isValue":false}
+{"date":"2022-04-16","area":"BACKYARD","item":"PLANTS","cost":10.67,"receiptFilename":"C:\\Receipts\\2022_04_28 Planter boxes.jpg","info":"soil","isValue":false}
+{"date":"2022-04-15","area":"BACKYARD","item":"PLANTS","cost":27.55,"receiptFilename":"C:\\Receipts\\2022_04_10 soil.jpg","info":"plants","isValue":false}
+{"date":"2022-04-15","area":"BACKYARD","item":"MISC","cost":62.18,"receiptFilename":"C:\\Receipts\\2022_04_10 soil.jpg","info":"semi gloss paint","isValue":false}
+{"date":"2022-04-13","area":"BACKYARD","item":"MISC","cost":20.62,"receiptFilename":"C:\\Receipts\\2022_04_10 soil.jpg","info":"ant trap","isValue":false}
+{"date":"2022-04-12","area":"BACKYARD","item":"PLANTS","cost":28.52,"receiptFilename":"C:\\Receipts\\2022_04_10 soil.jpg","info":"mulch","isValue":false}
+{"date":"2022-04-11","area":"KITCHEN","item":"MISC","cost":51.99,"receiptFilename":"filename","info":"water filter","isValue":false}
+{"date":"2022-04-10","area":"BACKYARD","item":"MISC","cost":18.24,"receiptFilename":"C:\\Receipts\\20220410 Pergola.jpg","info":"fasteners","isValue":false}
+{"date":"2022-04-10","area":"BACKYARD","item":"MISC","cost":13.0,"receiptFilename":"C:\\Receipts\\20220410 Pergola.jpg","info":"concrete drill bit","isValue":false}
+{"date":"2022-04-10","area":"BACKYARD","item":"MISC","cost":29.92,"receiptFilename":"C:\\Receipts\\20220410 Pergola.jpg","info":"soli and wood","isValue":false}
+{"date":"2022-04-10","area":"GARAGE","item":"MISC","cost":2.46,"receiptFilename":"filename","info":"bucket lid","isValue":false}
+{"date":"2022-04-05","area":"BACKYARD","item":"MISC","cost":28.93,"receiptFilename":"C:\\Receipts\\20220410 Pergola.jpg","info":"fasteners for pergola","isValue":false}
+{"date":"2022-04-03","area":"FRONTYARD","item":"PLANTS","cost":12.9,"receiptFilename":"C:\\Receipts\\20220410 Pergola.jpg","info":"grass","isValue":false}
+{"date":"2022-03-31","area":"BACKYARD","item":"MISC","cost":31.5,"receiptFilename":"C:\\Receipts\\20220410 Pergola.jpg","info":"pergola hardware","isValue":false}
+{"date":"2022-03-24","area":"FRONTYARD","item":"MISC","cost":6.43,"receiptFilename":"C:\\Receipts\\2022_03_23 Red Tip.jpg","info":"drippers","isValue":false}
+{"date":"2022-03-23","area":"GARAGE","item":"OUTLETS","cost":5.25,"receiptFilename":"C:\\Receipts\\2022_02_23 outlet.jpg","info":"electrical plates","isValue":false}
+{"date":"2022-03-22","area":"BACKYARD","item":"MISC","cost":64.48,"receiptFilename":"C:\\Receipts\\2022_03_23 Red Tip.jpg","info":"pergola paint","isValue":false}
+{"date":"2022-03-20","area":"FRONTYARD","item":"PLANTS","cost":85.65,"receiptFilename":"C:\\Receipts\\2022_03_23 Red Tip.jpg","info":"red tip photinia","isValue":false}
+{"date":"2022-03-20","area":"FRONTYARD","item":"PLANTS","cost":14.71,"receiptFilename":"C:\\Receipts\\2022_03_23 Red Tip.jpg","info":"soil","isValue":false}
+{"date":"2022-03-19","area":"BACKYARD","item":"MISC","cost":49.0,"receiptFilename":"C:\\Receipts\\2022_03_15 Pergola.jpg","info":"pergola","isValue":false}
+{"date":"2022-03-16","area":"BACKYARD","item":"MISC","cost":20.49,"receiptFilename":"C:\\Receipts\\2022_03_15 Pergola.jpg","info":"pergola","isValue":false}
+{"date":"2022-03-15","area":"BACKYARD","item":"MISC","cost":12.47,"receiptFilename":"C:\\Receipts\\2022_03_15 Pergola.jpg","info":"pergola","isValue":false}
+{"date":"2022-03-13","area":"BACKYARD","item":"MISC","cost":29.0,"receiptFilename":"C:\\Receipts\\2022_03_13 Pergola.jpg","info":"pergola","isValue":false}
+{"date":"2022-03-12","area":"BACKYARD","item":"MISC","cost":53.81,"receiptFilename":"C:\\Receipts\\2022_03_13 Pergola.jpg","info":"pergola","isValue":false}
+{"date":"2022-03-05","area":"GARAGE","item":"OUTLETS","cost":6.08,"receiptFilename":"C:\\Receipts\\2022_02_23 outlet.jpg","info":"","isValue":false}
+{"date":"2022-03-05","area":"GARAGE","item":"LIGHTS","cost":92.19,"receiptFilename":"C:\\Receipts\\2022_03_13 Pergola.jpg","info":"electrical wire","isValue":false}
+{"date":"2022-03-05","area":"BACKYARD","item":"MISC","cost":172.9,"receiptFilename":"filename","info":"woods for pergola","isValue":false}
+{"date":"2022-03-04","area":"GARAGE","item":"OUTLETS","cost":4.58,"receiptFilename":"C:\\Receipts\\2022_02_23 outlet.jpg","info":"","isValue":false}
+{"date":"2022-03-01","area":"FRONTYARD","item":"LIGHTS","cost":86.97,"receiptFilename":"C:\\Receipts\\2022_02_23 outlet.jpg","info":"front porch light","isValue":false}
+{"date":"2022-02-20","area":"FRONTYARD","item":"MISC","cost":16.5,"receiptFilename":"C:\\Receipts\\2022_02_20 plants.jpg","info":"raindrip system emitters","isValue":false}
+{"date":"2022-02-20","area":"FRONTYARD","item":"PLANTS","cost":30.97,"receiptFilename":"C:\\Receipts\\2022_02_20 plants.jpg","info":"flowering quince","isValue":false}
+{"date":"2022-02-19","area":"FRONTYARD","item":"PLANTS","cost":72.7,"receiptFilename":"C:\\Receipts\\2022_02_20 plants.jpg","info":"sweet broom and indoor bird of P","isValue":false}
+{"date":"2022-02-19","area":"FRONTYARD","item":"PLANTS","cost":51.17,"receiptFilename":"C:\\Receipts\\2022_02_20 plants.jpg","info":"Lavender and bark","isValue":false}
+{"date":"2022-02-13","area":"FRONTYARD","item":"PLANTS","cost":20.27,"receiptFilename":"C:\\Receipts\\2022_02_20 plants.jpg","info":"bark","isValue":false}
+{"date":"2022-02-10","area":"FRONTYARD","item":"PLANTS","cost":41.55,"receiptFilename":"C:\\Receipts\\2022_02_10 Raindrip.jpg","info":"raindrip system","isValue":false}
+{"date":"2022-02-10","area":"FRONTYARD","item":"MISC","cost":7.55,"receiptFilename":"C:\\Receipts\\2022_02_10 Raindrip.jpg","info":"raindrip system front yard","isValue":false}
+{"date":"2022-02-10","area":"FRONTYARD","item":"MISC","cost":296.31,"receiptFilename":"C:\\Receipts\\2022_02_10 Rocks.jpg","info":"rocks","isValue":false}
+{"date":"2022-02-07","area":"FRONTYARD","item":"MISC","cost":50.44,"receiptFilename":"C:\\Receipts\\2022_02_02 raindrip.jpg","info":"tarp","isValue":false}
+{"date":"2022-02-07","area":"FRONTYARD","item":"MISC","cost":13.9,"receiptFilename":"C:\\Receipts\\2022_02_02 raindrip.jpg","info":"sand and staples","isValue":false}
+{"date":"2022-02-05","area":"FRONTYARD","item":"PLANTS","cost":34.44,"receiptFilename":"C:\\Receipts\\2022_02_02 raindrip.jpg","info":"trellis for roses","isValue":false}
+{"date":"2022-02-02","area":"BACKYARD","item":"LIGHTS","cost":19.71,"receiptFilename":"C:\\Receipts\\2022_02_02 raindrip.jpg","info":"tools for power supply for lights","isValue":false}
+{"date":"2022-01-29","area":"FRONTYARD","item":"PLANTS","cost":6.4,"receiptFilename":"C:\\Receipts\\2022_01_29 Primrose.jpg","info":"Primrose","isValue":false}
+{"date":"2022-01-20","area":"FRONTYARD","item":"MISC","cost":14.23,"receiptFilename":"C:\\Receipts\\2022_01_29 Primrose.jpg","info":"rain drip system","isValue":false}
+{"date":"2022-01-20","area":"FRONTYARD","item":"PLANTS","cost":1.7,"receiptFilename":"C:\\Receipts\\2022_01_29 Primrose.jpg","info":"soil","isValue":false}
+{"date":"2022-01-07","area":"KITCHEN","item":"MISC","cost":865.0,"receiptFilename":"filename","info":"oven and range","isValue":false}
+{"date":"2021-12-28","area":"ROOF","item":"MISC","cost":21.52,"receiptFilename":"C:\\Receipts\\2021_10_26 strainer.jpg","info":"insulation","isValue":false}
+{"date":"2021-12-23","area":"BDRM2","item":"MISC","cost":21.52,"receiptFilename":"filename","info":"smoke alarm replacement","isValue":false}
+{"date":"2021-12-20","area":"BDRM3","item":"PLANTS","cost":33.74,"receiptFilename":"filename","info":"","isValue":false}
+{"date":"2021-12-19","area":"KITCHEN","item":"LIGHTS","cost":12.9,"receiptFilename":"filename","info":"LED light bulbs","isValue":false}
+{"date":"2021-12-19","area":"KITCHEN","item":"LIGHTS","cost":102.33,"receiptFilename":"filename","info":"replace kitchen light","isValue":false}
+{"date":"2021-12-17","area":"LIVING ROOM","item":"FLOOR","cost":65.81,"receiptFilename":"filename","info":"floor sewer cleaning pest control","isValue":false}
+{"date":"2021-12-11","area":"KITCHEN","item":"FAN","cost":75.4,"receiptFilename":"filename","info":"dining area fan","isValue":false}
+{"date":"2021-12-04","area":"FRONTYARD","item":"MISC","cost":18.61,"receiptFilename":"filename","info":"rain drip emitters","isValue":false}
+{"date":"2021-11-27","area":"FRONTYARD","item":"PLANTS","cost":26.5,"receiptFilename":"filename","info":"red leaf plant","isValue":false}
+{"date":"2021-11-23","area":"FRONTYARD","item":"PLANTS","cost":28.55,"receiptFilename":"filename","info":"plant red leaf","isValue":false}
+{"date":"2021-11-20","area":"LIVING ROOM","item":"MISC","cost":30.12,"receiptFilename":"filename","info":"Xmas wreath","isValue":false}
+{"date":"2021-11-19","area":"FRONTYARD","item":"MISC","cost":11.02,"receiptFilename":"filename","info":"rain drip emitters","isValue":false}
+{"date":"2021-11-18","area":"FRONTYARD","item":"MISC","cost":12.27,"receiptFilename":"filename","info":"rain drip emitters","isValue":false}
+{"date":"2021-11-12","area":"FRONTYARD","item":"MISC","cost":14.9,"receiptFilename":"C:\\Receipts\\2021_11_01 Yard remodel.jpg","info":"rain drip system","isValue":false}
+{"date":"2021-11-11","area":"FRONTYARD","item":"MISC","cost":17.56,"receiptFilename":"C:\\Receipts\\2021_11_01 Yard remodel.jpg","info":"rain drip system","isValue":false}
+{"date":"2021-11-11","area":"FRONTYARD","item":"MISC","cost":2.0,"receiptFilename":"C:\\Receipts\\2021_11_01 Yard remodel.jpg","info":"rain drip system","isValue":false}
+{"date":"2021-11-08","area":"FRONTYARD","item":"MISC","cost":5.25,"receiptFilename":"C:\\Receipts\\2021_11_01 Yard remodel.jpg","info":"rain drip system","isValue":false}
+{"date":"2021-11-07","area":"FRONTYARD","item":"PLANTS","cost":31.25,"receiptFilename":"C:\\Receipts\\2021_11_01 Yard remodel.jpg","info":"plants","isValue":false}
+{"date":"2021-11-04","area":"FRONTYARD","item":"PLANTS","cost":10.9,"receiptFilename":"C:\\Receipts\\2021_10_29 Deer.jpg","info":"Tulips","isValue":false}
+{"date":"2021-11-04","area":"FRONTYARD","item":"PLANTS","cost":57.57,"receiptFilename":"C:\\Receipts\\2021_10_29 Deer.jpg","info":"Bricks and plants","isValue":false}
+{"date":"2021-11-01","area":"FRONTYARD","item":"MISC","cost":31.23,"receiptFilename":"C:\\Receipts\\2021_10_29 Deer.jpg","info":"Retaining walls","isValue":false}
+{"date":"2021-10-29","area":"FRONTYARD","item":"MISC","cost":69.0,"receiptFilename":"C:\\Receipts\\2021_10_29 Deer.jpg","info":"Xmas d?cor","isValue":false}
+{"date":"2021-10-26","area":"FRONTYARD","item":"MISC","cost":46.31,"receiptFilename":"C:\\Receipts\\2021_10_26 strainer.jpg","info":"cultivator","isValue":false}
+{"date":"2021-10-17","area":"GARAGE","item":"OUTLETS","cost":46.24,"receiptFilename":"C:\\Receipts\\2021_10_17 electrical.jpg","info":"fish tape","isValue":false}
+{"date":"2021-10-16","area":"KITCHEN","item":"OUTLETS","cost":15.0,"receiptFilename":"filename","info":"Kasa Smart Switch","isValue":false}
+{"date":"2021-10-16","area":"GARAGE","item":"OUTLETS","cost":15.0,"receiptFilename":"filename","info":"Kasa Smart Switch","isValue":false}
+{"date":"2021-10-16","area":"LIVING ROOM","item":"LIGHTS","cost":15.0,"receiptFilename":"filename","info":"2 Kasa Smart Bulb","isValue":false}
+{"date":"2021-10-16","area":"FRONTYARD","item":"OUTLETS","cost":70.0,"receiptFilename":"filename","info":"Add power outlet outside front door","isValue":false}
+{"date":"2021-10-16","area":"GARAGE","item":"OUTLETS","cost":5.2,"receiptFilename":"C:\\Receipts\\2021_10_17 electrical.jpg","info":"","isValue":false}
+{"date":"2021-10-15","area":"GARAGE","item":"OUTLETS","cost":20.93,"receiptFilename":"C:\\Receipts\\2021_10_17 electrical.jpg","info":"","isValue":false}
+{"date":"2021-10-14","area":"GARAGE","item":"OUTLETS","cost":22.14,"receiptFilename":"C:\\Receipts\\2021_10_13 electrical .jpg","info":"","isValue":false}
+{"date":"2021-10-13","area":"GARAGE","item":"OUTLETS","cost":36.67,"receiptFilename":"C:\\Receipts\\2021_10_13 electrical .jpg","info":"outside outlet electrical","isValue":false}
+{"date":"2021-10-13","area":"GARAGE","item":"OUTLETS","cost":41.34,"receiptFilename":"C:\\Receipts\\2021_10_13 electrical .jpg","info":"outside outlet electrical","isValue":false}
+{"date":"2021-09-26","area":"BDRM2","item":"PLANTS","cost":40.35,"receiptFilename":"C:\\Receipts\\2021_09_26 Indoor plants.jpg","info":"indoor plants","isValue":false}
+{"date":"2021-09-25","area":"LIVING ROOM","item":"PLANTS","cost":89.87,"receiptFilename":"C:\\Receipts\\2021_09_26 Indoor plants.jpg","info":"indoor plants","isValue":false}
+{"date":"2021-09-25","area":"LIVING ROOM","item":"PLANTS","cost":55.92,"receiptFilename":"C:\\Receipts\\2021_09_26 Indoor plants.jpg","info":"indoor plants","isValue":false}
+{"date":"2021-09-11","area":"BACKYARD","item":"PLANTS","cost":12.87,"receiptFilename":"C:\\Receipts\\2021_09_04 Soil.jpg","info":"","isValue":false}
+{"date":"2021-09-06","area":"LIVING ROOM","item":"MISC","cost":20.0,"receiptFilename":"C:\\Receipts\\2021_09_04 Soil.jpg","info":"air filters","isValue":false}
+{"date":"2021-09-04","area":"BACKYARD","item":"PLANTS","cost":15.02,"receiptFilename":"C:\\Receipts\\2021_09_04 Soil.jpg","info":"soil","isValue":false}
+{"date":"2021-09-04","area":"BACKYARD","item":"PLANTS","cost":13.9,"receiptFilename":"C:\\Receipts\\2021_09_26 Indoor plants.jpg","info":"","isValue":false}
+{"date":"2021-08-28","area":"BACKYARD","item":"PLANTS","cost":52.47,"receiptFilename":"C:\\Receipts\\2021_08_28 Planter box.jpg","info":"planter box #2","isValue":false}
+{"date":"2021-08-22","area":"BACKYARD","item":"PLANTS","cost":26.27,"receiptFilename":"C:\\Receipts\\2021_08_28 Planter box.jpg","info":"wood for planter box #1","isValue":false}
+{"date":"2021-08-21","area":"BACKYARD","item":"MISC","cost":19.37,"receiptFilename":"C:\\Receipts\\2021_08_28 Planter box.jpg","info":"cedar fan trellis for rose","isValue":false}
+{"date":"2021-08-17","area":"BACKYARD","item":"FENCE","cost":34.39,"receiptFilename":"C:\\Receipts\\2021_08_13 fence.jpg","info":"screws","isValue":false}
+{"date":"2021-08-17","area":"BACKYARD","item":"FENCE","cost":295.8,"receiptFilename":"C:\\Receipts\\2021_08_17 fence.jpg","info":"fence panels","isValue":false}
+{"date":"2021-08-16","area":"BACKYARD","item":"FENCE","cost":92.44,"receiptFilename":"C:\\Receipts\\2021_08_16 fence.jpg","info":"fence panels","isValue":false}
+{"date":"2021-08-13","area":"BACKYARD","item":"FENCE","cost":22.23,"receiptFilename":"C:\\Receipts\\2021_08_13 fence.jpg","info":"2 x 4 screws","isValue":false}
+{"date":"2021-08-12","area":"BACKYARD","item":"FENCE","cost":21.2,"receiptFilename":"C:\\Receipts\\2021_08_07 fence.jpg","info":"2 x 4 studs bolts","isValue":false}
+{"date":"2021-08-12","area":"BACKYARD","item":"LIGHTS","cost":32.13,"receiptFilename":"C:\\Receipts\\2021_08_13 fence.jpg","info":"solar pathway lights","isValue":false}
+{"date":"2021-08-11","area":"BACKYARD","item":"FENCE","cost":13.59,"receiptFilename":"C:\\Receipts\\2021_08_07 fence.jpg","info":"screws & bolts","isValue":false}
+{"date":"2021-08-10","area":"BACKYARD","item":"FENCE","cost":92.44,"receiptFilename":"C:\\Receipts\\2021_08_10 fence.jpg","info":"fence wood panels","isValue":false}
+{"date":"2021-08-08","area":"BACKYARD","item":"FENCE","cost":13.02,"receiptFilename":"C:\\Receipts\\2021_08_12 fence.jpg","info":"concrete","isValue":false}
+{"date":"2021-08-08","area":"BACKYARD","item":"FENCE","cost":35.91,"receiptFilename":"C:\\Receipts\\2021_08_12 fence.jpg","info":"2x4 wood studs concrete","isValue":false}
+{"date":"2021-08-07","area":"BACKYARD","item":"FENCE","cost":26.83,"receiptFilename":"C:\\Receipts\\2021_08_12 fence.jpg","info":"concrete","isValue":false}
+{"date":"2021-08-07","area":"BACKYARD","item":"FENCE","cost":50.0,"receiptFilename":"C:\\Receipts\\2021_08_12 fence.jpg","info":"fence posts upgraded to 8 feet","isValue":false}
+{"date":"2021-08-01","area":"BACKYARD","item":"FENCE","cost":21.4,"receiptFilename":"C:\\Receipts\\2021_07_31 fence.jpg","info":"fence posts","isValue":false}
+{"date":"2021-07-30","area":"BACKYARD","item":"FENCE","cost":77.9,"receiptFilename":"C:\\Receipts\\2021_07_31 fence.jpg","info":"2x4 hardware","isValue":false}
+{"date":"2021-07-29","area":"LIVING ROOM","item":"DOOR","cost":19.55,"receiptFilename":"C:\\Receipts\\2021_07_31 fence.jpg","info":"","isValue":false}
+{"date":"2021-07-23","area":"BACKYARD","item":"MISC","cost":11.11,"receiptFilename":"C:\\Receipts\\2021_07_31 fence.jpg","info":"wood for lilac","isValue":false}
+{"date":"2021-07-18","area":"BACKYARD","item":"MISC","cost":42.69,"receiptFilename":"C:\\Receipts\\2021_07_18 Knee pads.jpg","info":"rain drippers -extension cord-chisel","isValue":false}
+{"date":"2021-07-18","area":"BACKYARD","item":"LIGHTS","cost":10.85,"receiptFilename":"C:\\Receipts\\2021_07_18 Knee pads.jpg","info":"backyard solar light & flowers","isValue":false}
+{"date":"2021-07-09","area":"BACKYARD","item":"DOOR","cost":8.59,"receiptFilename":"C:\\Receipts\\2021_07_18 Knee pads.jpg","info":"door mat","isValue":false}
+{"date":"2021-07-06","area":"BDRM3","item":"WINDOWS","cost":91.35,"receiptFilename":"C:\\Receipts\\The Home Depot - Order Confirmation.pdf","info":"Outdoors roll up blinds","isValue":false}
+{"date":"2021-07-05","area":"FRONTYARD","item":"PLANTS","cost":18.21,"receiptFilename":"C:\\Receipts\\2021_07_02 Logs Wood.jpg","info":"soil and support","isValue":false}
+{"date":"2021-07-03","area":"FRONTYARD","item":"MISC","cost":75.27,"receiptFilename":"C:\\Receipts\\2021_07_02 Logs Wood.jpg","info":"decorative logs for front lawn edging","isValue":false}
+{"date":"2021-07-02","area":"BACKYARD","item":"MISC","cost":31.35,"receiptFilename":"C:\\Receipts\\2021_07_02 Logs Wood.jpg","info":"planter box wood","isValue":false}
+{"date":"2021-06-13","area":"BDRM3","item":"DOOR","cost":10.8,"receiptFilename":"C:\\Receipts\\2021_06_13 door knob.jpg","info":"door handle replacement","isValue":false}
+{"date":"2021-06-11","area":"BACKYARD","item":"PLANTS","cost":34.33,"receiptFilename":"C:\\Receipts\\2021_06_13 door knob.jpg","info":"wood for planter box soil","isValue":false}
+{"date":"2021-05-31","area":"BACKYARD","item":"PLANTS","cost":34.54,"receiptFilename":"C:\\Receipts\\2021_05_31 Planter wood.jpg","info":"soil & planter box","isValue":false}
+{"date":"2021-05-27","area":"HALLWAY","item":"DOOR","cost":40.82,"receiptFilename":"filename","info":"door knobs","isValue":false}
+{"date":"2021-05-25","area":"HALLWAY","item":"DOOR","cost":29.55,"receiptFilename":"C:\\Receipts\\2021_05_31 Planter wood.jpg","info":"door knobs - screws","isValue":false}
+{"date":"2021-05-23","area":"BACKYARD","item":"PLANTS","cost":22.76,"receiptFilename":"C:\\Receipts\\2021_05_23 Planter box.jpg","info":"planter box","isValue":false}
+{"date":"2021-05-22","area":"BACKYARD","item":"PLANTS","cost":18.67,"receiptFilename":"C:\\Receipts\\2021_05_23 Planter box.jpg","info":"veggies and soil","isValue":false}
+{"date":"2021-05-21","area":"BACKYARD","item":"MISC","cost":12.0,"receiptFilename":"C:\\Receipts\\2021_05_23 Planter box.jpg","info":"planter stain","isValue":false}
+{"date":"2021-05-19","area":"GARAGE","item":"MISC","cost":20.94,"receiptFilename":"C:\\Receipts\\2021_05_19 retainer wall.jpg","info":"work bench clamps","isValue":false}
+{"date":"2021-05-18","area":"FRONTYARD","item":"MISC","cost":19.07,"receiptFilename":"C:\\Receipts\\2021_05_19 retainer wall.jpg","info":"","isValue":false}
+{"date":"2021-05-16","area":"FRONTYARD","item":"PLANTS","cost":22.62,"receiptFilename":"C:\\Receipts\\2021_05_16 Jasmine.jpg","info":"pink jasmine - succulents","isValue":false}
+{"date":"2021-05-16","area":"GARAGE","item":"MISC","cost":246.75,"receiptFilename":"C:\\Receipts\\2021_05_16 Workbench.pdf","info":"workbench","isValue":false}
+{"date":"2021-05-12","area":"BACKYARD","item":"MISC","cost":5.77,"receiptFilename":"C:\\Receipts\\2021_05_16 Jasmine.jpg","info":"gazebo lights","isValue":false}
+{"date":"2021-05-08","area":"BACKYARD","item":"MISC","cost":51.68,"receiptFilename":"C:\\Receipts\\2021_05_07 yellow jacket.jpg","info":"yard maintenance - insect pest control","isValue":false}
+{"date":"2021-05-06","area":"FRONTYARD","item":"PLANTS","cost":30.13,"receiptFilename":"C:\\Receipts\\2021_05_16 Jasmine.jpg","info":"","isValue":false}
+{"date":"2021-05-02","area":"BACKYARD","item":"MISC","cost":418.0,"receiptFilename":"filename","info":"Gazebo","isValue":false}
+{"date":"2021-05-01","area":"BACKYARD","item":"MISC","cost":52.14,"receiptFilename":"filename","info":"drill for gazebo","isValue":false}
+{"date":"2021-05-01","area":"BACKYARD","item":"MISC","cost":25.54,"receiptFilename":"filename","info":"anchor bolts for gazebo","isValue":false}
+{"date":"2021-04-29","area":"FRONTYARD","item":"MISC","cost":32.0,"receiptFilename":"C:\\Receipts\\2021_04_25 door knobs.jpg","info":"scalloped edging","isValue":false}
+{"date":"2021-04-28","area":"BACKYARD","item":"PLANTS","cost":18.8,"receiptFilename":"C:\\Receipts\\2021_04_25 door knobs.jpg","info":"","isValue":false}
+{"date":"2021-04-25","area":"BATH1","item":"SHOWER/TUB","cost":45.0,"receiptFilename":"C:\\Receipts\\2021_04_25 door knobs.jpg","info":"shower fixture door knobs","isValue":false}
+{"date":"2021-04-24","area":"FRONTYARD","item":"PLANTS","cost":15.6,"receiptFilename":"C:\\Receipts\\2021_05_01 Drill.jpg","info":"grass seeds","isValue":false}
+{"date":"2021-04-15","area":"FRONTYARD","item":"MISC","cost":23.35,"receiptFilename":"C:\\Receipts\\2021_04_15 concrete blocks.jpg","info":"retainer wall blocks for Maple","isValue":false}
+{"date":"2021-04-11","area":"FRONTYARD","item":"PLANTS","cost":25.18,"receiptFilename":"C:\\Receipts\\2021_04_10 window screen.jpg","info":"weed & feed","isValue":false}
+{"date":"2021-04-11","area":"FRONTYARD","item":"PLANTS","cost":20.0,"receiptFilename":"filename","info":"Jpanese Maple","isValue":false}
+{"date":"2021-04-10","area":"BDRM2","item":"WINDOWS","cost":24.46,"receiptFilename":"C:\\Receipts\\2021_04_10 window screen.jpg","info":"window screen for Bed #2","isValue":false}
+{"date":"2021-04-07","area":"BACKYARD","item":"MISC","cost":48.47,"receiptFilename":"C:\\Receipts\\2021_04_25 door knobs.jpg","info":"garden hose storage","isValue":false}
+{"date":"2021-04-05","area":"BACKYARD","item":"PLANTS","cost":13.95,"receiptFilename":"C:\\Receipts\\2021_04_10 window screen.jpg","info":"","isValue":false}
+{"date":"2021-04-03","area":"FRONTYARD","item":"PLANTS","cost":45.79,"receiptFilename":"C:\\Receipts\\2021_04_03 Carmelia.jpg","info":"Camellia","isValue":false}
+{"date":"2021-03-31","area":"BACKYARD","item":"PLANTS","cost":34.34,"receiptFilename":"C:\\Receipts\\2021_03_31 Plants.jpg","info":"plants  - soil - hose gun","isValue":false}
+{"date":"2021-03-29","area":"BACKYARD","item":"PLANTS","cost":18.26,"receiptFilename":"C:\\Receipts\\2021_04_03 Carmelia.jpg","info":"pot and potting mix","isValue":false}
+{"date":"2021-03-28","area":"BACKYARD","item":"MISC","cost":35.99,"receiptFilename":"C:\\Receipts\\2021_03_31 Plants.jpg","info":"roach trap","isValue":false}
+{"date":"2021-03-27","area":"BACKYARD","item":"PLANTS","cost":12.99,"receiptFilename":"C:\\Receipts\\2021_03_27 Flowers & seeds.pdf","info":"boiganvillia - garden hose","isValue":false}
+{"date":"2021-03-27","area":"FRONTYARD","item":"PLANTS","cost":19.62,"receiptFilename":"C:\\Receipts\\2021_03_27 Flowers & seeds.pdf","info":"grass seeds and bracket for seasonal flag","isValue":false}
+{"date":"2021-03-26","area":"FRONTYARD","item":"PLANTS","cost":12.0,"receiptFilename":"C:\\Receipts\\2021_03_25 Flowers & Bulbs.pdf","info":"","isValue":false}
+{"date":"2021-03-26","area":"BACKYARD","item":"PLANTS","cost":26.84,"receiptFilename":"C:\\Receipts\\2021_03_25 Flowers & Bulbs.pdf","info":"plants and pots","isValue":false}
+{"date":"2021-03-25","area":"BACKYARD","item":"PLANTS","cost":250.0,"receiptFilename":"filename","info":"tree cutting","isValue":false}
+{"date":"2021-03-19","area":"BACKYARD","item":"PLANTS","cost":32.98,"receiptFilename":"C:\\Receipts\\2021_03_25 Flowers & Bulbs.pdf","info":"","isValue":false}
+{"date":"2021-03-18","area":"BACKYARD","item":"MISC","cost":10.75,"receiptFilename":"C:\\Receipts\\2021_03_25 Flowers & Bulbs.pdf","info":"brass hose fittings x 2","isValue":false}
+{"date":"2021-03-16","area":"GARAGE","item":"OUTLETS","cost":4.21,"receiptFilename":"C:\\Receipts\\2021_03_16 garage outlet.pdf","info":"replace outlet by garage","isValue":false}
+{"date":"2021-03-16","area":"GARAGE","item":"OUTLETS","cost":8.32,"receiptFilename":"C:\\Receipts\\2021_03_16 garage outlet.pdf","info":"","isValue":false}
+{"date":"2021-03-16","area":"LIVING ROOM","item":"DOOR","cost":96.95,"receiptFilename":"C:\\Receipts\\2021_03_16 garage outlet.pdf","info":"patio door - screen door","isValue":false}
+{"date":"2021-03-15","area":"BACKYARD","item":"MISC","cost":57.04,"receiptFilename":"C:\\Receipts\\2021_03_15 backyard faucet.pdf","info":"backyard water faucet junction","isValue":false}
+{"date":"2021-03-14","area":"BACKYARD","item":"PLANTS","cost":4.27,"receiptFilename":"C:\\Receipts\\2021_03_31 Plants.jpg","info":"","isValue":false}
+{"date":"2021-03-13","area":"BACKYARD","item":"PLANTS","cost":8.08,"receiptFilename":"C:\\Receipts\\2021_03_15 backyard faucet.pdf","info":"","isValue":false}
+{"date":"2021-03-09","area":"FRONTYARD","item":"PLANTS","cost":5.0,"receiptFilename":"C:\\Receipts\\2021_03_15 backyard faucet.pdf","info":"","isValue":false}
+{"date":"2021-03-06","area":"LIVING ROOM","item":"DOOR","cost":47.74,"receiptFilename":"C:\\Receipts\\2021_03_06 patio door.pdf","info":"patio door handle latch","isValue":false}
+{"date":"2021-03-02","area":"FRONTYARD","item":"PLANTS","cost":19.42,"receiptFilename":"C:\\Receipts\\2021_03_06 patio door.pdf","info":"fescue grass seeds","isValue":false}
+{"date":"2021-02-28","area":"BACKYARD","item":"MISC","cost":19.29,"receiptFilename":"C:\\Receipts\\2021_03_06 patio door.pdf","info":"mulch- plant ties","isValue":false}
+{"date":"2021-02-28","area":"BACKYARD","item":"MISC","cost":11.45,"receiptFilename":"C:\\Receipts\\2021_03_06 patio door.pdf","info":"mulch for side yard","isValue":false}
+{"date":"2021-02-27","area":"BACKYARD","item":"MISC","cost":34.66,"receiptFilename":"C:\\Receipts\\2021_02_27 Plants.pdf","info":"garden tool - BBQ cover","isValue":false}
+{"date":"2021-02-27","area":"FRONTYARD","item":"PLANTS","cost":38.79,"receiptFilename":"C:\\Receipts\\2021_02_27 Plants.pdf","info":"jasmine & indoor plants","isValue":false}
+{"date":"2021-02-20","area":"BACKYARD","item":"MISC","cost":50.64,"receiptFilename":"C:\\Receipts\\2021_02_14 Ring contacts.pdf","info":"propane tank","isValue":false}
+{"date":"2021-02-20","area":"FRONTYARD","item":"PLANTS","cost":11.25,"receiptFilename":"C:\\Receipts\\2021_02_14 Ring contacts.pdf","info":"red mulch for front & back yards","isValue":false}
+{"date":"2021-02-13","area":"FRONTYARD","item":"PLANTS","cost":28.36,"receiptFilename":"C:\\Receipts\\2021_02_07 Grill.pdf","info":"top soil for lawn","isValue":false}
+{"date":"2021-02-13","area":"BACKYARD","item":"PLANTS","cost":21.45,"receiptFilename":"C:\\Receipts\\2021_02_07 Grill.pdf","info":"Lilac plant","isValue":false}
+{"date":"2021-02-13","area":"FRONTYARD","item":"PLANTS","cost":86.95,"receiptFilename":"C:\\Receipts\\2021_02_13 soil seed.pdf","info":"lawn seeds - top soil","isValue":false}
+{"date":"2021-02-12","area":"BACKYARD","item":"PLANTS","cost":12.89,"receiptFilename":"filename","info":"Plant food for rose bushes and shrubs","isValue":false}
+{"date":"2021-02-07","area":"BACKYARD","item":"MISC","cost":192.75,"receiptFilename":"C:\\Receipts\\2021_02_07 Grill.pdf","info":"grill - rain drip valves","isValue":false}
+{"date":"2021-02-06","area":"BACKYARD","item":"MISC","cost":8.36,"receiptFilename":"C:\\Receipts\\2021_02_06 Irrigation.pdf","info":"washers and swirel for garden hose & faucets","isValue":false}
+{"date":"2021-02-06","area":"BACKYARD","item":"MISC","cost":3.02,"receiptFilename":"C:\\Receipts\\2021_02_06 Irrigation.pdf","info":"pvc pipe repair","isValue":false}
+{"date":"2021-02-01","area":"BACKYARD","item":"MISC","cost":34.45,"receiptFilename":"C:\\Receipts\\2021_02_01 Timer.pdf","info":"Irrigation drip system timer","isValue":false}
+{"date":"2021-01-31","area":"FRONTYARD","item":"PLANTS","cost":16.13,"receiptFilename":"C:\\Receipts\\2021_02_01 Timer.pdf","info":"weed killer","isValue":false}
+{"date":"2021-01-30","area":"BACKYARD","item":"LIGHTS","cost":14.21,"receiptFilename":"C:\\Receipts\\2021_01_30 gutter patio light.pdf","info":"porch light","isValue":false}
+{"date":"2021-01-30","area":"BACKYARD","item":"PLANTS","cost":9.0,"receiptFilename":"C:\\Receipts\\2021_01_30 gutter patio light.pdf","info":"drip irrigatiion valves","isValue":false}
+{"date":"2021-01-30","area":"BACKYARD","item":"PLANTS","cost":12.0,"receiptFilename":"filename","info":"Bird of paradise","isValue":false}
+{"date":"2021-01-29","area":"BDRM1","item":"OUTLETS","cost":4.87,"receiptFilename":"C:\\Receipts\\2021_01_30 gutter patio light.pdf","info":"electrical outlet insulation","isValue":false}
+{"date":"2021-01-26","area":"FRONTYARD","item":"GUTTERS","cost":6.69,"receiptFilename":"C:\\Receipts\\2021_01_30 gutter patio light.pdf","info":"Gutter scoop","isValue":false}
+{"date":"2021-01-23","area":"BACKYARD","item":"MISC","cost":25.25,"receiptFilename":"C:\\Receipts\\2021_01_23 Mulch.pdf","info":"mulch for backyard","isValue":false}
+{"date":"2021-01-23","area":"BACKYARD","item":"PLANTS","cost":58.94,"receiptFilename":"C:\\Receipts\\2021_01_23 Mulch.pdf","info":"mulch & gardenia for backyard","isValue":false}
+{"date":"2021-01-23","area":"BACKYARD","item":"MISC","cost":15.8,"receiptFilename":"C:\\Receipts\\2021_01_23 Mulch.pdf","info":"mulch for backyard","isValue":false}
+{"date":"2021-01-22","area":"BACKYARD","item":"PLANTS","cost":61.57,"receiptFilename":"C:\\Receipts\\2021_01_19  Plants weed.pdf","info":"suculent plants and  landscape staples","isValue":false}
+{"date":"2021-01-21","area":"BACKYARD","item":"PLANTS","cost":27.36,"receiptFilename":"C:\\Receipts\\2021_01_20 Plants Mulch.pdf","info":"plants and mulch","isValue":false}
+{"date":"2021-01-21","area":"BACKYARD","item":"MISC","cost":19.0,"receiptFilename":"C:\\Receipts\\2021_01_22 Plants.pdf","info":"mulch for yard","isValue":false}
+{"date":"2021-01-21","area":"BACKYARD","item":"PLANTS","cost":19.26,"receiptFilename":"C:\\Receipts\\2021_01_22 Plants.pdf","info":"grape vine and poppies","isValue":false}
+{"date":"2021-01-20","area":"BACKYARD","item":"PLANTS","cost":64.7,"receiptFilename":"C:\\Receipts\\2021_01_19  Plants weed.pdf","info":"back yard plants and  soil","isValue":false}
+{"date":"2021-01-20","area":"FRONTYARD","item":"MISC","cost":11.25,"receiptFilename":"C:\\Receipts\\2021_01_20 Plants Mulch.pdf","info":"Mulch red","isValue":false}
+{"date":"2021-01-19","area":"FRONTYARD","item":"MISC","cost":12.9,"receiptFilename":"C:\\Receipts\\2021_01_19  Plants weed.pdf","info":"Round Up","isValue":false}
+{"date":"2021-01-17","area":"FRONTYARD","item":"PLANTS","cost":16.98,"receiptFilename":"C:\\Receipts\\2021_01_17 Raindrip & garden.pdf","info":"weed & feed for front lawn","isValue":false}
+{"date":"2021-01-17","area":"FRONTYARD","item":"PLANTS","cost":20.46,"receiptFilename":"C:\\Receipts\\2021_01_17 Raindrip & garden.pdf","info":"","isValue":false}
+{"date":"2021-01-17","area":"BACKYARD","item":"MISC","cost":32.0,"receiptFilename":"C:\\Receipts\\2021_01_17 Raindrip & garden.pdf","info":"gardening tools","isValue":false}
+{"date":"2021-01-16","area":"BACKYARD","item":"OUTLETS","cost":15.55,"receiptFilename":"C:\\Receipts\\2021_01_16 Porch outlet box.pdf","info":"patio wall outlet replacement","isValue":false}
+{"date":"2021-01-13","area":"BACKYARD","item":"PLANTS","cost":19.58,"receiptFilename":"C:\\Receipts\\2021_01-13 Mulch & flowers.pdf","info":"seeds and mulch","isValue":false}
+{"date":"2021-01-13","area":"BACKYARD","item":"PLANTS","cost":12.56,"receiptFilename":"C:\\Receipts\\2021_01-13 Mulch & flowers.pdf","info":"bulbs and flower seeds","isValue":false}
+{"date":"2021-01-11","area":"BACKYARD","item":"PLANTS","cost":18.26,"receiptFilename":"C:\\Receipts\\2021_01-13 Mulch & flowers.pdf","info":"soil and lilies","isValue":false}
+{"date":"2021-01-10","area":"ROOF","item":"MISC","cost":9.31,"receiptFilename":"C:\\Receipts\\2022_01_09 bucket lids.jpg","info":"downspout strainer","isValue":false}
+{"date":"2021-01-10","area":"ROOF","item":"MISC","cost":19.33,"receiptFilename":"C:\\Receipts\\2022_01_09 bucket lids.jpg","info":"downspout extension","isValue":false}
+{"date":"2021-01-09","area":"FRONTYARD","item":"SEWAGE LINE","cost":5.78,"receiptFilename":"C:\\Receipts\\2021_01_09 Swerline drain cap.pdf","info":"Sewer line drain cap and fitting","isValue":false}
+{"date":"2021-01-09","area":"FRONTYARD","item":"PLANTS","cost":20.68,"receiptFilename":"C:\\Receipts\\2022_01_09 bucket lids.jpg","info":"soil and plants","isValue":false}
+{"date":"2021-01-08","area":"FRONTYARD","item":"SEWAGE LINE","cost":17.47,"receiptFilename":"C:\\Receipts\\2021_01_08 drain root kill.pdf","info":"drain product to kill off roots in sewer line","isValue":false}
+{"date":"2021-01-08","area":"FRONTYARD","item":"PLANTS","cost":18.25,"receiptFilename":"C:\\Receipts\\2021_10_26 strainer.jpg","info":"soil","isValue":false}
+{"date":"2021-01-06","area":"BATH1","item":"TOILET","cost":9.12,"receiptFilename":"C:\\Receipts\\filename.jpeg","info":"Replaced toilet handle","isValue":false}
+{"date":"2021-01-06","area":"BATH2","item":"TOILET","cost":9.12,"receiptFilename":"C:\\Receipts\\filename.jpeg","info":"Replaced toilet handle","isValue":false}
+{"date":"2021-01-03","area":"FRONTYARD","item":"PLANTS","cost":11.0,"receiptFilename":"C:\\Receipts\\2021_01_03 Plants for yard.pdf","info":"Jasmine for FRONTYARD","isValue":false}
+{"date":"2021-01-03","area":"BACKYARD","item":"PLANTS","cost":9.0,"receiptFilename":"C:\\Receipts\\2021_01_03 Plants for yard.pdf","info":"Lavender for backyard","isValue":false}
+{"date":"2021-01-03","area":"BACKYARD","item":"PLANTS","cost":22.0,"receiptFilename":"C:\\Receipts\\2021_01_03 Plants for yard.pdf","info":"Rose & soli for backyard","isValue":false}
+{"date":"2020-12-31","area":"FRONTYARD","item":"MISC","cost":36.0,"receiptFilename":"filename","info":"Plumber snake & drain grate","isValue":false}
+{"date":"2020-12-31","area":"BATH2","item":"TOILET","cost":10.0,"receiptFilename":"C:\\Receipts\\2021_01_03 Plants for yard.pdf","info":"Flapper for toilet","isValue":false}
+{"date":"2020-12-31","area":"FRONTYARD","item":"SEWAGE LINE","cost":145.0,"receiptFilename":"C:\\Receipts\\2020_12_31 Plumber service.pdf","info":"plumbing service to clear out clog","isValue":false}
+{"date":"2020-12-27","area":"GARAGE","item":"WINDOWS","cost":18.0,"receiptFilename":"filename","info":"Blinds for garage window","isValue":false}
+{"date":"2020-12-22","area":"FRONT ENTRY","item":"MISC","cost":20.0,"receiptFilename":"filename","info":"Floor mats","isValue":false}
+{"date":"2020-12-22","area":"GARAGE","item":"MISC","cost":20.0,"receiptFilename":"filename","info":"Floor mats","isValue":false}
+{"date":"2020-12-04","area":"FRONTYARD","item":"MISC","cost":35.65,"receiptFilename":"C:\\Receipts\\2020_12_04 paint ring light.pdf","info":"Waterpipe insulation","isValue":false}
+{"date":"2020-12-04","area":"FRONTYARD","item":"LIGHTS","cost":97.0,"receiptFilename":"C:\\Receipts\\2020_12_05 ring light.pdf","info":"Ring flood light","isValue":false}
+{"date":"2020-12-01","area":"GARAGE","item":"MISC","cost":50.0,"receiptFilename":"C:\\Receipts\\2020_12_30 Amazon orders thru 12-31.pdf","info":"Reciprocating saw","isValue":false}
+{"date":"2020-11-28","area":"LIVING ROOM","item":"FLOOR","cost":81.0,"receiptFilename":"filename","info":"Rug for living room coffee table","isValue":false}
+{"date":"2020-11-28","area":"KITCHEN","item":"MISC","cost":65.0,"receiptFilename":"filename","info":"Kitchen liners and kitchen garbage can","isValue":false}
+{"date":"2020-11-27","area":"KITCHEN","item":"MISC","cost":20.0,"receiptFilename":"filename","info":"Fire extinguisher for kitchen and bedroom","isValue":false}
+{"date":"2020-11-27","area":"BDRM3","item":"MISC","cost":20.0,"receiptFilename":"filename","info":"Fire extinguisher for kitchen and bedroom","isValue":false}
+{"date":"2020-11-27","area":"KITCHEN","item":"REFRIG","cost":50.0,"receiptFilename":"filename","info":"Water filter for refrigerator","isValue":false}
+{"date":"2020-11-25","area":"LIVING ROOM","item":"CHIMNEY","cost":248.0,"receiptFilename":"C:\\Receipts\\2020_12_07 Wayfair.pdf","info":"Fireplace screen door","isValue":false}
+{"date":"2020-11-22","area":"GARAGE","item":"SINK","cost":105.0,"receiptFilename":"C:\\Receipts\\2020_11_21 HD faucet dryer.pdf","info":"Faucet hardware and dryer duct repairs","isValue":false}
+{"date":"2020-11-22","area":"GARAGE","item":"SINK","cost":55.0,"receiptFilename":"filename","info":"Utility sink","isValue":false}
+{"date":"2020-11-21","area":"GARAGE","item":"MISC","cost":40.0,"receiptFilename":"filename","info":"Torch kit and accessories","isValue":false}
+{"date":"2020-11-20","area":"LIVING ROOM","item":"TILE","cost":87.0,"receiptFilename":"filename","info":"Tile cleaning for all rooms","isValue":false}
+{"date":"2020-11-18","area":"BATH2","item":"SHOWER/TUB","cost":35.0,"receiptFilename":"C:\\Receipts\\2020_12_30 Amazon orders thru 12-31.pdf","info":"AquaSpa shower head","isValue":false}
+{"date":"2020-11-17","area":"BDRM3","item":"LIGHTS","cost":25.0,"receiptFilename":"C:\\Receipts\\2020_12_30 Amazon orders thru 12-31.pdf","info":"Light fixture for room closet","isValue":false}
+{"date":"2020-11-14","area":"BATH1","item":"TOILET","cost":22.0,"receiptFilename":"C:\\Receipts\\2020_11_14 Home Depot toilet.pdf","info":"Soldering iron","isValue":false}
+{"date":"2020-11-08","area":"LIVING ROOM","item":"MISC","cost":25.0,"receiptFilename":"filename","info":"Paint tools for all rooms","isValue":false}
+{"date":"2020-11-08","area":"FRONTYARD","item":"MISC","cost":25.0,"receiptFilename":"filename","info":"Garden hose & sprinkler","isValue":false}
+{"date":"2020-11-08","area":"BATH2","item":"MISC","cost":25.0,"receiptFilename":"C:\\Receipts\\2020_11_08 Paint & Supplies.pdf","info":"Bathroom repairs","isValue":false}
+{"date":"2020-11-07","area":"GARAGE","item":"MISC","cost":125.0,"receiptFilename":"filename","info":"Power drill plus drill bits","isValue":false}
+{"date":"2020-11-06","area":"GARAGE","item":"MISC","cost":25.0,"receiptFilename":"C:\\Receipts\\2020_11_10 Amazon orders thru 11-10.pdf","info":"Garage door openers - remote","isValue":false}
+{"date":"2020-11-06","area":"KITCHEN","item":"DOORS","cost":25.0,"receiptFilename":"C:\\Receipts\\2020_11_10 Amazon orders thru 11-10.pdf","info":"Entry door lock replacement","isValue":false}
+{"date":"2020-11-05","area":"LIVING ROOM","item":"DOORS","cost":25.0,"receiptFilename":"C:\\Receipts\\2020_11_10 Amazon orders thru 11-10.pdf","info":"Entry door lock replacement","isValue":false}
+{"date":"2020-11-04","area":"GARAGE","item":"WASHER","cost":592.0,"receiptFilename":"filename","info":"Samsung washer","isValue":false}
+{"date":"2020-11-04","area":"GARAGE","item":"DRYER","cost":592.0,"receiptFilename":"filename","info":"Samsung dryer","isValue":false}
+{"date":"2020-11-04","area":"KITCHEN","item":"OVEN","cost":40.0,"receiptFilename":"C:\\Receipts\\2020_11_04 Oven gasket on eBay.pdf","info":"GE oven gasket replacemnet","isValue":false}
+{"date":"2020-11-04","area":"LIVING ROOM","item":"MISC","cost":295.0,"receiptFilename":"C:\\Receipts\\2020_11_10 Amazon orders thru 11-10.pdf","info":"Ring security alarm & Alexia for whole house","isValue":false}
+{"date":"2020-11-04","area":"LIVING ROOM","item":"DOORS","cost":125.0,"receiptFilename":"C:\\Receipts\\2020_11_10 Amazon orders thru 11-10.pdf","info":"Ring video door bell","isValue":false}
+{"date":"2020-11-04","area":"GARAGE","item":"DOORS","cost":25.0,"receiptFilename":"C:\\Receipts\\2020_11_10 Amazon orders thru 11-10.pdf","info":"Entry door lock replacement","isValue":false}
+] 
+ }

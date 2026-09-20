@@ -1,8 +1,7 @@
 package com.homeimprovement;
 
 /*     */
- /*     */ import com.toedter.calendar.JDateChooser;
-/*     */ import java.awt.Color;
+ /*     */ import java.awt.Color;
 /*     */ import java.awt.Component;
 /*     */ import java.awt.Font;
 /*     */ import java.awt.LayoutManager;
@@ -18,6 +17,7 @@ package com.homeimprovement;
 /*     */ import java.util.Date;
 /*     */ import java.util.Iterator;
 /*     */ import java.util.List;
+
 /*     */ import javax.swing.Box;
 /*     */ import javax.swing.DefaultComboBoxModel;
 /*     */ import javax.swing.JButton;
@@ -28,6 +28,8 @@ package com.homeimprovement;
 /*     */ import javax.swing.JOptionPane;
 /*     */ import javax.swing.JSeparator;
 /*     */ import javax.swing.JTextField;
+
+/*     */ import com.toedter.calendar.JDateChooser;
 
 /*     */
  /*     */ public class QueryingWindow /*     */ {
@@ -46,38 +48,16 @@ package com.homeimprovement;
     /*     */    private MySQLConnect myDatabase;
     /*  48 */    private final String HOMEIMPROVEMENT_DATABASE = "houseexpenses";
 
-    /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
+  
  /*     */ public static void main(String[] args) {
     }
 
-    /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
  /*     */ public QueryingWindow(String username, MySQLConnect mySQLDatabase) {
         /*  68 */ this.username = username;
         /*  69 */ this.myDatabase = mySQLDatabase;
         /*  70 */ initialize();
         /*     */    }
 
-    /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
  /*     */ private void initialize() {
         /*  79 */ String[] areas = {"ATTIC", "BACKYARD", "BATH1", "BATH2", "BDRM1", "BDRM2", "BDRM3", "BDRM4",
             /*  80 */ "FRONTYARD", "GARAGE", "HALLWAY", "KITCHEN", "LIVING ROOM", "ROOF"};
@@ -106,7 +86,7 @@ package com.homeimprovement;
         /* 103 */ lblArea.setBounds(10, 225, 105, 19);
         /* 104 */ this.qFrame.getContentPane().add(lblArea);
         /*     */
- /* 106 */ this.comboBoxArea = new JComboBox();
+ /* 106 */ this.comboBoxArea = new JComboBox<Object>();
         /* 107 */ this.comboBoxArea.setModel(new DefaultComboBoxModel<>(areas));
         /* 108 */ this.comboBoxArea.setBounds(10, 245, 130, 31);
         /* 109 */ this.qFrame.getContentPane().add(this.comboBoxArea);
@@ -117,7 +97,7 @@ package com.homeimprovement;
         /* 114 */ this.qFrame.getContentPane().add(lblItem1);
         /*     */
  /*     */
- /* 117 */ this.comboBoxItem1 = new JComboBox();
+ /* 117 */ this.comboBoxItem1 = new JComboBox<Object>();
         /* 118 */ this.comboBoxItem1.setModel(new DefaultComboBoxModel<>(new String[]{"N/A", "ANTENNA", "CHIMNEY", "CLOSET", "DISHWASHER", "DOOR", "DRYER", "FAN", "FENCE", "FLOOR", "FRIG", "GUTTERS", "INTERNET", "LIGHTS", "MIRROR", "MISC", "OUTLETS", "OVEN", "PLANTS", "SEWAGE LINE", "SHOWER/TUB", "SINK", "TILE", "TOILET", "TV", "WALLS", "WASHER", "WINDOWS"}));
         /* 119 */ this.comboBoxItem1.setBounds(241, 245, 130, 31);
         /* 120 */ this.qFrame.getContentPane().add(this.comboBoxItem1);
@@ -128,7 +108,7 @@ package com.homeimprovement;
         /* 125 */ lblItem.setBounds(241, 287, 105, 19);
         /* 126 */ this.qFrame.getContentPane().add(lblItem);
         /*     */
- /* 128 */ this.comboBoxItem2 = new JComboBox();
+ /* 128 */ this.comboBoxItem2 = new JComboBox<Object>();
         /* 129 */ this.comboBoxItem2.setModel(new DefaultComboBoxModel<>(items));
         /* 130 */ this.comboBoxItem2.setBounds(241, 307, 130, 31);
         /* 131 */ this.qFrame.getContentPane().add(this.comboBoxItem2);
@@ -139,7 +119,7 @@ package com.homeimprovement;
         /* 136 */ lblItem_1.setBounds(241, 349, 105, 19);
         /* 137 */ this.qFrame.getContentPane().add(lblItem_1);
         /*     */
- /* 139 */ this.comboBoxItem3 = new JComboBox();
+ /* 139 */ this.comboBoxItem3 = new JComboBox<Object>();
         /* 140 */ this.comboBoxItem3.setModel(new DefaultComboBoxModel<>(items));
         /* 141 */ this.comboBoxItem3.setBounds(241, 369, 130, 31);
         /* 142 */ this.qFrame.getContentPane().add(this.comboBoxItem3);
@@ -262,19 +242,7 @@ package com.homeimprovement;
             /*     */        });
         /*     */    }
 
-    /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
+ 
  /*     */ private void getDateRangeFromDatabase() {
         /* 277 */ String pattern = "yyyy-MM-dd";
         /* 278 */ DateFormat formatter = new SimpleDateFormat(pattern);
@@ -298,18 +266,7 @@ package com.homeimprovement;
         /*     */    }
 
     /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
+ 
  /*     */ private void getDateRangeFromFile() {
         /* 311 */ int dateSelect = 1;
         /* 312 */ String pattern = "yyyy-MM-dd";
@@ -325,16 +282,7 @@ package com.homeimprovement;
         /* 322 */ String title = "Date Range Queries. Total Cost = $" + Double.toString(HomeMainGui.computeTotalCost(dateRangeList));
         /*     */    }
 
-    /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
+
  /*     */ private void doItemsQueryFromDatabase() {
         /* 335 */ String whocares = "N/A";
         /* 336 */ String result = null;
@@ -367,15 +315,6 @@ package com.homeimprovement;
  /* 363 */ this.myDatabase.clearList();
         /*     */    }
 
-    /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
  /*     */ private void doItemsQueryFromFile() {
         /* 375 */ List<HomeData> myList = new ArrayList<>();
         /* 376 */ String area = this.comboBoxArea.getSelectedItem().toString();
@@ -389,36 +328,7 @@ package com.homeimprovement;
             /*     */        }
         /*     */    }
 
-    /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
+ 
  /*     */ public static List<HomeData> getDateRange(int bDate, int eDate, Boolean isSelected) {
         /* 417 */ int dateSelect = 1;
         /* 418 */ List<HomeData> myList = HomeMainGui.getDataFromFile();
@@ -534,7 +444,7 @@ package com.homeimprovement;
         /*     */
  /*     */
  /* 527 */ itr = myList.iterator();
-        /* 528 */ if (isSelected.booleanValue()) /* 529 */ {
+        /* 528 */ if (isSelected) /* 529 */ {
             while (itr.hasNext()) {
                 /* 530 */ boolean homeImprovementSelectedItems = ((HomeData) itr.next()).getIsValue().booleanValue();
                 /* 531 */ if (!homeImprovementSelectedItems) /* 532 */ {
