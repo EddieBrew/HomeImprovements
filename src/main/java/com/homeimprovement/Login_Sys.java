@@ -49,7 +49,7 @@ public class Login_Sys {
      * Launch the application.
      */
     public static void main(String[] args) {
-        /* 
+        
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -60,7 +60,7 @@ public class Login_Sys {
 				}
 			}
 		});
-         */
+         
     }
 
     public Login_Sys() {

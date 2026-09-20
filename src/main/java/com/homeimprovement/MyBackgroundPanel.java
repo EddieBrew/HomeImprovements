@@ -67,7 +67,7 @@ public class MyBackgroundPanel extends JPanel {
  /*     */
  /*     */
  /*     */ public static void main(String[] args) {
-
+/* *
     // TODO Auto-generated method stub
 		 String jdbcUrl = "jdbc:mysql://127.0.0.1:3306/home_improvement";
 		  String userid = "rbrewer"; 
@@ -84,7 +84,7 @@ public class MyBackgroundPanel extends JPanel {
         frame.setVisible(true);
 
 
-
+*/
 
     }
 
