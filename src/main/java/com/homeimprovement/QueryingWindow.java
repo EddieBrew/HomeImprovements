@@ -6,6 +6,7 @@ import java.awt.BorderLayout;
 /*     */ import java.awt.Font;
 /*     */ import java.awt.LayoutManager;
 /*     */ import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 /*     */ import java.awt.event.KeyAdapter;
 /*     */ import java.awt.event.KeyEvent;
 /*     */ import java.text.DateFormat;
@@ -57,7 +58,8 @@ import javax.swing.JScrollPane;
         /*  70 */ initialize();
         /*     */    }
 
-    /*     */ private void initialize() {
+    /*     */@SuppressWarnings("Convert2Lambda")
+ private void initialize() {
         /*  79 */ String[] areas = {"ATTIC", "BACKYARD", "BATH1", "BATH2", "BDRM1", "BDRM2", "BDRM3", "BDRM4",
             /*  80 */ "FRONTYARD", "GARAGE", "HALLWAY", "KITCHEN", "LIVING ROOM", "ROOF"};
         /*     */
@@ -219,49 +221,51 @@ import javax.swing.JScrollPane;
         /* 237 */ this.qFrame.getContentPane().add(lblMaximumCostOf);
         /*     */
  /*     */
-        btnResultsDateRange.addActionListener((ActionEvent e) -> {
-            if (HomeMainGui.getDatabaseStatus()) {
-                QueryingWindow.this.getDateRangeFromDatabase();
-                System.out.println("Test1");
-
-                List<HomeData> dateRangeList = this.myDatabase.getList();
-                Collections.sort(dateRangeList, (Comparator<? super HomeData>) new HomeMainGui.SortHomeDataInDescendingOrderByDate());
-
-                String title = "Date Range Queries. Total Cost = $" + Double.toString(HomeMainGui.computeTotalCost(dateRangeList));
-
-                MyQueryTable myQueryTable = new MyQueryTable(dateRangeList);//create Table
-                JScrollPane mScrollPane = new JScrollPane(myQueryTable.getTable());//place table in scroll pane
-                JPanel panel = new JPanel();//panel object
-                panel.setLayout(new BorderLayout());
-                panel.add(mScrollPane, BorderLayout.CENTER);
-
-                //place table in frame
-                JFrame myFrame = new JFrame();
-                myFrame.setResizable(true);
-                myFrame.setTitle(title);
-                myFrame.getContentPane().setLayout(new BorderLayout());
-                myFrame.setBounds(100, 400, 800, 400);
-                //myFrame.setSize(800,400);
-                myFrame.getContentPane().add(panel);
-                myFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-                myFrame.setVisible(true);
-                this.myDatabase.clearList();
-            } else {
-                System.out.println("Test2");
+        btnResultsDateRange.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (HomeMainGui.getDatabaseStatus()) {
+                    QueryingWindow.this.getDateRangeFromDatabase();
+                    System.out.println("Test1");
+                    List<HomeData> dateRangeList = QueryingWindow.this.myDatabase.getList();
+                    Collections.sort(dateRangeList, (Comparator<? super HomeData>) new HomeMainGui.SortHomeDataInDescendingOrderByDate());
+                    String title = "Date Range Queries. Total Cost = $" + Double.toString(HomeMainGui.computeTotalCost(dateRangeList));
+                    MyQueryTable myQueryTable = new MyQueryTable(dateRangeList);//create Table
+                    JScrollPane mScrollPane = new JScrollPane(myQueryTable.getTable());//place table in scroll pane
+                    JPanel panel = new JPanel();//panel object
+                    panel.setLayout(new BorderLayout());
+                    panel.add(mScrollPane, BorderLayout.CENTER);
+                    //place table in frame
+                    JFrame myFrame = new JFrame();
+                    myFrame.setResizable(true);
+                    myFrame.setTitle(title);
+                    myFrame.getContentPane().setLayout(new BorderLayout());
+                    myFrame.setBounds(100, 400, 800, 400);
+                    //myFrame.setSize(800,400);
+                    myFrame.getContentPane().add(panel);
+                    myFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                    myFrame.setVisible(true);
+                    QueryingWindow.this.myDatabase.clearList();
+                } else {
+                    System.out.println("Test2");
+                }
             }
         });
        
 
+         btnResultsItems.addActionListener(new ActionListener() {
+             @Override
+             public void actionPerformed(ActionEvent e) {
+                 /* 255 */ if (HomeMainGui.getDatabaseStatus()) {
+                     /* 256 */ QueryingWindow.this.doItemsQueryFromDatabase();
+                     /*     */                 } else {
+                     /* 258 */ QueryingWindow.this.doItemsQueryFromFile();
+                     /*     */                 }
+                
+             }
+         });
+     }
 
- /* 252 */ btnResultsItems.addActionListener((ActionEvent e) -> {
-            /* 255 */ if (HomeMainGui.getDatabaseStatus()) {
-                /* 256 */ QueryingWindow.this.doItemsQueryFromDatabase();
-                /*     */            } else {
-                /* 258 */ QueryingWindow.this.doItemsQueryFromFile();
-                /*     */            }
-            /*     */
-        } /*     */ /*     */ /*     */);
-        /*     */    }
 
      private void getDateRangeFromDatabase() {
          String pattern = "yyyy-MM-dd";

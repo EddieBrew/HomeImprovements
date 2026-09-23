@@ -1,13 +1,8 @@
 package com.homeimprovement;
 
-import java.awt.BorderLayout;
 import java.awt.Color;
-import java.util.ArrayList;
 import java.util.List;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
 import javax.swing.JTable;
 
 public class MyQueryTable extends JTable {
@@ -88,6 +83,7 @@ public class MyQueryTable extends JTable {
     }
 
     public static void main(String[] args) {
+        /* 
         // TODO Auto-generated method stub
         MyQueryTable myQueryTable;
         List<HomeData> myList = new ArrayList<>();
@@ -116,7 +112,7 @@ public class MyQueryTable extends JTable {
         myFrame.getContentPane().add(panel);
         myFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         myFrame.setVisible(true);
-
+*/
     }
 
 }
