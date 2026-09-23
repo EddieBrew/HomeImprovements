@@ -428,12 +428,14 @@ public class MySQLConnect {
                     conn.close();
                 } //end if connected   
                 //PayrollPanel.sortListByDate(dataArray);
+                System.out.println("Size of dataArray is :" + dataArray.size());
                 return dataArray;
             }
         });
         executor.shutdown();
         try {
             list = myFuture.get();
+               System.out.println("Size of list is :" + list.size());
         } catch (InterruptedException | ExecutionException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();

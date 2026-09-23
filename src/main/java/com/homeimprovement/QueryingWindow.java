@@ -1,12 +1,11 @@
 package com.homeimprovement;
 
-/*     */
+import java.awt.BorderLayout;
  /*     */ import java.awt.Color;
 /*     */ import java.awt.Component;
 /*     */ import java.awt.Font;
 /*     */ import java.awt.LayoutManager;
 /*     */ import java.awt.event.ActionEvent;
-/*     */ import java.awt.event.ActionListener;
 /*     */ import java.awt.event.KeyAdapter;
 /*     */ import java.awt.event.KeyEvent;
 /*     */ import java.text.DateFormat;
@@ -26,6 +25,8 @@ package com.homeimprovement;
 /*     */ import javax.swing.JFrame;
 /*     */ import javax.swing.JLabel;
 /*     */ import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 /*     */ import javax.swing.JSeparator;
 /*     */ import javax.swing.JTextField;
 
@@ -45,20 +46,18 @@ package com.homeimprovement;
     /*     */    private JCheckBox chckBoxHomeImprovementItems;
     /*     */    private JTextField textFieldCost;
     /*     */    private String username;
-    /*     */    private MySQLConnect myDatabase;
+    /*     */    private MySQLConnect myDatabase;  
+                 
+
     /*  48 */    private final String HOMEIMPROVEMENT_DATABASE = "houseexpenses";
 
-  
- /*     */ public static void main(String[] args) {
-    }
-
- /*     */ public QueryingWindow(String username, MySQLConnect mySQLDatabase) {
+    /*     */ public QueryingWindow(String username, MySQLConnect mySQLDatabase) {
         /*  68 */ this.username = username;
         /*  69 */ this.myDatabase = mySQLDatabase;
         /*  70 */ initialize();
         /*     */    }
 
- /*     */ private void initialize() {
+    /*     */ private void initialize() {
         /*  79 */ String[] areas = {"ATTIC", "BACKYARD", "BATH1", "BATH2", "BDRM1", "BDRM2", "BDRM3", "BDRM4",
             /*  80 */ "FRONTYARD", "GARAGE", "HALLWAY", "KITCHEN", "LIVING ROOM", "ROOF"};
         /*     */
@@ -220,55 +219,90 @@ package com.homeimprovement;
         /* 237 */ this.qFrame.getContentPane().add(lblMaximumCostOf);
         /*     */
  /*     */
- /* 240 */ btnResultsDateRange.addActionListener(new ActionListener() /*     */ {
-            /*     */ public void actionPerformed(ActionEvent e) {
-                /* 243 */ if (HomeMainGui.getDatabaseStatus().booleanValue()) {
-                    /* 244 */ QueryingWindow.this.getDateRangeFromDatabase();
-                    /*     */                } else {
-                    /* 246 */ QueryingWindow.this.getDateRangeFromFile();
-                    /*     */                }
+        btnResultsDateRange.addActionListener((ActionEvent e) -> {
+            if (HomeMainGui.getDatabaseStatus()) {
+                QueryingWindow.this.getDateRangeFromDatabase();
+                System.out.println("Test1");
+
+                List<HomeData> dateRangeList = this.myDatabase.getList();
+                Collections.sort(dateRangeList, (Comparator<? super HomeData>) new HomeMainGui.SortHomeDataInDescendingOrderByDate());
+
+                String title = "Date Range Queries. Total Cost = $" + Double.toString(HomeMainGui.computeTotalCost(dateRangeList));
+
+                MyQueryTable myQueryTable = new MyQueryTable(dateRangeList);//create Table
+                JScrollPane mScrollPane = new JScrollPane(myQueryTable.getTable());//place table in scroll pane
+                JPanel panel = new JPanel();//panel object
+                panel.setLayout(new BorderLayout());
+                panel.add(mScrollPane, BorderLayout.CENTER);
+
+                //place table in frame
+                JFrame myFrame = new JFrame();
+                myFrame.setResizable(true);
+                myFrame.setTitle(title);
+                myFrame.getContentPane().setLayout(new BorderLayout());
+                myFrame.setBounds(100, 400, 800, 400);
+                //myFrame.setSize(800,400);
+                myFrame.getContentPane().add(panel);
+                myFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                myFrame.setVisible(true);
+                this.myDatabase.clearList();
+            } else {
+                System.out.println("Test2");
+            }
+        });
+       
+
+
+ /* 252 */ btnResultsItems.addActionListener((ActionEvent e) -> {
+            /* 255 */ if (HomeMainGui.getDatabaseStatus()) {
+                /* 256 */ QueryingWindow.this.doItemsQueryFromDatabase();
+                /*     */            } else {
+                /* 258 */ QueryingWindow.this.doItemsQueryFromFile();
                 /*     */            }
-            /*     */        });
-        /*     */
- /*     */
- /* 252 */ btnResultsItems.addActionListener(new ActionListener() /*     */ {
-            /*     */ public void actionPerformed(ActionEvent e) {
-                /* 255 */ if (HomeMainGui.getDatabaseStatus().booleanValue()) {
-                    /* 256 */ QueryingWindow.this.doItemsQueryFromDatabase();
-                    /*     */                } else {
-                    /* 258 */ QueryingWindow.this.doItemsQueryFromFile();
-                    /*     */                }
-                /*     */            }
-            /*     */        });
+            /*     */
+        } /*     */ /*     */ /*     */);
         /*     */    }
 
- 
- /*     */ private void getDateRangeFromDatabase() {
-        /* 277 */ String pattern = "yyyy-MM-dd";
-        /* 278 */ DateFormat formatter = new SimpleDateFormat(pattern);
-        /*     */
- /* 280 */ Date bDate = this.dateChooserB.getDate();
-        /* 281 */ String dateStringB = formatter.format(bDate);
-        /* 282 */ Date eDate = this.dateChooserE.getDate();
-        /* 283 */ String dateStringE = formatter.format(eDate);
-        /*     */
- /* 285 */ String result = "SELECT * FROM houseexpenses WHERE  DATE >= '" + dateStringB + "' AND DATE <= '" + dateStringE + "'";
-        /* 286 */ System.out.println(result);
-        /* 287 */ this.myDatabase.getDateRangeResults(result);
-        /*     */
- /* 289 */ List<HomeData> dateRangeList = this.myDatabase.getList();
-        /* 290 */ Collections.sort(dateRangeList, (Comparator<? super HomeData>) new HomeMainGui.SortHomeDataInDescendingOrderByDate());
-        /*     */
- /* 292 */ String title = "Date Range Queries. Total Cost = $" + Double.toString(HomeMainGui.computeTotalCost(dateRangeList));
-        /*     */
- /*     */
- /* 295 */ this.myDatabase.clearList();
-        /*     */    }
+     private void getDateRangeFromDatabase() {
+         String pattern = "yyyy-MM-dd";
+         DateFormat formatter = new SimpleDateFormat(pattern);
 
-    /*     */
- 
- /*     */ private void getDateRangeFromFile() {
-        /* 311 */ int dateSelect = 1;
+         Date bDate = this.dateChooserB.getDate();
+         String dateStringB = formatter.format(bDate);
+         Date eDate = this.dateChooserE.getDate();
+         String dateStringE = formatter.format(eDate);
+
+         String result = "SELECT * FROM houseexpenses WHERE  DATE >= '" + dateStringB + "' AND DATE <= '" + dateStringE + "'";
+         System.out.println(result);
+         this.myDatabase.getDateRangeResults(result);
+
+         List<HomeData> dateRangeList = this.myDatabase.getList();
+         System.out.println("dataRangeList = " + dateRangeList.size());
+         Collections.sort(dateRangeList, (Comparator<? super HomeData>) new HomeMainGui.SortHomeDataInDescendingOrderByDate());
+
+         String title = "Date Range Queries. Total Cost = $" + Double.toString(HomeMainGui.computeTotalCost(dateRangeList));
+        MyQueryTable  myQueryTable = new MyQueryTable(dateRangeList);//create Table
+        JScrollPane mScrollPane = new JScrollPane(myQueryTable.getTable());//place table in scroll pane
+        JPanel panel = new JPanel();//panel object
+        panel.setLayout(new BorderLayout());
+        panel.add(mScrollPane, BorderLayout.CENTER);
+
+        //place table in frame
+        JFrame myFrame = new JFrame();
+        myFrame.setResizable(true);
+        myFrame.setTitle(title);
+        myFrame.getContentPane().setLayout(new BorderLayout());
+        myFrame.setBounds(100, 400, 800, 400);
+        //myFrame.setSize(800,400);
+        myFrame.getContentPane().add(panel);
+        myFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        myFrame.setVisible(true);
+         this.myDatabase.clearList();
+     
+     }
+
+  private void getDateRangeFromFile() {
+       /* 311 */ int dateSelect = 1;
         /* 312 */ String pattern = "yyyy-MM-dd";
         /* 313 */ DateFormat formatter = new SimpleDateFormat(pattern);
         /*     */
@@ -280,10 +314,9 @@ package com.homeimprovement;
  /* 320 */ List<HomeData> dateRangeList = getDateRange(HomeMainGui.convertDateStringToInt(dateStringB, dateSelect),
                 /* 321 */ HomeMainGui.convertDateStringToInt(dateStringE, dateSelect), Boolean.valueOf(this.chckbxHomeImprovementDates.isSelected()));
         /* 322 */ String title = "Date Range Queries. Total Cost = $" + Double.toString(HomeMainGui.computeTotalCost(dateRangeList));
-        /*     */    }
+ }
 
-
- /*     */ private void doItemsQueryFromDatabase() {
+    /*     */ private void doItemsQueryFromDatabase() {
         /* 335 */ String whocares = "N/A";
         /* 336 */ String result = null;
         /* 337 */ if (this.comboBoxItem1.getSelectedItem().toString().compareTo(whocares) == 0
@@ -305,7 +338,7 @@ package com.homeimprovement;
  /* 353 */ System.out.println(result);
         /* 354 */ this.myDatabase.getQuery(result);
         /* 355 */ List<HomeData> myList = this.myDatabase.getList();
-        /* 356 */ if (myList.size() == 0) {
+        /* 356 */ if (myList.isEmpty()) {
             /* 357 */ JOptionPane.showMessageDialog(null, "Your query returned 0 results");
             /*     */        } else {
             /* 359 */ String title = "Item Queries. Total Cost = $" + Double.toString(HomeMainGui.computeTotalCost(myList));
@@ -313,23 +346,22 @@ package com.homeimprovement;
         /*     */
  /*     */
  /* 363 */ this.myDatabase.clearList();
-        /*     */    }
+ }
 
- /*     */ private void doItemsQueryFromFile() {
+    /*     */ private void doItemsQueryFromFile() {
         /* 375 */ List<HomeData> myList = new ArrayList<>();
         /* 376 */ String area = this.comboBoxArea.getSelectedItem().toString();
         /* 377 */ String[] items = {this.comboBoxItem1.getSelectedItem().toString(), this.comboBoxItem2.getSelectedItem().toString(), this.comboBoxItem3.getSelectedItem().toString()};
         /*     */
  /* 379 */ myList = getQueryItemsList(area, items, Boolean.valueOf(this.chckBoxHomeImprovementItems.isSelected()));
-        /* 380 */ if (myList.size() == 0) {
+        /* 380 */ if (myList.isEmpty()) {
             /* 381 */ JOptionPane.showMessageDialog(null, "Your query returned 0 results");
             /*     */        } else {
             /* 383 */ String title = "Item Queries. Total Cost = $" + Double.toString(HomeMainGui.computeTotalCost(myList));
             /*     */        }
         /*     */    }
 
- 
- /*     */ public static List<HomeData> getDateRange(int bDate, int eDate, Boolean isSelected) {
+    /*     */ public static List<HomeData> getDateRange(int bDate, int eDate, Boolean isSelected) {
         /* 417 */ int dateSelect = 1;
         /* 418 */ List<HomeData> myList = HomeMainGui.getDataFromFile();
         /*     */
@@ -343,9 +375,9 @@ package com.homeimprovement;
         }
         /*     */
  /* 427 */ itr = myList.iterator();
-        /* 428 */ if (isSelected.booleanValue()) /*     */ {
+        /* 428 */ if (isSelected) /*     */ {
             /* 430 */ while (itr.hasNext()) {
-                /* 431 */ boolean homeImprovementSelected = ((HomeData) itr.next()).getIsValue().booleanValue();
+                /* 431 */ boolean homeImprovementSelected = ((HomeData) itr.next()).getIsValue();
                 /*     */
  /* 433 */ if (!homeImprovementSelected) {
                     /* 434 */ itr.remove();
@@ -356,21 +388,6 @@ package com.homeimprovement;
  /* 439 */ return myList;
         /*     */    }
 
-    /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
- /*     */
  /*     */ private List<HomeData> getQueryItemsList(String area, String[] items, Boolean isSelected) {
         /* 457 */ List<HomeData> myList = HomeMainGui.getDataFromFile();
         /* 458 */ String notApplicable = "N/A";
