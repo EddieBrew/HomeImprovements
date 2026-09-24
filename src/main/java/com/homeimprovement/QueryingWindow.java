@@ -226,7 +226,9 @@ import javax.swing.JScrollPane;
             public void actionPerformed(ActionEvent e) {
                 if (HomeMainGui.getDatabaseStatus()) {
                     QueryingWindow.this.getDateRangeFromDatabase();
-                    System.out.println("Test1");
+                   /* 
+
+                    //System.out.println("Test1");
                     List<HomeData> dateRangeList = QueryingWindow.this.myDatabase.getList();
                     Collections.sort(dateRangeList, (Comparator<? super HomeData>) new HomeMainGui.SortHomeDataInDescendingOrderByDate());
                     String title = "Date Range Queries. Total Cost = $" + Double.toString(HomeMainGui.computeTotalCost(dateRangeList));
@@ -246,8 +248,10 @@ import javax.swing.JScrollPane;
                     myFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                     myFrame.setVisible(true);
                     QueryingWindow.this.myDatabase.clearList();
+                    */
                 } else {
-                    System.out.println("Test2");
+                    getDateRangeFromFile() ;
+                     System.out.println("Test2");
                 }
             }
         });
