@@ -70,6 +70,18 @@ public class MyBarChart extends JFrame {
             if (i == 5) {
                 year = "2025";
             }
+             if (i == 6) {
+                year = "2026";
+            }
+            if (i == 7) {
+                year = "2027";
+            }
+            if (i == 8) {
+                year = "2028";
+            }
+            if (i == 9) {
+                year = "2029";
+            }
             for (int j = 0; j < HomeMainGui.COLS; j++) {
                 switch (j) {
                     case 0:
