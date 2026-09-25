@@ -504,9 +504,9 @@ public class HomeMainGui {
                         + /*  551 */ Double.toString(currentBalance);
                 /*      */            }
             /*      */
- /*  554 */ if (currentBalance > 250.0D && !maxLimitFlag) /*      */ {
+ /*  554 */ if (currentBalance > MONTHLY_MAX && !maxLimitFlag) /*      */ {
                 /*  556 */ maxLimitFlag = true;
-                /*  557 */ playMaxLimitSound(currentBalance, 250.0D);
+                /*  557 */ playMaxLimitSound(currentBalance, MONTHLY_MAX);
                 /*      */            }
             /*      */
  /*  560 */        } catch (Exception e) {
@@ -530,10 +530,10 @@ public class HomeMainGui {
                     + /*  587 */ Double.toString(currentBalance);
             /*      */        }
         /*      */
- /*  590 */ if (currentBalance > 250.0D && !maxLimitFlag) {
+ /*  590 */ if (currentBalance > MONTHLY_MAX  && !maxLimitFlag) {
             /*      */
  /*  592 */ maxLimitFlag = true;
-            /*  593 */ playMaxLimitSound(currentBalance, 250.0D);
+            /*  593 */ playMaxLimitSound(currentBalance, MONTHLY_MAX);
             /*      */        }
         /*      */    }
 
@@ -612,6 +612,16 @@ public class HomeMainGui {
         /*      */
  /*  728 */ List<HomeData> list2025 = getListForYear(myList, 2025);
         /*  729 */ getMonthlyTotalForTheYear(monthlyTotals, list2025, 5);
+
+        List<HomeData> list2026 = getListForYear(myList, 2026);
+        /*  729 */ getMonthlyTotalForTheYear(monthlyTotals, list2026, 6);
+
+         List<HomeData> list2027 = getListForYear(myList, 2027);
+        /*  729 */ getMonthlyTotalForTheYear(monthlyTotals, list2027, 7);
+
+        List<HomeData> list2028 = getListForYear(myList, 2028);
+        /*  729 */ getMonthlyTotalForTheYear(monthlyTotals, list2028, 8);
+
         /*      */
  /*      */ new MyBarChart("Marlin's Monthly Expenses", monthlyTotals);
         /*  732 */ this.mySQLDatabase.clearList();
