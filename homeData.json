@@ -1,5 +1,16 @@
 { 
  "homeData" :[ 
+{"date":"2026-08-05","area":"KITCHEN","item":"MISC","cost":17.2,"receiptFilename":"filename","info":"baking soda","isValue":false}
+{"date":"2026-07-31","area":"BACKYARD","item":"MISC","cost":25.62,"receiptFilename":"filename","info":"batteries","isValue":false}
+{"date":"2026-07-23","area":"GARAGE","item":"MISC","cost":18.25,"receiptFilename":"filename","info":"door lube","isValue":false}
+{"date":"2026-07-19","area":"KITCHEN","item":"FLOOR","cost":5.37,"receiptFilename":"filename","info":"floor cleaner","isValue":false}
+{"date":"2026-07-16","area":"FRONTYARD","item":"MISC","cost":5.45,"receiptFilename":"filename","info":"drip coupling","isValue":false}
+{"date":"2026-06-23","area":"BACKYARD","item":"PLANTS","cost":34.22,"receiptFilename":"filename","info":"spring veggies","isValue":false}
+{"date":"2026-06-18","area":"LIVING ROOM","item":"PLANTS","cost":11.45,"receiptFilename":"filename","info":"pothos indoor plants","isValue":false}
+{"date":"2026-06-17","area":"FRONTYARD","item":"MISC","cost":28.0,"receiptFilename":"filename","info":"frames for signage","isValue":false}
+{"date":"2026-06-10","area":"KITCHEN","item":"FLOOR","cost":15.06,"receiptFilename":"filename","info":"mop","isValue":false}
+{"date":"2026-06-07","area":"BACKYARD","item":"PLANTS","cost":22.97,"receiptFilename":"filename","info":"succulents and mulch","isValue":false}
+{"date":"2026-05-23","area":"FRONTYARD","item":"PLANTS","cost":11.32,"receiptFilename":"filename","info":"pagonias","isValue":false}
 {"date":"2026-05-20","area":"BACKYARD","item":"MISC","cost":29.02,"receiptFilename":"filename","info":"houseplants","isValue":false}
 {"date":"2026-05-15","area":"FRONTYARD","item":"SEWAGE LINE","cost":15.85,"receiptFilename":"filename","info":"sewage line treatment","isValue":false}
 {"date":"2026-05-13","area":"BACKYARD","item":"LIGHTS","cost":21.52,"receiptFilename":"filename","info":"Two sets of floodlights for backyard motion sensor floodlights","isValue":false}
