@@ -263,6 +263,7 @@ public class HomeMainGui {
                     /* 294 */ downloadFromServerToFile();
                     /* 295 */ copyFileToGoogleDrive();
                     /* 296 */ System.exit(0);
+                            new Login_Sys();
                     /*      */ }
                 /*      */ }
             /*      */ });
