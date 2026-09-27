@@ -10,14 +10,10 @@ Updates:
 Version 3.1 6/20/22:  Changed login procedures to be more secure by parsing credentials from a file
 
  */
-
 import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -38,30 +34,20 @@ public class Login_Sys {
     private JFrame frameLoginSystem;
     private JTextField tFieldUsername;
     private JPasswordField passwordField;
-    private String filename = "mysignonstuff.txt";
-    //private HomeMainGui window = null;
-    //public final static String credentialsFilename = "mysignonstuff.txt" ;
 
     /**
      * Launch the application.
      */
-    /**
-     * Launch the application.
-     */
-    
     public static void main(String[] args) {
-        
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Login_Sys window = new Login_Sys();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-         
+
+        EventQueue.invokeLater(() -> {
+            try {
+                Login_Sys window = new Login_Sys();
+                window.frame.setVisible(true);
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "OH OH, Something went wrong", "Login Error", JOptionPane.ERROR_MESSAGE);
+            }
+        });
     }
 
     public Login_Sys() {
@@ -128,39 +114,32 @@ public class Login_Sys {
         btnReset.setBounds(159, 202, 126, 48);
         frame.getContentPane().add(btnReset);
 
-        btnExit.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                frameLoginSystem = new JFrame("Exit");
-                if (JOptionPane.showConfirmDialog(frameLoginSystem, "Confirmif you want to exit", "Login System",
-                        JOptionPane.YES_NO_OPTION) == JOptionPane.YES_NO_OPTION) {
-                    System.exit(0);
-                }
+        btnExit.addActionListener((ActionEvent e) -> {
+            frameLoginSystem = new JFrame("Exit");
+            if (JOptionPane.showConfirmDialog(frameLoginSystem, "Confirmif you want to exit", "Login System",
+                    JOptionPane.YES_NO_OPTION) == JOptionPane.YES_NO_OPTION) {
+                System.exit(0);
             }
         });
 
-        btnLogin.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                String username = tFieldUsername.getText();
-                char[] password = passwordField.getPassword();
+        btnLogin.addActionListener((ActionEvent e) -> {
+            String username = tFieldUsername.getText();
+            char[] password = passwordField.getPassword();
 
-                if (isSignonCredentCorrect(username, password)) {
-                    frame.setVisible(false); //you can't see me!
-                    frame.dispose(); //Destroy the JFrame object
-                    new HomeMainGui(username, password);
-                } else {
-                    // TODO Auto-generated catch block
-                    //JOptionPane.showMessageDialog(null, "Invalid Username and/or Password ","Login Error", JOptionPane.ERROR_MESSAGE);
-                    passwordField.setText(null);
-                }
-            }
-        });
+            if (isLoginCredentsCorrect(username, password)) {
+                frame.setVisible(false); //you can't see me!
+                frame.dispose(); //Destroy the JFrame object
+                new HomeMainGui(username, password);
 
-        btnReset.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-
-                tFieldUsername.setText(null);
+            } else {
+                JOptionPane.showMessageDialog(null, "Invalid Username and/or Password ", "Login Error", JOptionPane.ERROR_MESSAGE);
                 passwordField.setText(null);
             }
+        });
+
+        btnReset.addActionListener((ActionEvent e) -> {
+            tFieldUsername.setText(null);
+            passwordField.setText(null);
         });
     }//end initialize()
 
@@ -172,28 +151,22 @@ public class Login_Sys {
      * @pre String name: username char[] pword: password
      * @parameter
      * @post boolean: return boolean value if credential is correct or not
-	 *********************************************************************************
+     * ********************************************************************************
      */
-    private boolean isSignonCredentCorrect(String name, char[] pword) {
+    private boolean isLoginCredentsCorrect(String name, char[] pword) {
 
-        boolean isFound;
         final String DELIMITER = "#";
         String myDatastuff[] = getCredentialsFromFile().split(DELIMITER);
 
         if (myDatastuff == null || myDatastuff.length == 0) {
             //JOptionPane.showMessageDialog(null, "Credential File Can Not Be Found","File Not Found Error", JOptionPane.ERROR_MESSAGE);
-            isFound = false;
-        }
-
-        if (name.equals(myDatastuff[1]) && String.valueOf(pword).equals(myDatastuff[4])) {
-            isFound = true;
+            return false;
+        } else if (name.equals(myDatastuff[1]) && String.valueOf(pword).equals(myDatastuff[4])) {
+            return true;
         } else {
             JOptionPane.showMessageDialog(null, "Invalid Username and/or Password ", "Login Error", JOptionPane.ERROR_MESSAGE);
-            isFound = false;
-
+            return false;
         }
-
-        return isFound;
     }
 
     /**
@@ -203,10 +176,11 @@ public class Login_Sys {
      * @pre String inputFile: filename storing credentials
      * @parameter
      * @post String: sign-on credential
-	 *********************************************************************************
+     * ********************************************************************************
      */
     private String getCredentialsFromFile() {
 
+        final String filename = "mysignonstuff.txt";
         InputStream inputStream = Login_Sys.class.getClassLoader().getResourceAsStream(filename);
         final int myMagicNumber = 21;
         String allData = null;
@@ -231,20 +205,16 @@ public class Login_Sys {
                 if (count < myMagicNumber) { //file does not contain sign-on credential info
                     JOptionPane.showMessageDialog(null, "Credentials can not be found.");
                 }
-
             } catch (IOException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
                 JOptionPane.showMessageDialog(null, "Can not read  from file or File Is Not Found ");
             }
         } finally {
-            try {
-                bufferedReader.close();
-                //return allData;
-            } catch (IOException e) {
-                // TODO Auto-generated catch block
-                JOptionPane.showMessageDialog(null, "Error Closing The File" + e);
-                e.printStackTrace();
+            if (bufferedReader != null) {
+                try {
+                    bufferedReader.close();
+                } catch (IOException e) {
+                    JOptionPane.showMessageDialog(null, "Error Closing The File" + e);
+                }
             }
         }
 
