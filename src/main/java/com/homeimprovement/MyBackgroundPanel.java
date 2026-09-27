@@ -434,6 +434,6 @@ public class MyBackgroundPanel extends JPanel {
 
 
 /* Location:              C:\Users\rober\OneDrive\Documents\MyApplications\HomeImprovementsNRepairs\homeImprovementsNRepairs.jar!\main_screen\MyBackgroundPanel.class
- * Java compiler version: 8 (52.0)
+ * Java compiler version: 21
  * JD-Core Version:       1.1.3
  */
