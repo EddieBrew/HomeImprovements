@@ -73,7 +73,6 @@ public class MyQueryTable extends JTable {
             table.setBackground(Color.CYAN);
 
         } catch (Exception e) {
-            // TODO Auto-generated catch block
             //e.printStackTrace();
              JOptionPane.showMessageDialog(null, "OH OH, Something went wrong", "Query Table Error", JOptionPane.ERROR_MESSAGE);
             table = null;
@@ -83,7 +82,7 @@ public class MyQueryTable extends JTable {
 
     public static void main(String[] args) {
         /* 
-        // TODO Auto-generated method stub
+
         MyQueryTable myQueryTable;
         List<HomeData> myList = new ArrayList<>();
         HomeData myInfo;
