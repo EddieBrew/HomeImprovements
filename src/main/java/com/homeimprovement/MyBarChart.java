@@ -43,12 +43,9 @@ public class MyBarChart extends JFrame {
         getContentPane().add(panel);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setVisible(true);
-
     }
 
     private CategoryDataset createDataset() {
-        // TODO Auto-generated method stub
-
         DefaultCategoryDataset dataset = new DefaultCategoryDataset();
         String year = "";
         for (int i = 0; i < HomeMainGui.ROWS; i++) {
@@ -70,7 +67,7 @@ public class MyBarChart extends JFrame {
             if (i == 5) {
                 year = "2025";
             }
-             if (i == 6) {
+            if (i == 6) {
                 year = "2026";
             }
             if (i == 7) {
@@ -84,54 +81,39 @@ public class MyBarChart extends JFrame {
             }
             for (int j = 0; j < HomeMainGui.COLS; j++) {
                 switch (j) {
-                    case 0:
+                    case 0 ->
                         dataset.addValue(mydata[i][j], year, "Jan");
-                        break;
-                    case 1:
+                    case 1 ->
                         dataset.addValue(mydata[i][j], year, "Feb");
-                        break;
-                    case 2:
+                    case 2 ->
                         dataset.addValue(mydata[i][j], year, "Mar");
-                        break;
-                    case 3:
+                    case 3 ->
                         dataset.addValue(mydata[i][j], year, "Apr");
-                        break;
-                    case 4:
+                    case 4 ->
                         dataset.addValue(mydata[i][j], year, "May");
-                        break;
-                    case 5:
+                    case 5 ->
                         dataset.addValue(mydata[i][j], year, "Jun");
-                        break;
-                    case 6:
+                    case 6 ->
                         dataset.addValue(mydata[i][j], year, "Jul");
-                        break;
-                    case 7:
+                    case 7 ->
                         dataset.addValue(mydata[i][j], year, "Aug");
-                        break;
-                    case 8:
+                    case 8 ->
                         dataset.addValue(mydata[i][j], year, "Sep");
-                        break;
-                    case 9:
+                    case 9 ->
                         dataset.addValue(mydata[i][j], year, "Oct");
-                        break;
-                    case 10:
+                    case 10 ->
                         dataset.addValue(mydata[i][j], year, "Nov");
-                        break;
-                    case 11:
+                    case 11 ->
                         dataset.addValue(mydata[i][j], year, "Dec");
-                        break;
-                    default:
+                    default -> {
+                    }
                 }
-
             }
         }
-
         return dataset;
-
     }
 
     public static void main(String[] args) throws Exception {
-        // TODO Auto-generated method stub
 
     }
 
