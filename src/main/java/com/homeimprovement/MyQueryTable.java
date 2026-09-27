@@ -3,6 +3,7 @@ package com.homeimprovement;
 import java.awt.Color;
 import java.util.List;
 
+import javax.swing.JOptionPane;
 import javax.swing.JTable;
 
 public class MyQueryTable extends JTable {
@@ -30,7 +31,6 @@ public class MyQueryTable extends JTable {
             Object[][] data = new Object[rows][COLS];
             for (int i = 0; i < rows; i++) {
                 for (int j = 0; j < COLS; j++) {
-
                     switch (j) {
                         case 0:
                             data[i][j] = myList.get(i).getDate();
@@ -74,8 +74,8 @@ public class MyQueryTable extends JTable {
 
         } catch (Exception e) {
             // TODO Auto-generated catch block
-            e.printStackTrace();
-            //System.out.println("OUT: " + e.toString());
+            //e.printStackTrace();
+             JOptionPane.showMessageDialog(null, "OH OH, Something went wrong", "Query Table Error", JOptionPane.ERROR_MESSAGE);
             table = null;
         }
 
