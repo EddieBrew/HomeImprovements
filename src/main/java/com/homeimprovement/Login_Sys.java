@@ -46,6 +46,7 @@ public class Login_Sys {
                 window.frame.setVisible(true);
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(null, "OH OH, Something went wrong", "Login Error", JOptionPane.ERROR_MESSAGE);
+                System.exit(0);
             }
         });
     }
