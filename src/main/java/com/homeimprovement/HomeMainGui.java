@@ -1,437 +1,367 @@
 package com.homeimprovement;
 
 import java.awt.BorderLayout;
- import java.awt.Color;
- import java.awt.Font;
- import java.awt.event.ActionEvent;
- import java.awt.event.ActionListener;
- import java.awt.event.MouseAdapter;
- import java.awt.event.MouseEvent;
- import java.io.BufferedReader;
- import java.io.BufferedWriter;
- import java.io.File;
- import java.io.FileInputStream;
- import java.io.FileOutputStream;
- import java.io.FileReader;
- import java.io.FileWriter;
- import java.io.IOException;
- import java.io.InputStream;
- import java.io.InputStreamReader;
- import java.io.OutputStream;
- import java.nio.charset.StandardCharsets;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.HeadlessException;
+import java.awt.event.ActionEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.nio.charset.StandardCharsets;
 import java.text.SimpleDateFormat;
- import java.time.LocalDate;
- import java.util.ArrayList;
- import java.util.Calendar;
- import java.util.Collections;
- import java.util.Comparator;
- import java.util.Date;
- import java.util.Iterator;
- import java.util.List;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
 
- import javax.sound.sampled.AudioInputStream;
- import javax.sound.sampled.AudioSystem;
- import javax.sound.sampled.Clip;
- import javax.swing.JFrame;
- import javax.swing.JLabel;
- import javax.swing.JMenu;
- import javax.swing.JMenuBar;
- import javax.swing.JMenuItem;
- import javax.swing.JOptionPane;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
+import javax.swing.SwingUtilities;
 
- import org.jfree.data.json.impl.JSONArray;
+import org.jfree.data.json.impl.JSONArray;
 import org.jfree.data.json.impl.JSONObject;
 import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class HomeMainGui {
 
-     private static final long serialVersionUID = -8044048618173986424L;
-     private final String CLASSNAME = "HomeMainGui";
-     private static String username;
-     private JFrame frame;
-     private JMenuBar menuBar;
-     private JMenu myMenu;
-     private JMenuItem queryWork;
-     private JMenuItem logout;
-     private JMenuItem download;
-     private final String HOMEIMPROVEMENT_DATABASE = "houseexpenses";
-    
-     private JMenuItem upload;
-    
-     private JMenuItem about;
-    
-     private JMenuItem filePath;
-    
-     private JMenuItem reformat;
-    
-     private JMenuItem jsonToDatabase;
-    
-     private JMenuItem reconnectToDatabase;
-    
-     private JMenuItem currentMonth;
+    private static final long serialVersionUID = -8044048618173986424L;
+    private final String CLASSNAME = "HomeMainGui";
+    private static String username;
+    private JFrame frame;
+    private JMenuBar menuBar;
+    private JMenu myMenu;
+    private JMenuItem queryWork;
+    private JMenuItem logout;
+    private JMenuItem download;
+    private final String HOMEIMPROVEMENT_DATABASE = "houseexpenses";
 
-    
-     public static Boolean getDatabaseStatus() {
-         return databaseStatus;
-         }
+    private JMenuItem upload;
 
-     private MySQLConnect mySQLDatabase;
-     private static final String inputFile = "cost.csv";
+    private JMenuItem about;
+
+    private JMenuItem filePath;
+
+    private JMenuItem reformat;
+
+    private JMenuItem jsonToDatabase;
+
+    private JMenuItem reconnectToDatabase;
+
+    private JMenuItem currentMonth;
+
+    public static Boolean getDatabaseStatus() {
+        return databaseStatus;
+    }
+
+    private MySQLConnect mySQLDatabase;
+    private static final String inputFile = "cost.csv";
     private final String filename = "mysqlsignonstuff.txt";
     public static final int ROWS = 9;
-     public static final int COLS = 12;
-     private static boolean maxLimitFlag = false;
-     private static Boolean databaseStatus;
-     private JLabel lblDatabaseStatus;
-     private MyBackgroundPanel myBackgroundPanel;
+    public static final int COLS = 12;
+    private static boolean maxLimitFlag = false;
+    private static Boolean databaseStatus;
+    private JLabel lblDatabaseStatus;
+    private MyBackgroundPanel myBackgroundPanel;
 
-    
-     public HomeMainGui(String username, char[] password) {
-         HomeMainGui.username = username;
-         isSQLSignonCredentCorrect();
-         initialize();
-         if (databaseStatus) {
-             this.lblDatabaseStatus.setText("Database Connected");
-             this.lblDatabaseStatus.setForeground(Color.green);
-             } else {
-             this.lblDatabaseStatus.setText("Database Is Not Connected");
-             this.lblDatabaseStatus.setForeground(Color.red);
-             }
-         }
+    public HomeMainGui(String username, char[] password) {
+        HomeMainGui.username = username;
+        isSQLSignonCredentCorrect();
+        initialize();
+        if (databaseStatus) {
+            SwingUtilities.invokeLater(() -> {
+                lblDatabaseStatus.setForeground(Color.GREEN);
+                lblDatabaseStatus.repaint();
+            });
 
-    
-    
-     class MyMouseListener
-             extends MouseAdapter  {
+            // this.lblDatabaseStatus.setText("Database Connected");
+            // this.lblDatabaseStatus.setForeground(Color.GREEN);
+            // lblDatabaseStatus.repaint();
+        } else {
 
-         public void mouseClicked(MouseEvent evt) {
-             if (evt.getClickCount() == 3) {
-                 HomeMainGui.this.reformat.setVisible(false);
-                 } else if (evt.getClickCount() == 2) {
-                 HomeMainGui.this.reformat.setVisible(true);
-                 System.out.println("double-click");
-                 }
-             }
-         }
+            SwingUtilities.invokeLater(() -> {
+                lblDatabaseStatus.setForeground(Color.RED);
+                lblDatabaseStatus.repaint();
+            });
+            // this.lblDatabaseStatus.setText("Database Is Not Connected");
+            // this.lblDatabaseStatus.setForeground(Color.RED);
+            //lblDatabaseStatus.repaint();
+        }
+    }
 
-    
-    
-     private void initialize() {
-         this.frame = new JFrame();
-         this.myBackgroundPanel = new MyBackgroundPanel(this.mySQLDatabase);
-         this.frame.setContentPane(this.myBackgroundPanel);
-        
-        
-         this.menuBar = new JMenuBar();
-         this.menuBar.setLayout(new BorderLayout());
-         this.menuBar.setFont(new Font("Segoe UI", 1, 12));
-         this.menuBar.setBackground(Color.WHITE);
-        
-        
-        
-         this.myMenu = new JMenu("MENU");
-         this.myMenu.setMnemonic(0);
-         this.myMenu.getAccessibleContext().setAccessibleDescription("Get My Shit");
-         this.myMenu.setBackground(new Color(50, 205, 50));
-         this.menuBar.add(this.myMenu, "West");
-        
-         this.lblDatabaseStatus = new JLabel("NOT CONNECTED");
-         this.lblDatabaseStatus.setBounds(156, 16, 159, 15);
-         this.lblDatabaseStatus.setFont(new Font("Verdana", 1, 14));
-        
-         this.lblDatabaseStatus.setDisplayedMnemonic(65);
-        
-         this.menuBar.add(this.lblDatabaseStatus, "East");
-        
-        
-        
-        
-        
-         this.download = new JMenuItem("Download From Server");
-         this.queryWork = new JMenuItem("Perform Queries");
-         this.currentMonth = new JMenuItem("Current Month's Expenses");
-         this.upload = new JMenuItem("Copy File Data To Database");
-         this.logout = new JMenuItem("Logout");
-         this.about = new JMenuItem("About");
-         this.reformat = new JMenuItem("Reformat CSV File");
-         this.reformat.setVisible(false);
-        
-        
-         this.jsonToDatabase = new JMenuItem("Copy JSON Data To Database");
-         this.reconnectToDatabase = new JMenuItem("Reconnect To Database");
-        
-        
-         this.myMenu.add(this.reformat);
-         this.myMenu.add(this.currentMonth);
-        
-        
-         this.myMenu.add(this.jsonToDatabase);
-         this.myMenu.add(this.queryWork);
-         this.myMenu.add(this.upload);
-         this.myMenu.add(this.reconnectToDatabase);
-         this.myMenu.add(this.about);
-         this.myMenu.add(this.logout);
-         this.jsonToDatabase.setVisible(false);
-        
-        
-        
-        
-        
-         this.myMenu.addMouseListener(new MouseAdapter()  {
-             public void mouseClicked(MouseEvent e) {
-                 if (HomeMainGui.this.jsonToDatabase.isVisible()) {
-                     HomeMainGui.this.jsonToDatabase.setVisible(false);
-                     } else {
-                     HomeMainGui.this.jsonToDatabase.setVisible(true);
-                     }
-                 }
-             });
-        
-         this.jsonToDatabase.addActionListener(new ActionListener()  {
-            
-            
-             public void actionPerformed(ActionEvent e)  {
-                 if (!HomeMainGui.getDatabaseStatus().booleanValue()) {
-                     String message = "Database Not Connected. JSON To Database Operation Not Performed";
-                     JOptionPane.showMessageDialog(null, message, "Input Error", 0);
-                    
-                     return;
-                     }
-                
-                 JFrame frame1 = new JFrame();
-                 String theMessage = " Do You Want To UpDate The Database with JSON info? If so, all previous info in the database will be refreshed";
-                 int result = JOptionPane.showConfirmDialog(frame1, theMessage, "alert", 0);
-                 if (result == 0) {
-                     if (HomeMainGui.this.populateDatabaseUsingJSONData("homeData.json").booleanValue()) {
-                         JOptionPane.showMessageDialog(null, "SUCCESS: JSON Data Downloaded to Database ");
-                         } else {
-                         JOptionPane.showMessageDialog(null, "ERROR: JSON Data Did Not Downloaded to File ");
-                         }
-                     }
-                 }
-             });
-        
-        
-        
-         this.about.addActionListener(new ActionListener()  {
-             public void actionPerformed(ActionEvent e) {
-                new About();
+    class MyMouseListener extends MouseAdapter {
+
+        @Override
+        public void mouseClicked(MouseEvent evt) {
+            if (evt.getClickCount() == 3) {
+                HomeMainGui.this.reformat.setVisible(false);
+            } else if (evt.getClickCount() == 2) {
+                HomeMainGui.this.reformat.setVisible(true);
+                System.out.println("double-click");
             }
-             });
-        
-        
-        
-        
-        
-         this.currentMonth.addActionListener(new ActionListener()  {
-            
-            
-             public void actionPerformed(ActionEvent e)  {
-                 if (HomeMainGui.databaseStatus) {
-                     getMonthlyExpensesFromDatabase(Boolean.valueOf(true));
-                     } else {
-                     getMonthlyExpensesFromFile(Boolean.valueOf(false));
-                     }
-                 }
-             });
-        
-         this.download.addActionListener(new ActionListener()  {
-            
-             public void actionPerformed(ActionEvent e)  {
-                 if (HomeMainGui.databaseStatus) {
-                     downloadFromServerToFile();
-                     }
-                 }
-             });
+        }
+    }
 
-         this.logout.addActionListener(new ActionListener()  {
-             public void actionPerformed(ActionEvent e)  {
-                 if (!HomeMainGui.databaseStatus.booleanValue()) {
-                     JOptionPane.showMessageDialog(null,
-                            "Database Not Connected. No Data Downlaoded to Google Drive. GoodBye");
-                     System.exit(0);
-                     }
-                
-                 JFrame frame1 = new JFrame();
-                 String theMessage = " Do You Want To Quit The Application?";
-                
-                 int result = JOptionPane.showConfirmDialog(frame1, theMessage, "alert", 0);
-                 if (result == 0) {
-                     downloadFromServerToFile();
-                     copyFileToGoogleDrive();
-                     System.exit(0);
-                            new Login_Sys();
-                     }
-                 }
-             });
-        
-         this.queryWork.addActionListener(new ActionListener()  {
-             public void actionPerformed(ActionEvent e) {
-                new QueryingWindow("rbrewer", mySQLDatabase);
+    private void initialize() {
+        this.frame = new JFrame();
+        this.myBackgroundPanel = new MyBackgroundPanel(this.mySQLDatabase);
+        this.frame.setContentPane(this.myBackgroundPanel);
+
+        this.menuBar = new JMenuBar();
+        this.menuBar.setLayout(new BorderLayout());
+        this.menuBar.setFont(new Font("Segoe UI", 1, 12));
+        this.menuBar.setBackground(Color.WHITE);
+
+        this.myMenu = new JMenu("MENU");
+        this.myMenu.setMnemonic(0);
+        this.myMenu.getAccessibleContext().setAccessibleDescription("Get My Shit");
+        this.myMenu.setBackground(new Color(50, 205, 50));
+        this.menuBar.add(this.myMenu, "West");
+
+        this.lblDatabaseStatus = new JLabel("NOT CONNECTED");
+        this.lblDatabaseStatus.setBounds(156, 16, 159, 15);
+        this.lblDatabaseStatus.setFont(new Font("Verdana", 1, 14));
+
+        this.lblDatabaseStatus.setDisplayedMnemonic(65);
+
+        this.menuBar.add(this.lblDatabaseStatus, "East");
+
+        this.download = new JMenuItem("Download From Server");
+        this.queryWork = new JMenuItem("Perform Queries");
+        this.currentMonth = new JMenuItem("Current Month's Expenses");
+        this.upload = new JMenuItem("Copy File Data To Database");
+        this.logout = new JMenuItem("Logout");
+        this.about = new JMenuItem("About");
+        this.reformat = new JMenuItem("Reformat CSV File");
+        this.reformat.setVisible(false);
+
+        this.jsonToDatabase = new JMenuItem("Copy JSON Data To Database");
+        this.reconnectToDatabase = new JMenuItem("Reconnect To Database");
+
+        this.myMenu.add(this.reformat);
+        this.myMenu.add(this.currentMonth);
+
+        this.myMenu.add(this.jsonToDatabase);
+        this.myMenu.add(this.queryWork);
+        this.myMenu.add(this.upload);
+        this.myMenu.add(this.reconnectToDatabase);
+        this.myMenu.add(this.about);
+        this.myMenu.add(this.logout);
+        this.jsonToDatabase.setVisible(false);
+
+        this.myMenu.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                if (HomeMainGui.this.jsonToDatabase.isVisible()) {
+                    HomeMainGui.this.jsonToDatabase.setVisible(false);
+                } else {
+                    HomeMainGui.this.jsonToDatabase.setVisible(true);
+                }
             }
-             });
-        
-        
-        
-        
-        
-        
-         this.upload.addActionListener(new ActionListener()  {
-            
-            
-             public void actionPerformed(ActionEvent e)  {
-                 if (!HomeMainGui.getDatabaseStatus()) {
-                     String message = "No Database Connected. File is not Uploaded to Database";
-                     JOptionPane.showMessageDialog(null, message, "Input Error", 0);
-                    
-                     return;
-                     }
-                
-                 Thread databaseThread = new Thread(new Runnable()  {
-                    
-                     public void run()  {
-                         if (refreshDatabase()) {
-                             JOptionPane.showMessageDialog(null, "MYSQL database updated");
-                             } else {
-                             JOptionPane.showMessageDialog(null, "ERROR:::MYSQL database was not updated");
-                             }
-                         }
-                     }, "Database Thread");
-                
-                 System.out.println(String.valueOf(databaseThread.getName()) + " has statrted");
-                 databaseThread.start();
-                 }
-             });
-        
-        
-        
-         this.reformat.addActionListener(new ActionListener()  {
-            
-            
-             public void actionPerformed(ActionEvent e)  {
-                 List<HomeData> list = HomeMainGui.getDataFromFile();
-                 HomeMainGui.replaceDataInFile(list, "cost.csv");
-                 JOptionPane.showMessageDialog(null, "Data reformatted in  cost.csv file");
-                 }
-             });
-        
-        
-         this.reconnectToDatabase.addActionListener(new ActionListener()  {
-            
-            
-             public void actionPerformed(ActionEvent e)  {
-                 HomeMainGui.this.mySQLDatabase = null;
-                 HomeMainGui.this.isSQLSignonCredentCorrect();
-                 if (HomeMainGui.databaseStatus.booleanValue()) {
-                     HomeMainGui.this.lblDatabaseStatus.setText("Database Connected");
-                     HomeMainGui.this.lblDatabaseStatus.setForeground(Color.green);
-                     } else {
-                     HomeMainGui.this.lblDatabaseStatus.setText("Database Is Not Connected");
-                     HomeMainGui.this.lblDatabaseStatus.setForeground(Color.red);
-                     }
-                 }
-             });
-        
-        
-        
-        
-         this.frame.setJMenuBar(this.menuBar);
-         this.frame.pack();
-         this.frame.setVisible(true);
-         this.frame.setResizable(false);
-         displayMarlinExpensesBarChart();
-         }
+        });
 
-    
-    
-     private void copyFileToGoogleDrive() {
-         InputStream in = null;
-         OutputStream out = null;
-         File source = new File("cost.csv");
-         File dest = new File("M:\\My Drive\\Marlin Info\\cost.csv");
-        
-         try {
-             in = new FileInputStream(source);
-             out = new FileOutputStream(dest);
-             byte[] buffer = new byte[1024];
-             int length;
-             while ((length = in.read(buffer)) > 0) {
-                 out.write(buffer, 0, length);
-                 }
-             } catch (Exception e1) {
-            
-             JOptionPane.showMessageDialog(null, "ERROR: File Copy Not Successful To Google Drive ");
-             } finally {
-            
-             try {
-                 in.close();
-                 if (out == null) {
-                     JOptionPane.showMessageDialog(null, "ERROR: Data Not copied to outfile");
-                     } else {
-                     out.close();
-                     }
-                
-                 } catch (IOException e2) {
-                
-                
-                 JOptionPane.showMessageDialog(null, "ERROR: File Copy Not Closed ");
-                 }
-             }
-         }
+        this.jsonToDatabase.addActionListener((ActionEvent e) -> {
+            if (!HomeMainGui.getDatabaseStatus()) {
+                String message = "Database Not Connected. JSON To Database Operation Not Performed";
+                JOptionPane.showMessageDialog(null, message, "Input Error", 0);
 
-    
-    
-    
-    
-    
-     protected boolean refreshDatabase() {
-         if (this.mySQLDatabase.refreshDatabase(getDataFromFile())) {
-             return true;
-             }
-         return false;
-         }
+                return;
+            }
 
-    
-    
-    
-    
-     public void downloadFromServerToFile() {
-         JFrame frame = new JFrame();
-         String theMessage = " Download From Server? File Data Will Be Overwritten. Continue?";
-         int result = JOptionPane.showConfirmDialog(frame, theMessage, "alert", 0);
-         if (result == 0) {
-            
-             String query = "SELECT * FROM houseexpenses";
-             this.mySQLDatabase.getQuery(query);
-             List<HomeData> myList = this.mySQLDatabase.getList();
-             Collections.sort(myList, new SortHomeDataInDescendingOrderByDate());
-             if (replaceDataInFile(myList, "cost.csv").booleanValue()) {
-                 JOptionPane.showMessageDialog(null, "SUCCESS: Data Downloaded to File ");
-                
-                
-                 if (createJSONFile(myList)) {
-                     JOptionPane.showMessageDialog(null, "SUCCESS: JSON File created ");
-                     } else {
-                     JOptionPane.showMessageDialog(null, "ERROR: Downloading JSON Data ");
-                     }
-                
-                 } else {
-                
-                 JOptionPane.showMessageDialog(null, "ERROR: Downloading Data ");
-                 }
-             this.mySQLDatabase.clearList();
-             }
-         }
+            JFrame frame1 = new JFrame();
+            String theMessage = " Do You Want To UpDate The Database with JSON info? If so, all previous info in the database will be refreshed";
+            int result = JOptionPane.showConfirmDialog(frame1, theMessage, "alert", 0);
+            if (result == 0) {
+                if (HomeMainGui.this.populateDatabaseUsingJSONData("homeData.json")) {
+                    JOptionPane.showMessageDialog(null, "SUCCESS: JSON Data Downloaded to Database ");
+                } else {
+                    JOptionPane.showMessageDialog(null, "ERROR: JSON Data Did Not Downloaded to File ");
+                }
+            }
+        });
 
-    
-    
-    
-    
-    
+        this.about.addActionListener((ActionEvent e) -> {
+            new About();
+        });
+
+        this.currentMonth.addActionListener((ActionEvent e) -> {
+            if (HomeMainGui.databaseStatus) {
+                getMonthlyExpensesFromDatabase(true);
+            } else {
+                getMonthlyExpensesFromFile(false);
+            }
+        });
+
+        this.download.addActionListener((ActionEvent e) -> {
+            if (HomeMainGui.databaseStatus) {
+                downloadFromServerToFile();
+            }
+        });
+
+        this.logout.addActionListener((ActionEvent e) -> {
+            if (!HomeMainGui.databaseStatus) {
+                JOptionPane.showMessageDialog(null,
+                        "Database Not Connected. No Data Downlaoded to Google Drive. GoodBye");
+                System.exit(0);
+            }
+
+            JFrame frame1 = new JFrame();
+            String theMessage = " Do You Want To Quit The Application?";
+
+            int result = JOptionPane.showConfirmDialog(frame1, theMessage, "alert", 0);
+            if (result == 0) {
+                downloadFromServerToFile();
+                copyFileToGoogleDrive();
+                System.exit(0);
+                new Login_Sys();
+            }
+        });
+
+        this.queryWork.addActionListener((ActionEvent e) -> {
+            new QueryingWindow("rbrewer", mySQLDatabase);
+        });
+
+        this.upload.addActionListener((ActionEvent e) -> {
+            if (!HomeMainGui.getDatabaseStatus()) {
+                String message = "No Database Connected. File is not Uploaded to Database";
+                JOptionPane.showMessageDialog(null, message, "Input Error", 0);
+
+                return;
+            }
+
+            Thread databaseThread = new Thread(() -> {
+                if (refreshDatabase()) {
+                    JOptionPane.showMessageDialog(null, "MYSQL database updated");
+                } else {
+                    JOptionPane.showMessageDialog(null, "ERROR:::MYSQL database was not updated");
+                }
+            }, "Database Thread");
+
+            System.out.println(String.valueOf(databaseThread.getName()) + " has statrted");
+            databaseThread.start();
+        });
+
+        this.reformat.addActionListener((ActionEvent e) -> {
+            List<HomeData> list = HomeMainGui.getDataFromFile();
+            HomeMainGui.replaceDataInFile(list, "cost.csv");
+            JOptionPane.showMessageDialog(null, "Data reformatted in  cost.csv file");
+        });
+
+        this.reconnectToDatabase.addActionListener((ActionEvent e) -> {
+            HomeMainGui.this.mySQLDatabase = null;
+            HomeMainGui.this.isSQLSignonCredentCorrect();
+            if (HomeMainGui.databaseStatus) {
+                HomeMainGui.this.lblDatabaseStatus.setText("Database Connected");
+                HomeMainGui.this.lblDatabaseStatus.setForeground(Color.green);
+            } else {
+                HomeMainGui.this.lblDatabaseStatus.setText("Database Is Not Connected");
+                HomeMainGui.this.lblDatabaseStatus.setForeground(Color.red);
+            }
+        });
+
+        this.frame.setJMenuBar(this.menuBar);
+        this.frame.pack();
+        this.frame.setVisible(true);
+        this.frame.setResizable(false);
+        displayMarlinExpensesBarChart();
+    }
+
+    private void copyFileToGoogleDrive() {
+        InputStream in = null;
+        OutputStream out = null;
+        File source = new File("cost.csv");
+        File dest = new File("M:\\My Drive\\Marlin Info\\cost.csv");
+
+        try {
+            in = new FileInputStream(source);
+            out = new FileOutputStream(dest);
+            byte[] buffer = new byte[1024];
+            int length;
+            while ((length = in.read(buffer)) > 0) {
+                out.write(buffer, 0, length);
+            }
+        } catch (IOException e1) {
+
+            JOptionPane.showMessageDialog(null, "ERROR: File Copy Not Successful To Google Drive ");
+        } finally {
+
+            try {
+                in.close();
+                if (out == null) {
+                    JOptionPane.showMessageDialog(null, "ERROR: Data Not copied to outfile");
+                } else {
+                    out.close();
+                }
+
+            } catch (IOException e2) {
+
+                JOptionPane.showMessageDialog(null, "ERROR: File Copy Not Closed ");
+            }
+        }
+    }
+
+    protected boolean refreshDatabase() {
+        if (this.mySQLDatabase.refreshDatabase(getDataFromFile())) {
+            return true;
+        }
+        return false;
+    }
+
+    public void downloadFromServerToFile() {
+        JFrame frame = new JFrame();
+        String theMessage = " Download From Server? File Data Will Be Overwritten. Continue?";
+        int result = JOptionPane.showConfirmDialog(frame, theMessage, "alert", 0);
+        if (result == 0) {
+
+            String query = "SELECT * FROM houseexpenses";
+            this.mySQLDatabase.getQuery(query);
+            List<HomeData> myList = this.mySQLDatabase.getList();
+            Collections.sort(myList, new SortHomeDataInDescendingOrderByDate());
+            if (replaceDataInFile(myList, "cost.csv")) {
+                JOptionPane.showMessageDialog(null, "SUCCESS: Data Downloaded to File ");
+
+                if (createJSONFile(myList)) {
+                    JOptionPane.showMessageDialog(null, "SUCCESS: JSON File created ");
+                } else {
+                    JOptionPane.showMessageDialog(null, "ERROR: Downloading JSON Data ");
+                }
+
+            } else {
+
+                JOptionPane.showMessageDialog(null, "ERROR: Downloading Data ");
+            }
+            this.mySQLDatabase.clearList();
+        }
+    }
+
     public boolean createJSONFile(List<HomeData> data) {
-        if (data.size() == 0) {
+        if (data.isEmpty()) {
             return false;
         }
         // Creates a json file with HomeData data
@@ -451,621 +381,609 @@ public class HomeMainGui {
         }
         return true;
 
-         }
-
-    
-    
-    
-    
-     public Boolean populateDatabaseUsingJSONData(String filename) {
-         Boolean isDatabaseUpdated = Boolean.valueOf(false);
-         JSONParser parser = new JSONParser();
-        
-         ArrayList<HomeData> databaseEntries = new ArrayList<>();
-         try {
-             JSONObject jsonObject = (JSONObject) parser.parse(new FileReader(filename));
-             JSONArray homeDataArray = (JSONArray) jsonObject.get("homeData");
-             for (int i = 0; i < homeDataArray.size(); i++) {
-                 JSONObject jsonObjectRow = (JSONObject) homeDataArray.get(i);
-                
-                 databaseEntries.add(new HomeData(
-                        (String) jsonObjectRow.get("date"),
-                         (String) jsonObjectRow.get("area"),
-                         (String) jsonObjectRow.get("item"),
-                         (Double) jsonObjectRow.get("cost"),
-                         (String) jsonObjectRow.get("receiptFilename"),
-                         (String) jsonObjectRow.get("info"),
-                         (Boolean) jsonObjectRow.get("isValue")));
-                 }
-             Collections.sort(databaseEntries, new SortHomeDataInDescendingOrderByDate());
-             if (this.mySQLDatabase.refreshDatabase(databaseEntries)) {
-                 isDatabaseUpdated = Boolean.valueOf(true);
-                 }
-             } catch (Exception e) {
-             JOptionPane.showMessageDialog(null, e.toString());
-             }
-         return isDatabaseUpdated;
     }
 
-     public void getMonthlyExpensesFromDatabase(Boolean showTable) {
-         Date date = new Date();
-         try {
-             double MONTHLY_MAX = 250.0D;
-            
-            
-             String result = "SELECT * FROM houseexpenses WHERE  DATE >= '" + getFirstDayOfMonth(date)
-                    +  "' AND DATE <= '" + getLastDayOfMonth(date) + "'";
-             this.mySQLDatabase.getDateRangeResults(result);
-            
-             List<HomeData> dateRangeList = this.mySQLDatabase.getList();
-             Collections.sort(dateRangeList, new SortHomeDataInDescendingOrderByDate());
-             double currentBalance = computeTotalCost(dateRangeList);
-            
-             if (showTable.booleanValue()) {
-                 String stitle = "Monthly Query for " + getMonthOfDate() + ". Total Cost = $"
-                        +  Double.toString(currentBalance);
-                 }
-            
-             if (currentBalance > MONTHLY_MAX && !maxLimitFlag)  {
-                 maxLimitFlag = true;
-                 playMaxLimitSound(currentBalance, MONTHLY_MAX);
-                 }
-            
-             } catch (Exception e) {
-            
-             JOptionPane.showMessageDialog(null,
-                    "ERROR: Unable To obtain current months total expense. Check database connection ");
-             }
-        
-        
-         this.mySQLDatabase.clearList();
-         }
+    public Boolean populateDatabaseUsingJSONData(String filename) {
+        Boolean isDatabaseUpdated = false;
+        JSONParser parser = new JSONParser();
 
-     public void getMonthlyExpensesFromFile(Boolean showTable) {
-         Date date = new Date();
-         List<HomeData> dateRangeList = getDataFromFile(getFirstDayOfMonth(date), getLastDayOfMonth(date));
-         Collections.sort(dateRangeList, new SortHomeDataInDescendingOrderByDate());
-         double currentBalance = computeTotalCost(dateRangeList);
-         double MONTHLY_MAX = 250.0D;
-        
-         if (showTable.booleanValue()) {
-             String stitle = "Monthly Query for " + getMonthOfDate() + ". Total Cost = $"
-                    +  Double.toString(currentBalance);
-             }
-        
-         if (currentBalance > MONTHLY_MAX && !maxLimitFlag) {
-            
-             maxLimitFlag = true;
-             playMaxLimitSound(currentBalance, MONTHLY_MAX);
-             }
-         }
+        ArrayList<HomeData> databaseEntries = new ArrayList<>();
+        try {
+            JSONObject jsonObject = (JSONObject) parser.parse(new FileReader(filename));
+            JSONArray homeDataArray = (JSONArray) jsonObject.get("homeData");
+            for (int i = 0; i < homeDataArray.size(); i++) {
+                JSONObject jsonObjectRow = (JSONObject) homeDataArray.get(i);
 
-     public static void playMaxLimitSound(double currentBalance, double maxLimit) {
-         try {
-             File musicpath = new File("cash_register.wav");
-             if (musicpath.exists()) {
-                 AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicpath);
-                 Clip clip = AudioSystem.getClip();
-                 clip.open(audioInput);
-                 clip.start();
-                
-                 String theMessage = "Your monthly expenditures have exceed your set $"
-                        + String.format("%.2f", new Object[] { Double.valueOf(maxLimit)
-                         }) + "\n by $"
-                        + String.format("%.2f", new Object[] { Double.valueOf(currentBalance - maxLimit) });
-                 JOptionPane.showMessageDialog(null, theMessage, "ALERT", 0);
-                 } else {
-                
-                 String theMessage1 = "Audio File Not Found";
-                 JOptionPane.showMessageDialog(null, theMessage1, "alert", 0);
-                 }
-            
-             } catch (Exception exception) {
+                databaseEntries.add(new HomeData(
+                        (String) jsonObjectRow.get("date"),
+                        (String) jsonObjectRow.get("area"),
+                        (String) jsonObjectRow.get("item"),
+                        (Double) jsonObjectRow.get("cost"),
+                        (String) jsonObjectRow.get("receiptFilename"),
+                        (String) jsonObjectRow.get("info"),
+                        (Boolean) jsonObjectRow.get("isValue")));
+            }
+            Collections.sort(databaseEntries, new SortHomeDataInDescendingOrderByDate());
+            if (this.mySQLDatabase.refreshDatabase(databaseEntries)) {
+                isDatabaseUpdated = true;
+            }
+        } catch (IOException | ParseException e) {
+            JOptionPane.showMessageDialog(null, e.toString());
         }
-         }
+        return isDatabaseUpdated;
+    }
 
-     public static String getFirstDayOfMonth(Date d) {
-         Calendar calendar = Calendar.getInstance();
-         calendar.setTime(d);
-         calendar.set(5, 1);
-         Date dddd = calendar.getTime();
-         SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd");
-         return sdf1.format(dddd);
-         }
+    public void getMonthlyExpensesFromDatabase(Boolean showTable) {
+        Date date = new Date();
+        try {
+            double MONTHLY_MAX = 250.0D;
 
-     public static String getLastDayOfMonth(Date d) {
-         Calendar calendar = Calendar.getInstance();
-         calendar.setTime(d);
-         calendar.set(5, calendar.getActualMaximum(5));
-         Date dddd = calendar.getTime();
-         SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd");
-         return sdf1.format(dddd);
-         }
+            String result = "SELECT * FROM houseexpenses WHERE  DATE >= '" + getFirstDayOfMonth(date)
+                    + "' AND DATE <= '" + getLastDayOfMonth(date) + "'";
+            this.mySQLDatabase.getDateRangeResults(result);
 
-     public static String getMonthOfDate() {
-         LocalDate date = LocalDate.now();
-         return date.getMonth().toString();
-         }
+            List<HomeData> dateRangeList = this.mySQLDatabase.getList();
+            Collections.sort(dateRangeList, new SortHomeDataInDescendingOrderByDate());
+            double currentBalance = computeTotalCost(dateRangeList);
 
-     private void displayMarlinExpensesBarChart() {
-         String query = "SELECT * FROM  home_improvement.houseexpenses";
-         this.mySQLDatabase.getQuery(query);
-         List<HomeData> myList = this.mySQLDatabase.getList();
-        
-        
-         double[][] monthlyTotals = new double[9][12];
-         for (int row = 0; row < 9; row++) {
-             for (int col = 0; col < 12; col++) {
-                 monthlyTotals[row][col] = 0.0D;
-                 }
-             }
-        
-         List<HomeData> list2020 = getListForYear(myList, 2020);
-         getMonthlyTotalForTheYear(monthlyTotals, list2020, 0);
-        
-         List<HomeData> list2021 = getListForYear(myList, 2021);
-         getMonthlyTotalForTheYear(monthlyTotals, list2021, 1);
-        
-         List<HomeData> list2022 = getListForYear(myList, 2022);
-         getMonthlyTotalForTheYear(monthlyTotals, list2022, 2);
-        
-         List<HomeData> list2023 = getListForYear(myList, 2023);
-         getMonthlyTotalForTheYear(monthlyTotals, list2023, 3);
-        
-         List<HomeData> list2024 = getListForYear(myList, 2024);
-         getMonthlyTotalForTheYear(monthlyTotals, list2024, 4);
-        
-         List<HomeData> list2025 = getListForYear(myList, 2025);
-         getMonthlyTotalForTheYear(monthlyTotals, list2025, 5);
+            if (showTable) {
+                String stitle = "Monthly Query for " + getMonthOfDate() + ". Total Cost = $"
+                        + Double.toString(currentBalance);
+            }
+
+            if (currentBalance > MONTHLY_MAX && !maxLimitFlag) {
+                maxLimitFlag = true;
+                playMaxLimitSound(currentBalance, MONTHLY_MAX);
+            }
+
+        } catch (Exception e) {
+
+            JOptionPane.showMessageDialog(null,
+                    "ERROR: Unable To obtain current months total expense. Check database connection ");
+        }
+
+        this.mySQLDatabase.clearList();
+    }
+
+    public void getMonthlyExpensesFromFile(Boolean showTable) {
+        Date date = new Date();
+        List<HomeData> dateRangeList = getDataFromFile(getFirstDayOfMonth(date), getLastDayOfMonth(date));
+        Collections.sort(dateRangeList, new SortHomeDataInDescendingOrderByDate());
+        double currentBalance = computeTotalCost(dateRangeList);
+        double MONTHLY_MAX = 250.0D;
+
+        if (showTable) {
+            String stitle = "Monthly Query for " + getMonthOfDate() + ". Total Cost = $"
+                    + Double.toString(currentBalance);
+        }
+
+        if (currentBalance > MONTHLY_MAX && !maxLimitFlag) {
+
+            maxLimitFlag = true;
+            playMaxLimitSound(currentBalance, MONTHLY_MAX);
+        }
+    }
+
+    public static void playMaxLimitSound(double currentBalance, double maxLimit) {
+        try {
+            File musicpath = new File("cash_register.wav");
+            if (musicpath.exists()) {
+                AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicpath);
+                Clip clip = AudioSystem.getClip();
+                clip.open(audioInput);
+                clip.start();
+
+                String theMessage = "Your monthly expenditures have exceed your set $"
+                        + String.format("%.2f", new Object[]{maxLimit}) + "\n by $"
+                        + String.format("%.2f", new Object[]{currentBalance - maxLimit});
+                JOptionPane.showMessageDialog(null, theMessage, "ALERT", 0);
+            } else {
+
+                String theMessage1 = "Audio File Not Found";
+                JOptionPane.showMessageDialog(null, theMessage1, "alert", 0);
+            }
+
+        } catch (HeadlessException | IOException | LineUnavailableException | UnsupportedAudioFileException exception) {
+        }
+    }
+
+    public static String getFirstDayOfMonth(Date d) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(d);
+        calendar.set(5, 1);
+        Date dddd = calendar.getTime();
+        SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd");
+        return sdf1.format(dddd);
+    }
+
+    public static String getLastDayOfMonth(Date d) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(d);
+        calendar.set(5, calendar.getActualMaximum(5));
+        Date dddd = calendar.getTime();
+        SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd");
+        return sdf1.format(dddd);
+    }
+
+    public static String getMonthOfDate() {
+        LocalDate date = LocalDate.now();
+        return date.getMonth().toString();
+    }
+
+    private void displayMarlinExpensesBarChart() {
+        List<HomeData> myList;
+        String query = "SELECT * FROM  home_improvement.houseexpenses";
+
+        if (databaseStatus) {
+            this.mySQLDatabase.getQuery(query);
+            myList = this.mySQLDatabase.getList();
+        } else {
+            myList = getDataFromFile();
+        }
+
+        double[][] monthlyTotals = new double[9][12];
+        for (int row = 0; row < 9; row++) {
+            for (int col = 0; col < 12; col++) {
+                monthlyTotals[row][col] = 0.0D;
+            }
+        }
+
+        List<HomeData> list2020 = getListForYear(myList, 2020);
+        getMonthlyTotalForTheYear(monthlyTotals, list2020, 0);
+
+        List<HomeData> list2021 = getListForYear(myList, 2021);
+        getMonthlyTotalForTheYear(monthlyTotals, list2021, 1);
+
+        List<HomeData> list2022 = getListForYear(myList, 2022);
+        getMonthlyTotalForTheYear(monthlyTotals, list2022, 2);
+
+        List<HomeData> list2023 = getListForYear(myList, 2023);
+        getMonthlyTotalForTheYear(monthlyTotals, list2023, 3);
+
+        List<HomeData> list2024 = getListForYear(myList, 2024);
+        getMonthlyTotalForTheYear(monthlyTotals, list2024, 4);
+
+        List<HomeData> list2025 = getListForYear(myList, 2025);
+        getMonthlyTotalForTheYear(monthlyTotals, list2025, 5);
 
         List<HomeData> list2026 = getListForYear(myList, 2026);
-         getMonthlyTotalForTheYear(monthlyTotals, list2026, 6);
+        getMonthlyTotalForTheYear(monthlyTotals, list2026, 6);
 
         List<HomeData> list2027 = getListForYear(myList, 2027);
-         getMonthlyTotalForTheYear(monthlyTotals, list2027, 7);
+        getMonthlyTotalForTheYear(monthlyTotals, list2027, 7);
 
         List<HomeData> list2028 = getListForYear(myList, 2028);
-         getMonthlyTotalForTheYear(monthlyTotals, list2028, 8);
+        getMonthlyTotalForTheYear(monthlyTotals, list2028, 8);
 
-        
-         new MyBarChart("Marlin's Monthly Expenses", monthlyTotals);
-         this.mySQLDatabase.clearList();
-         }
+        new MyBarChart("Marlin's Monthly Expenses", monthlyTotals);
+        this.mySQLDatabase.clearList();
+    }
 
-     private List<HomeData> getListForYear(List<HomeData> myList, int year) {
-         int dateSelect = 3;
-         List<HomeData> list = new ArrayList<>();
-         Iterator<HomeData> it = myList.iterator();
-         while (it.hasNext()) {
-             HomeData data = it.next();
-             int listYear = convertDateStringToInt(data.getDate(), dateSelect);
-             if (listYear == year) {
-                 list.add(data);
-                 }
-             }
-         return list;
-         }
+    private List<HomeData> getListForYear(List<HomeData> myList, int year) {
+        int dateSelect = 3;
+        List<HomeData> list = new ArrayList<>();
+        Iterator<HomeData> it = myList.iterator();
+        while (it.hasNext()) {
+            HomeData data = it.next();
+            int listYear = convertDateStringToInt(data.getDate(), dateSelect);
+            if (listYear == year) {
+                list.add(data);
+            }
+        }
+        return list;
+    }
 
-     public static void getMonthlyTotalForTheYear(double[][] monthlyTotals, List<HomeData> list, int row) {
-         int dateSelect = 2;
-        
-         for (int i = 0; i < list.size(); i++) {
-             switch (convertDateStringToInt(((HomeData) list.get(i)).getDate(), dateSelect)) {
-                 case 1:
-                     monthlyTotals[row][0] = monthlyTotals[row][0]
-                            + ((HomeData) list.get(i)).getCost().doubleValue();
-                     break;
-                 case 2:
-                     monthlyTotals[row][1] = monthlyTotals[row][1]
-                            + ((HomeData) list.get(i)).getCost().doubleValue();
-                     break;
-                 case 3:
-                     monthlyTotals[row][2] = monthlyTotals[row][2]
-                            + ((HomeData) list.get(i)).getCost().doubleValue();
-                     break;
-                 case 4:
-                     monthlyTotals[row][3] = monthlyTotals[row][3]
-                            + ((HomeData) list.get(i)).getCost().doubleValue();
-                     break;
-                 case 5:
-                     monthlyTotals[row][4] = monthlyTotals[row][4]
-                            + ((HomeData) list.get(i)).getCost().doubleValue();
-                     break;
-                 case 6:
-                     monthlyTotals[row][5] = monthlyTotals[row][5]
-                            + ((HomeData) list.get(i)).getCost().doubleValue();
-                     break;
-                 case 7:
-                     monthlyTotals[row][6] = monthlyTotals[row][6]
-                            + ((HomeData) list.get(i)).getCost().doubleValue();
-                     break;
-                 case 8:
-                     monthlyTotals[row][7] = monthlyTotals[row][7]
-                            + ((HomeData) list.get(i)).getCost().doubleValue();
-                     break;
-                 case 9:
-                     monthlyTotals[row][8] = monthlyTotals[row][8]
-                            + ((HomeData) list.get(i)).getCost().doubleValue();
-                     break;
-                 case 10:
-                     monthlyTotals[row][9] = monthlyTotals[row][9]
-                            + ((HomeData) list.get(i)).getCost().doubleValue();
-                     break;
-                 case 11:
-                     monthlyTotals[row][10] = monthlyTotals[row][10]
-                            + ((HomeData) list.get(i)).getCost().doubleValue();
-                     break;
-                 case 12:
-                     monthlyTotals[row][11] = monthlyTotals[row][11]
-                            + ((HomeData) list.get(i)).getCost().doubleValue();
-                     break;
-                 }
-             }
-         }
+    public static void getMonthlyTotalForTheYear(double[][] monthlyTotals, List<HomeData> list, int row) {
+        int dateSelect = 2;
+
+        for (int i = 0; i < list.size(); i++) {
+            switch (convertDateStringToInt(((HomeData) list.get(i)).getDate(), dateSelect)) {
+                case 1:
+                    monthlyTotals[row][0] = monthlyTotals[row][0]
+                            + ((HomeData) list.get(i)).getCost();
+                    break;
+                case 2:
+                    monthlyTotals[row][1] = monthlyTotals[row][1]
+                            + ((HomeData) list.get(i)).getCost();
+                    break;
+                case 3:
+                    monthlyTotals[row][2] = monthlyTotals[row][2]
+                            + ((HomeData) list.get(i)).getCost();
+                    break;
+                case 4:
+                    monthlyTotals[row][3] = monthlyTotals[row][3]
+                            + ((HomeData) list.get(i)).getCost();
+                    break;
+                case 5:
+                    monthlyTotals[row][4] = monthlyTotals[row][4]
+                            + ((HomeData) list.get(i)).getCost();
+                    break;
+                case 6:
+                    monthlyTotals[row][5] = monthlyTotals[row][5]
+                            + ((HomeData) list.get(i)).getCost();
+                    break;
+                case 7:
+                    monthlyTotals[row][6] = monthlyTotals[row][6]
+                            + ((HomeData) list.get(i)).getCost();
+                    break;
+                case 8:
+                    monthlyTotals[row][7] = monthlyTotals[row][7]
+                            + ((HomeData) list.get(i)).getCost();
+                    break;
+                case 9:
+                    monthlyTotals[row][8] = monthlyTotals[row][8]
+                            + ((HomeData) list.get(i)).getCost();
+                    break;
+                case 10:
+                    monthlyTotals[row][9] = monthlyTotals[row][9]
+                            + ((HomeData) list.get(i)).getCost();
+                    break;
+                case 11:
+                    monthlyTotals[row][10] = monthlyTotals[row][10]
+                            + ((HomeData) list.get(i)).getCost();
+                    break;
+                case 12:
+                    monthlyTotals[row][11] = monthlyTotals[row][11]
+                            + ((HomeData) list.get(i)).getCost();
+                    break;
+            }
+        }
+    }
 
     public static int convertDateStringToInt(String date, int dateSelect) {
-         String delimStr = "-";
-        
-         String[] words = date.split(delimStr);
-         int intDate = 0;
-         switch (dateSelect) {
-            
-             case 1:
-                 intDate = Integer.parseInt(words[1]) * 100 + Integer.parseInt(words[2])
-                        +  Integer.parseInt(words[0]) * 10000;
-                 break;
-             case 2:
-                 intDate = Integer.parseInt(words[1]);
-                 break;
-             case 3:
-                 intDate = Integer.parseInt(words[0]);
-                 break;
-             }
-        
-        
-         return intDate;
-         }
+        String delimStr = "-";
+
+        String[] words = date.split(delimStr);
+        int intDate = 0;
+        switch (dateSelect) {
+
+            case 1 ->
+                intDate = Integer.parseInt(words[1]) * 100 + Integer.parseInt(words[2])
+                        + Integer.parseInt(words[0]) * 10000;
+            case 2 ->
+                intDate = Integer.parseInt(words[1]);
+            case 3 ->
+                intDate = Integer.parseInt(words[0]);
+        }
+
+        return intDate;
+    }
 
     private void isSQLSignonCredentCorrect() {
-        
 
         boolean isFound;
         final String DELIMITER = "%";
-        String myDatastuff[] = getCredentialsFromFile().split(DELIMITER);
+        String credentials = getCredentialsFromFile();
+        if (credentials == null) {
+            JOptionPane.showMessageDialog(null, "MYSQLConnect: Database is Not Connected.");
+            databaseStatus = false;
+            return;
+        }
 
-         this.mySQLDatabase = new MySQLConnect(myDatastuff[0], myDatastuff[1], myDatastuff[2]);
-         if (this.mySQLDatabase.isConnected()) {
-             JOptionPane.showMessageDialog(null, "MYSQLConnect: Database is Connected.");
-             databaseStatus = true;
-             } else {
-             JOptionPane.showMessageDialog(null, "MYSQLConnect: Database is Not Connected.");
-             databaseStatus = false;
-             }
-         }
+        String myDatastuff[] = credentials.split(DELIMITER);
 
-     private String getCredentialsFromFile() {
+        if (myDatastuff.length < 3) {
+            JOptionPane.showMessageDialog(null, "MYSQLConnect: Database is Not Connected.");
+            databaseStatus = false;
+            return;
+        }
+
+        this.mySQLDatabase = new MySQLConnect(myDatastuff[0], myDatastuff[1], myDatastuff[2]);
+        if (this.mySQLDatabase.isConnected()) {
+            JOptionPane.showMessageDialog(null, "MYSQLConnect: Database is Connected.");
+            databaseStatus = true;
+        } else {
+            JOptionPane.showMessageDialog(null, "MYSQLConnect: Database is Not Connected.");
+            databaseStatus = false;
+        }
+    }
+
+    private String getCredentialsFromFile() {
 
         InputStream inputStream = Login_Sys.class.getClassLoader().getResourceAsStream(filename);
-         final int myMagicNumber = 36;
-         String allData = null;
-         int count = 1;
-         BufferedReader bufferedReader = null;
-        
+        final int myMagicNumber = 36;
+        String allData = null;
+        int count = 1;
+        BufferedReader bufferedReader = null;
+
         if (inputStream == null) {
-            JOptionPane.showMessageDialog(null, "HomeMainGui: Can not find credential file ");
+            JOptionPane.showMessageDialog(null, "HomeMainGui: Credentials can not be found.");
             // System.err.println("Configuration file config.txt not found in resources!");
             return null;
         }
 
-         try {
-             bufferedReader = new BufferedReader(new InputStreamReader(inputStream, StandardCharsets.UTF_8));
-             try {
-                 String data;
-                 while ((data = bufferedReader.readLine()) != null) {
-                     if (count == myMagicNumber) {
-                         allData = data;
+        try {
+            bufferedReader = new BufferedReader(new InputStreamReader(inputStream, StandardCharsets.UTF_8));
+            try {
+                String data;
+                while ((data = bufferedReader.readLine()) != null) {
+                    if (count == myMagicNumber) {
+                        allData = data;
                         return allData;
-                         }
-                     count++;
-                     }
+                    }
+                    count++;
+                }
                 if (count < myMagicNumber) { // file does not contain sign-on credential info
                     JOptionPane.showMessageDialog(null, "HomeMainGui: Credentials can not be found.");
                 }
-                 } catch (IOException e) {
-                
-                 e.printStackTrace();
-                 JOptionPane.showMessageDialog(null, "HomeMainGui: HomeMainGUI: Can not read  from file ");
-                 }
-             } finally {
-             try {
-                 bufferedReader.close();
-                 }  catch (IOException e) {
-                
-                 JOptionPane.showMessageDialog(null, "HomeMainGui :Error Closing The File" + e);
-                 e.printStackTrace();
-                 }
-             }
-        
-         return null;
-         }
+            } catch (IOException e) {
 
-     public static class SortHomeDataInAscendingOrderByDate
-             implements Comparator<HomeData>  {
+                e.printStackTrace();
+                JOptionPane.showMessageDialog(null, "HomeMainGui: HomeMainGUI: Can not read  from file ");
+            }
+        } finally {
+            try {
+                bufferedReader.close();
+            } catch (IOException e) {
 
-         public int compare(HomeData a, HomeData b) {
-             int dateSelect = 1;
-            
-             return HomeMainGui.convertDateStringToInt(a.getDate(), dateSelect)
+                JOptionPane.showMessageDialog(null, "HomeMainGui :Error Closing The File" + e);
+                e.printStackTrace();
+            }
+        }
+
+        return null;
+    }
+
+    public static class SortHomeDataInAscendingOrderByDate
+            implements Comparator<HomeData> {
+
+        public int compare(HomeData a, HomeData b) {
+            int dateSelect = 1;
+
+            return HomeMainGui.convertDateStringToInt(a.getDate(), dateSelect)
                     - HomeMainGui.convertDateStringToInt(b.getDate(), dateSelect);
-             }
-         }
+        }
+    }
 
-     public static class SortHomeDataInDescendingOrderByDate
-             implements Comparator<HomeData>  {
+    public static class SortHomeDataInDescendingOrderByDate
+            implements Comparator<HomeData> {
 
-         public int compare(HomeData a, HomeData b) {
-             int dateSelect = 1;
-             return HomeMainGui.convertDateStringToInt(b.getDate(), dateSelect)
+        public int compare(HomeData a, HomeData b) {
+            int dateSelect = 1;
+            return HomeMainGui.convertDateStringToInt(b.getDate(), dateSelect)
                     - HomeMainGui.convertDateStringToInt(a.getDate(), dateSelect);
-             }
-         }
+        }
+    }
 
-     public static List<HomeData> getDataFromFile() {
-         BufferedReader fileReader = null;
-         String str = "";
-         List<HomeData> myList = new ArrayList<>();
-        
-        
-         try {
-             InputStream resource = HomeMainGui.class.getClassLoader()
+    public static List<HomeData> getDataFromFile() {
+        BufferedReader fileReader = null;
+        String str = "";
+        List<HomeData> myList = new ArrayList<>();
+
+        try {
+            InputStream resource = HomeMainGui.class.getClassLoader()
                     .getResourceAsStream("resources/cost.csv");
-             fileReader = resource == null
+            fileReader = resource == null
                     ? new BufferedReader(new FileReader(inputFile))
                     : new BufferedReader(new InputStreamReader(resource));
-            
-            
-             str = fileReader.readLine();
-             while ((str = fileReader.readLine()) != null) {
-                 HomeData data = new HomeData(str);
-                 myList.add(data);
-                 }
-             } catch (Exception e) {
-             JOptionPane.showMessageDialog(null, "Error: Cannot find cost.csv file");
-             e.printStackTrace();
-             } finally {
-             try {
-                 if (fileReader == null) {
-                     return null;
-                     }
-                 fileReader.close();
-                 } catch (IOException e) {
-                 JOptionPane.showMessageDialog(null, "Error Closing The File" + e);
-                 }
-             }
-        
-         if (myList.size() > 0) {
-            
-             Collections.sort(myList, new SortHomeDataInDescendingOrderByDate());
-            
-            
-             return myList;
-             }
-         return null;
-         }
 
-     public static List<HomeData> getDataFromFile(String firstDay, String lastDay) {
-         System.out.println();
-        
-         BufferedReader fileReader = null;
-         String str = "";
-         List<HomeData> myList = new ArrayList<>();
-        
-        
-         try {
-             fileReader = new BufferedReader(new FileReader("cost.csv"));
-            
-            
-             str = fileReader.readLine();
-             while ((str = fileReader.readLine()) != null) {
-                 HomeData data = new HomeData(str);
-                
-                
-                 if (convertDateStringToInt(data.getDate(), 1) >= convertDateStringToInt(firstDay, 1)
+            str = fileReader.readLine();
+            while ((str = fileReader.readLine()) != null) {
+                HomeData data = new HomeData(str);
+                myList.add(data);
+            }
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(null, "Error: Cannot find cost.csv file");
+            e.printStackTrace();
+        } finally {
+            try {
+                if (fileReader == null) {
+                    return null;
+                }
+                fileReader.close();
+            } catch (IOException e) {
+                JOptionPane.showMessageDialog(null, "Error Closing The File" + e);
+            }
+        }
+
+        if (!myList.isEmpty()) {
+
+            Collections.sort(myList, new SortHomeDataInDescendingOrderByDate());
+
+            return myList;
+        }
+        return null;
+    }
+
+    public static List<HomeData> getDataFromFile(String firstDay, String lastDay) {
+        System.out.println();
+
+        BufferedReader fileReader = null;
+        String str = "";
+        List<HomeData> myList = new ArrayList<>();
+
+        try {
+            fileReader = new BufferedReader(new FileReader("cost.csv"));
+
+            str = fileReader.readLine();
+            while ((str = fileReader.readLine()) != null) {
+                HomeData data = new HomeData(str);
+
+                if (convertDateStringToInt(data.getDate(), 1) >= convertDateStringToInt(firstDay, 1)
                         && convertDateStringToInt(data.getDate(), 1) <= convertDateStringToInt(lastDay, 1)) {
-                     myList.add(data);
-                     }
-                 }
-             } catch (Exception e) {
-             JOptionPane.showMessageDialog(null, "Error: Cannot find cost.csv file");
-             e.printStackTrace();
-             } finally {
-             try {
-                 fileReader.close();
-                 } catch (IOException e) {
-                 JOptionPane.showMessageDialog(null, "Error Closing The File" + e);
-                 }
-             }
-        
-         if (myList.size() > 0) {
-            
-             Collections.sort(myList, new SortHomeDataInDescendingOrderByDate());
-            
-            
-             return myList;
-             }
-         return null;
-         }
+                    myList.add(data);
+                }
+            }
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(null, "Error: Cannot find cost.csv file");
+            e.printStackTrace();
+        } finally {
+            try {
+                fileReader.close();
+            } catch (IOException e) {
+                JOptionPane.showMessageDialog(null, "Error Closing The File" + e);
+            }
+        }
 
-     public static Boolean placeInFile(HomeData item) {
-         Boolean isWrittenToFile = Boolean.valueOf(true);
-         BufferedWriter bw = null;
-         Boolean createFileHeaders = Boolean.valueOf(true);
-         String COMMA_DELIMITER = ",";
-         String NEW_LINE_SEPARATOR = "\n";
-         try {
-             File file = new File("cost.csv");
-            
-            
-            
-            
-            
-             if (!file.exists()) {
-                 file.createNewFile();
-                 createFileHeaders = Boolean.valueOf(false);
-                 }
-             FileWriter fw = new FileWriter(file, true);
-             bw = new BufferedWriter(fw);
-            
-             if (!createFileHeaders.booleanValue()) {
-                 bw.write("DATE");
-                 bw.write(",");
-                 bw.write("AREA");
-                 bw.write(",");
-                 bw.write("ITEMS");
-                 bw.write(",");
-                 bw.write("COST");
-                 bw.write(",");
-                 bw.write("RECEIPT FILE NAME");
-                 bw.write(",");
-                 bw.write("INFO");
-                 bw.write(",");
-                 bw.write("VALUE ADDED");
-                 bw.write("\n");
-                 }
-            
-             bw.write(item.getDate());
-             bw.write(",");
-             bw.write(item.getArea());
-             bw.write(",");
-             bw.write(item.getItem());
-             bw.write(",");
-             bw.write(item.getCost().toString());
-             bw.write(",");
-             bw.write(item.getReceiptFilename());
-             bw.write(",");
-             bw.write(item.getInfo());
-             bw.write(",");
-             bw.write(item.getIsValue().toString());
-             bw.write("\n");
-            
-             }  catch (IOException ioe) {
-             isWrittenToFile = Boolean.valueOf(false);
-             JOptionPane.showMessageDialog(null, "Error Opening The File ");
-             } finally {
-             try {
-                 if (bw != null) {
-                     bw.close();
-                     }
-                 } catch (Exception e) {
-                 JOptionPane.showMessageDialog(null, "Error Closing The File ");
-                 }
-             }
-         return isWrittenToFile;
-         }
+        if (!myList.isEmpty()) {
 
-     public static Boolean replaceDataInFile(List<HomeData> item, String filename) {
-         Boolean isWriteSuccess = Boolean.valueOf(false);
-         BufferedWriter bw = null;
-        
-         String COMMA_DELIMITER = ",";
-         String NEW_LINE_SEPARATOR = "\n";
-         try {
-             File file = new File(filename);
-            
-            
-            
-            
-            
-             if (!file.exists()) {
-                 file.createNewFile();
-                 }
-            
-             if (filename.equalsIgnoreCase("cost.csv")) {
-                 FileWriter fw = new FileWriter(file, false);
-                 bw = new BufferedWriter(fw);
-                 bw.write("DATE");
-                 bw.write(",");
-                 bw.write("AREA");
-                 bw.write(",");
-                 bw.write("ITEMS");
-                 bw.write(",");
-                 bw.write("COST");
-                 bw.write(",");
-                 bw.write("RECEIPT FILE NAME");
-                 bw.write(",");
-                 bw.write("INFO");
-                 bw.write(",");
-                 bw.write("VALUE ADDED");
-                 bw.write("\n");
-                 }  else {
-                
-                 FileWriter fw = new FileWriter(file, true);
-                 bw = new BufferedWriter(fw);
-                 }
-            
-             for (int i = 0; i < item.size(); i++) {
-                 bw.write(((HomeData) item.get(i)).getDate());
-                 bw.write(",");
-                 bw.write(((HomeData) item.get(i)).getArea());
-                 bw.write(",");
-                 bw.write(((HomeData) item.get(i)).getItem());
-                 bw.write(",");
-                 bw.write(((HomeData) item.get(i)).getCost().toString());
-                 bw.write(",");
-                 bw.write(((HomeData) item.get(i)).getReceiptFilename());
-                 bw.write(",");
-                 bw.write(((HomeData) item.get(i)).getInfo());
-                 bw.write(",");
-                 bw.write(((HomeData) item.get(i)).getIsValue().toString());
-                 bw.write("\n");
-                 }
-             isWriteSuccess = Boolean.valueOf(true);
-             }  catch (IOException ioe) {
-             JOptionPane.showMessageDialog(null,
+            Collections.sort(myList, new SortHomeDataInDescendingOrderByDate());
+
+            return myList;
+        }
+        return null;
+    }
+
+    public static Boolean placeInFile(HomeData item) {
+        Boolean isWrittenToFile = true;
+        BufferedWriter bw = null;
+        Boolean createFileHeaders = true;
+        final String COMMA_DELIMITER = ",";
+        final String NEW_LINE_SEPARATOR = "\n";
+        try {
+            File file = new File("cost.csv");
+
+            if (!file.exists()) {
+                file.createNewFile();
+                createFileHeaders = false;
+            }
+            FileWriter fw = new FileWriter(file, true);
+            bw = new BufferedWriter(fw);
+
+            if (!createFileHeaders) {
+                bw.write("DATE");
+                bw.write(",");
+                bw.write("AREA");
+                bw.write(",");
+                bw.write("ITEMS");
+                bw.write(",");
+                bw.write("COST");
+                bw.write(",");
+                bw.write("RECEIPT FILE NAME");
+                bw.write(",");
+                bw.write("INFO");
+                bw.write(",");
+                bw.write("VALUE ADDED");
+                bw.write("\n");
+            }
+
+            bw.write(item.getDate());
+            bw.write(",");
+            bw.write(item.getArea());
+            bw.write(",");
+            bw.write(item.getItem());
+            bw.write(",");
+            bw.write(item.getCost().toString());
+            bw.write(",");
+            bw.write(item.getReceiptFilename());
+            bw.write(",");
+            bw.write(item.getInfo());
+            bw.write(",");
+            bw.write(item.getIsValue().toString());
+            bw.write("\n");
+
+        } catch (IOException ioe) {
+            isWrittenToFile = false;
+            JOptionPane.showMessageDialog(null, "Error Opening The File ");
+        } finally {
+            try {
+                if (bw != null) {
+                    bw.close();
+                }
+            } catch (IOException e) {
+                JOptionPane.showMessageDialog(null, "Error Closing The File ");
+            }
+        }
+        return isWrittenToFile;
+    }
+
+    public static Boolean replaceDataInFile(List<HomeData> item, String filename) {
+        Boolean isWriteSuccess = false;
+        BufferedWriter bw = null;
+
+        String COMMA_DELIMITER = ",";
+        String NEW_LINE_SEPARATOR = "\n";
+        try {
+            File file = new File(filename);
+
+            if (!file.exists()) {
+                file.createNewFile();
+            }
+
+            if (filename.equalsIgnoreCase("cost.csv")) {
+                FileWriter fw = new FileWriter(file, false);
+                bw = new BufferedWriter(fw);
+                bw.write("DATE");
+                bw.write(",");
+                bw.write("AREA");
+                bw.write(",");
+                bw.write("ITEMS");
+                bw.write(",");
+                bw.write("COST");
+                bw.write(",");
+                bw.write("RECEIPT FILE NAME");
+                bw.write(",");
+                bw.write("INFO");
+                bw.write(",");
+                bw.write("VALUE ADDED");
+                bw.write("\n");
+            } else {
+
+                FileWriter fw = new FileWriter(file, true);
+                bw = new BufferedWriter(fw);
+            }
+
+            for (int i = 0; i < item.size(); i++) {
+                bw.write(((HomeData) item.get(i)).getDate());
+                bw.write(",");
+                bw.write(((HomeData) item.get(i)).getArea());
+                bw.write(",");
+                bw.write(((HomeData) item.get(i)).getItem());
+                bw.write(",");
+                bw.write(((HomeData) item.get(i)).getCost().toString());
+                bw.write(",");
+                bw.write(((HomeData) item.get(i)).getReceiptFilename());
+                bw.write(",");
+                bw.write(((HomeData) item.get(i)).getInfo());
+                bw.write(",");
+                bw.write(((HomeData) item.get(i)).getIsValue().toString());
+                bw.write("\n");
+            }
+            isWriteSuccess = true;
+        } catch (IOException ioe) {
+            JOptionPane.showMessageDialog(null,
                     "Data was not written to file. \nVerify the cost.csv file is closed");
-             } finally {
-             try {
-                 if (bw != null) {
-                     bw.close();
-                     }
-                 } catch (Exception e) {
-                 JOptionPane.showMessageDialog(null, "Error Closing The File " + e);
-                 }
-             }
-         return isWriteSuccess;
-         }
+        } finally {
+            try {
+                if (bw != null) {
+                    bw.close();
+                }
+            } catch (IOException e) {
+                JOptionPane.showMessageDialog(null, "Error Closing The File " + e);
+            }
+        }
+        return isWriteSuccess;
+    }
 
-     public static String reformatDateString(String date) {
-         String newDate = null, DELIMITER = "/";
-         String[] oldDate = date.split(DELIMITER);
-         String month = oldDate[0];
-         String day = oldDate[1];
-        
-        
-         if (Integer.parseInt(oldDate[0]) < 10) {
-             month = "0" + oldDate[0];
-             } else {
-             month = oldDate[0];
-             }
-         if (Integer.parseInt(oldDate[1]) < 10) {
-             day = "0" + oldDate[1];
-             } else {
-             day = oldDate[1];
-             }
-        
-        
-         newDate = String.valueOf(oldDate[2]) + "-" + oldDate[0] + "-" + oldDate[1];
-         return newDate;
-         }
+    public static String reformatDateString(String date) {
+        String newDate = null, DELIMITER = "/";
+        String[] oldDate = date.split(DELIMITER);
+        String month = oldDate[0];
+        String day = oldDate[1];
 
-     public static double computeTotalCost(List<HomeData> list) {
-         double count = 0.0D;
-         for (HomeData myList : list) {
-             count += myList.getCost().doubleValue();
-             }
-        
-         return Math.round(count * 100.0D) / 100.0D;
-         }
+        if (Integer.parseInt(oldDate[0]) < 10) {
+            month = "0" + oldDate[0];
+        } else {
+            month = oldDate[0];
+        }
+        if (Integer.parseInt(oldDate[1]) < 10) {
+            day = "0" + oldDate[1];
+        } else {
+            day = oldDate[1];
+        }
+
+        newDate = String.valueOf(oldDate[2]) + "-" + oldDate[0] + "-" + oldDate[1];
+        return newDate;
+    }
+
+    public static double computeTotalCost(List<HomeData> list) {
+        double count = 0.0D;
+        for (HomeData myList : list) {
+            count += myList.getCost();
+        }
+
+        return Math.round(count * 100.0D) / 100.0D;
+    }
 
     public static void main(String[] args) {
         /*
