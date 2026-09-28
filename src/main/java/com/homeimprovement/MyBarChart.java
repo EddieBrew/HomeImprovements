@@ -13,9 +13,6 @@ public class MyBarChart extends JFrame {
 
     private static final long serialVersionUID = 1L;
     private double[][] mydata;
-    //final int ROWS = 6;
-    //final int COLS = 12;
-    //String title;
 
     public MyBarChart(String appTitle, double[][] data) {
         super(appTitle);

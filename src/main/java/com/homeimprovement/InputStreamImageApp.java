@@ -15,7 +15,7 @@ public class InputStreamImageApp {
     public static void main(String[] args) {
         JFrame frame = new JFrame("InputStream Image Example");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(500, 500);
+        frame.setSize(700, 700);
 
         JPanel panel = new JPanel();
 
