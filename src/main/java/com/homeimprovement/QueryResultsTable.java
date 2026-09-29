@@ -107,7 +107,7 @@ public class QueryResultsTable extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 // TODO Auto-generated method stub
-                //String oldValue;
+               // String oldValue;
                 JTable source = (JTable) e.getSource();
                 int row = source.rowAtPoint(e.getPoint());
                 int column = source.columnAtPoint(e.getPoint());
@@ -178,86 +178,77 @@ public class QueryResultsTable extends JFrame {
         btnModify = new JButton("MODIFY");
         btnModify.setEnabled(false);
         btnModify.setBackground(Color.GREEN);
-        btnModify.addActionListener(new ActionListener() {
-
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                // TODO Auto-generated method stub
-                final String COMMA = ",";
-                final int COLUMN_LENGTH = 7;
-                String fieldNames[] = {"Date", "area", "item", "cost", "filename", "info", "isValue"};
-                StringBuilder selectedData = new StringBuilder();
-                String queryField = null;
-                int[] selectedRow = table.getSelectedRows();
-                int[] selectedColumns = table.getSelectedColumns();
-
-                //retrieves data to  be corrected and used to query Parse
-                for (int i = 0; i < selectedRow.length; i++) {
-                    for (int j = 0; j < selectedColumns.length; j++) {
-                        //Columns in the table matches the indexes in the fieldName array
-
-                        queryField = fieldNames[selectedColumns[j]];
-                        System.out.println("queryField = " + queryField);
-                    }
-                }
-
-                //retrieve row data
-                for (int i = 0; i < selectedRow.length; i++) {
-                    for (int j = 0; j < COLUMN_LENGTH; j++) {
-
-                        if (j == 6) {
-                            selectedData.append(table.getValueAt(selectedRow[i], j));
-                        } else {
-                            selectedData.append(table.getValueAt(selectedRow[i], j) + COMMA);
-                        }
-                    }
-
-                    //MyNetworkConnection connection =  new MyNetworkConnection(HomeMainGui.credentialsFilename, "rbrewer", "luistam1959");
-                    if (queryField.equalsIgnoreCase("cost")) {
-                        //HomeMainGui.networkConnection.changeDataInParseServer(new HomeData(selectedData.toString()), queryField, Double.parseDouble(oldValue));
-                    } else if (queryField.equalsIgnoreCase("isValue")) {
-                        //HomeMainGui.networkConnection.changeDataInParseServer(new HomeData(selectedData.toString()), queryField, Boolean.parseBoolean(oldValue));
-                    } else {
-                        //HomeMainGui.networkConnection.changeDataInParseServer(new HomeData(selectedData.toString()), queryField, oldValue);
-                    }
+        btnModify.addActionListener((ActionEvent e) -> {
+            // TODO Auto-generated method stub
+            final String COMMA = ",";
+            final int COLUMN_LENGTH = 7;
+            String fieldNames[] = {"Date", "area", "item", "cost", "filename", "info", "isValue"};
+            StringBuilder selectedData = new StringBuilder();
+            String queryField = null;
+            int[] selectedRow = table.getSelectedRows();
+            int[] selectedColumns = table.getSelectedColumns();
+            
+            //retrieves data to  be corrected and used to query Parse
+            for (int i = 0; i < selectedRow.length; i++) {
+                for (int j = 0; j < selectedColumns.length; j++) {
+                    //Columns in the table matches the indexes in the fieldName array
+                    
+                    queryField = fieldNames[selectedColumns[j]];
+                    System.out.println("queryField = " + queryField);
                 }
             }
-
+            
+            //retrieve row data
+            for (int i = 0; i < selectedRow.length; i++) {
+                for (int j = 0; j < COLUMN_LENGTH; j++) {
+                    
+                    if (j == 6) {
+                        selectedData.append(table.getValueAt(selectedRow[i], j));
+                    } else {
+                        selectedData.append(table.getValueAt(selectedRow[i], j)).append(COMMA);
+                    }
+                }
+                
+                //MyNetworkConnection connection =  new MyNetworkConnection(HomeMainGui.credentialsFilename, "rbrewer", "luistam1959");
+                if (queryField.equalsIgnoreCase("cost")) {
+                    //HomeMainGui.networkConnection.changeDataInParseServer(new HomeData(selectedData.toString()), queryField, Double.parseDouble(oldValue));
+                } else if (queryField.equalsIgnoreCase("isValue")) {
+                    //HomeMainGui.networkConnection.changeDataInParseServer(new HomeData(selectedData.toString()), queryField, Boolean.parseBoolean(oldValue));
+                } else {
+                    //HomeMainGui.networkConnection.changeDataInParseServer(new HomeData(selectedData.toString()), queryField, oldValue);
+                }
+            }
         });
 
         btnRemove = new JButton("REMOVE");
         btnRemove.setBackground(Color.RED);
         btnRemove.setEnabled(false);
-        btnRemove.addActionListener(new ActionListener() {
-
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                // TODO Auto-generated method stub
-                final String COMMA = ",";
-                System.out.println(table.getSelectedRow());
-                if (table.getSelectedRow() != -1) {
-                    // remove selected row from the model 
-                    JFrame frameLoginSystem = new JFrame("Exit");
-
-                    if (JOptionPane.showConfirmDialog(frameLoginSystem, "Confirmif you want to delete the row", "Delete Row?",
-                            JOptionPane.YES_NO_OPTION) == JOptionPane.YES_NO_OPTION) {
-
-                        StringBuilder myString = new StringBuilder();
-                        for (int i = 0; i < COLS; i++) {
-                            myString.append(table.getValueAt(table.getSelectedRow(), i) + COMMA);
-                        }
-                        model.removeRow(table.getSelectedRow());
-                        System.out.println(myString.toString());
-                        //deleteRowItemFromServer(new HomeData(myString.toString()));
-                        if (deleteRowItemFromFile(new HomeData(myString.toString()))) {
-                            JOptionPane.showMessageDialog(null, myString.toString() + "\n Row Info Deleted.");
-                        } else {
-                            JOptionPane.showMessageDialog(null, "Selected row was not deleted");
-                        }
+        btnRemove.addActionListener((ActionEvent e) -> {
+            // TODO Auto-generated method stub
+            final String COMMA = ",";
+            System.out.println(table.getSelectedRow());
+            if (table.getSelectedRow() != -1) {
+                // remove selected row from the model
+                JFrame frameLoginSystem = new JFrame("Exit");
+                
+                if (JOptionPane.showConfirmDialog(frameLoginSystem, "Confirmif you want to delete the row", "Delete Row?",
+                        JOptionPane.YES_NO_OPTION) == JOptionPane.YES_NO_OPTION) {
+                    
+                    StringBuilder myString = new StringBuilder();
+                    for (int i = 0; i < COLS; i++) {
+                        myString.append(table.getValueAt(table.getSelectedRow(), i) + COMMA);
                     }
-                } else {
-                    System.out.println(ERROR);
+                    model.removeRow(table.getSelectedRow());
+                    System.out.println(myString.toString());
+                    //deleteRowItemFromServer(new HomeData(myString.toString()));
+                    if (deleteRowItemFromFile(new HomeData(myString.toString()))) {
+                        JOptionPane.showMessageDialog(null, myString.toString() + "\n Row Info Deleted.");
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Selected row was not deleted");
+                    }
                 }
+            } else {
+                System.out.println(ERROR);
             }
         });
 
