@@ -40,7 +40,6 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
-import javax.swing.SwingUtilities;
 
 import org.jfree.data.json.impl.JSONArray;
 import org.jfree.data.json.impl.JSONObject;
@@ -66,7 +65,7 @@ public class HomeMainGui {
 
     private JMenuItem about;
 
-    private JMenuItem filePath;
+   // private JMenuItem filePath;
 
     private JMenuItem reformat;
 
@@ -86,33 +85,28 @@ public class HomeMainGui {
     public static final int ROWS = 9;
     public static final int COLS = 12;
     private static boolean maxLimitFlag = false;
-    private static Boolean databaseStatus;
+    private static Boolean databaseStatus = false;
     private JLabel lblDatabaseStatus;
     private MyBackgroundPanel myBackgroundPanel;
 
     public HomeMainGui(String username, char[] password) {
         HomeMainGui.username = username;
-        isSQLSignonCredentCorrect();
         initialize();
-        if (databaseStatus) {
-            SwingUtilities.invokeLater(() -> {
-                lblDatabaseStatus.setForeground(Color.GREEN);
-                lblDatabaseStatus.repaint();
-            });
-
-            // this.lblDatabaseStatus.setText("Database Connected");
-            // this.lblDatabaseStatus.setForeground(Color.GREEN);
-            // lblDatabaseStatus.repaint();
-        } else {
-
-            SwingUtilities.invokeLater(() -> {
-                lblDatabaseStatus.setForeground(Color.RED);
-                lblDatabaseStatus.repaint();
-            });
-            // this.lblDatabaseStatus.setText("Database Is Not Connected");
-            // this.lblDatabaseStatus.setForeground(Color.RED);
-            //lblDatabaseStatus.repaint();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
         }
+        SQLSignonCredentCorrect();
+            if (HomeMainGui.databaseStatus) {
+                HomeMainGui.this.lblDatabaseStatus.setText("Database Connected");
+                HomeMainGui.this.lblDatabaseStatus.setForeground(Color.green);
+            } else {
+                HomeMainGui.this.lblDatabaseStatus.setText("Database Unavailable");
+                HomeMainGui.this.lblDatabaseStatus.setForeground(Color.red);
+            }
+        
     }
 
     class MyMouseListener extends MouseAdapter {
@@ -275,12 +269,12 @@ public class HomeMainGui {
 
         this.reconnectToDatabase.addActionListener((ActionEvent e) -> {
             HomeMainGui.this.mySQLDatabase = null;
-            HomeMainGui.this.isSQLSignonCredentCorrect();
+            HomeMainGui.this.SQLSignonCredentCorrect();
             if (HomeMainGui.databaseStatus) {
                 HomeMainGui.this.lblDatabaseStatus.setText("Database Connected");
                 HomeMainGui.this.lblDatabaseStatus.setForeground(Color.green);
             } else {
-                HomeMainGui.this.lblDatabaseStatus.setText("Database Is Not Connected");
+                HomeMainGui.this.lblDatabaseStatus.setText("Database Unavailable");
                 HomeMainGui.this.lblDatabaseStatus.setForeground(Color.red);
             }
         });
@@ -556,8 +550,11 @@ public class HomeMainGui {
         getMonthlyTotalForTheYear(monthlyTotals, list2028, 8);
 
         new MyBarChart("Marlin's Monthly Expenses", monthlyTotals);
+       
+       if (databaseStatus) {
         this.mySQLDatabase.clearList();
     }
+}
 
     private List<HomeData> getListForYear(List<HomeData> myList, int year) {
         int dateSelect = 3;
@@ -649,7 +646,7 @@ public class HomeMainGui {
         return intDate;
     }
 
-    private void isSQLSignonCredentCorrect() {
+    private void SQLSignonCredentCorrect() {
 
         boolean isFound;
         final String DELIMITER = "%";
