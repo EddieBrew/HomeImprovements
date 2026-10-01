@@ -78,7 +78,7 @@ public class HomeMainGui {
     public static Boolean getDatabaseStatus() {
         return databaseStatus;
     }
-
+//Saving this file
     private MySQLConnect mySQLDatabase;
     private static final String inputFile = "cost.csv";
     private final String filename = "mysqlsignonstuff.txt";
