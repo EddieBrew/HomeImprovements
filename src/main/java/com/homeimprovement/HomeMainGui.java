@@ -41,6 +41,7 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 
+
 import org.jfree.data.json.impl.JSONArray;
 import org.jfree.data.json.impl.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -59,6 +60,7 @@ public class HomeMainGui {
     private JMenuItem queryWork;
     private JMenuItem logout;
     private JMenuItem download;
+    private JMenuItem YearToYearComparison;
     private final String HOMEIMPROVEMENT_DATABASE = "houseexpenses";
 
     private JMenuItem upload;
@@ -74,6 +76,7 @@ public class HomeMainGui {
     private JMenuItem reconnectToDatabase;
 
     private JMenuItem currentMonth;
+    private JMenuItem yearToYearComparison;
 
     public static Boolean getDatabaseStatus() {
         return databaseStatus;
@@ -153,6 +156,7 @@ public class HomeMainGui {
         this.logout = new JMenuItem("Logout");
         this.about = new JMenuItem("About");
         this.reformat = new JMenuItem("Reformat CSV File");
+        this.yearToYearComparison = new JMenuItem("Year To Year Comparison"); 
         this.reformat.setVisible(false);
 
         this.jsonToDatabase = new JMenuItem("Copy JSON Data To Database");
@@ -164,6 +168,8 @@ public class HomeMainGui {
         this.myMenu.add(this.jsonToDatabase);
         this.myMenu.add(this.queryWork);
         this.myMenu.add(this.upload);
+        this.myMenu.add(this.upload);
+        this.myMenu.add(this.yearToYearComparison);
         this.myMenu.add(this.reconnectToDatabase);
         this.myMenu.add(this.about);
         this.myMenu.add(this.logout);
@@ -200,6 +206,20 @@ public class HomeMainGui {
             }
         });
 
+
+
+        this.yearToYearComparison .addActionListener((ActionEvent e) -> {
+           
+            if (HomeMainGui.databaseStatus) {  
+                 displayYearlyTotalfromDatabase();
+                   System.out.println("YearlyCostChart window2 created successfully.");
+            } else {
+                JOptionPane.showMessageDialog(null, "Database Not Connected. Yearly Comparison Not Performed", "Input Error", 0);   
+            }
+            
+
+           
+        });
         this.about.addActionListener((ActionEvent e) -> {
             new About();
         });
@@ -556,6 +576,48 @@ public class HomeMainGui {
     }
 }
 
+private void displayYearlyTotalfromDatabase(){
+
+        List<HomeData> myList;
+        String query = "SELECT * FROM  home_improvement.houseexpenses";
+
+        if (databaseStatus) {
+            this.mySQLDatabase.getQuery(query);
+            myList = this.mySQLDatabase.getList();
+
+        } else {
+            myList = getDataFromFile();
+        }
+
+        double[] yearlyTotals = new double[9];
+        int[] years = new int[9];
+
+        for (int i = 0; i < 9; i++) {
+            int year = 2020 + i;
+            years[i] = year;
+
+            List<HomeData> listForYear = getListForYear(myList, year);
+            //yearlyTotals[i] = computeTotalCost(listForYear);
+            yearlyTotals[i] = getCostForYear(listForYear, year);
+        }
+
+        new YearlyCostChart(years, yearlyTotals);
+
+        if (databaseStatus) {
+            this.mySQLDatabase.clearList();
+        }
+    }
+
+ private double getCostForYear(List<HomeData> myList, int year) {
+        int dateSelect = 3;
+        double totalCost = 0.0D;
+        Iterator<HomeData> it = myList.iterator();
+        while (it.hasNext()) {
+            totalCost += ((HomeData) it.next()).getCost();
+            }
+             return totalCost;
+        }
+       
     private List<HomeData> getListForYear(List<HomeData> myList, int year) {
         int dateSelect = 3;
         List<HomeData> list = new ArrayList<>();
